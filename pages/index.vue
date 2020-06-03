@@ -7,7 +7,7 @@
           <div class="flex flex-column">
             <div class="mb4 mb0-ns">
               <img
-                src="http://mrmrs.github.io/photos/cpu.jpg"
+                src="https://mrmrs.github.io/photos/cpu.jpg"
                 class="db img-fluid"
                 alt="Photo of a dimly lit room with a computer interface terminal."
               />
@@ -32,7 +32,7 @@
           <div class="flex flex-column">
             <div class="mb4 mb0-ns">
               <img
-                src="http://mrmrs.github.io/photos/cpu.jpg"
+                src="https://mrmrs.github.io/photos/cpu.jpg"
                 class="db img-fluid"
                 alt="Photo of a dimly lit room with a computer interface terminal."
               />
@@ -60,7 +60,7 @@
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
               <img
-                src="http://mrmrs.github.io/photos/cpu.jpg"
+                src="https://mrmrs.github.io/photos/cpu.jpg"
                 class="db"
                 alt="Photo of a dimly lit room with a computer interface terminal."
               />
@@ -85,7 +85,7 @@
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
               <img
-                src="http://mrmrs.github.io/photos/cpu.jpg"
+                src="https://mrmrs.github.io/photos/cpu.jpg"
                 class="db"
                 alt="Photo of a dimly lit room with a computer interface terminal."
               />
@@ -110,7 +110,7 @@
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
               <img
-                src="http://mrmrs.github.io/photos/cpu.jpg"
+                src="https://mrmrs.github.io/photos/cpu.jpg"
                 class="db"
                 alt="Photo of a dimly lit room with a computer interface terminal."
               />
