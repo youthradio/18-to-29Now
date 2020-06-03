@@ -1,0 +1,26 @@
+.img-fluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.cite-symbol {
+  position: relative;
+}
+.cite-symbol::before {
+  position: absolute;
+  content: '― ';
+  left: -1em;
+}
+
+@media #{$breakpoint-not-small} {
+  .two-col-ns {
+    column-count: 2;
+    // column-gap: 040px;
+  }
+}
+
+@media #{$breakpoint-medium} {
+}
+
+@media #{$breakpoint-large} {
+}

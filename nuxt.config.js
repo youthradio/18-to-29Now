@@ -70,8 +70,12 @@ export default {
         rel: 'mask-icon',
         color: '#5bbad5',
         href: 'favicon/safari-pinned-tab.svg'
+      },
+      {
+        href:
+          'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800&display=swap',
+        rel: 'stylesheet'
       }
-      // { rel: 'stylesheet', href: 'https://yr.media/statics/yr-media-typography/yr-typography.css', media: 'print', onload: "this.media='all'" }
     ]
   },
   /*
@@ -81,7 +85,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  // css: ['@/assets/css/styles.scss'],
   /*
    ** Plugins to load before mounting the App
    */
