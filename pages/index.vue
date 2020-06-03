@@ -66,13 +66,13 @@
               />
             </div>
             <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mt0 lh-title">
+              <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title">
+              <h3 class="dark-red sans-serif lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy">
+              <p class="sans-serif f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -91,13 +91,13 @@
               />
             </div>
             <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mt0 lh-title">
+              <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title">
+              <h3 class="dark-red sans-serif lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy">
+              <p class="sans-serif f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -116,13 +116,13 @@
               />
             </div>
             <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mt0 lh-title">
+              <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title">
+              <h3 class="dark-red sans-serif lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy">
+              <p class="sans-serif f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -133,7 +133,7 @@
     </section>
     <div class="bg-washed-red">
       <blockquote
-        class="flex flex-column flex-row-ns items-end ph0 f4 f1-ns center mw8 ph3"
+        class="flex flex-column flex-row-ns items-end f4 f1-ns center mw8 ph3"
       >
         <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns">
           “We are individual voices that form a collective voice for our younger
@@ -259,7 +259,11 @@
           data-pym-src="https://apps.nypr.org/newsletter-signup/?partnerOrg=Other&brand=wnyc-studios-gray&headline=Sign%20up%20for%20our%20newsletter&legalText=By%20submitting%20your%20information%2C%20you're%20agreeing%20to%20receive%20communications%20from%20New%20York%20Public%20Radio%20in%20accordance%20with%20our%20Terms%20of%20Use%20(https%3A%2F%2Fwww.wnyc.org%2Fterms)%20and%20in%20accordance%20with%20the%20Privacy%20Policy%20of%20YR%20Media%20(https%3A%2F%2Fyr.media%2Fprivacy-policy).&mailchimpId=04ba4787d5&mailchimpName=Newsletter%3A%20Radio%20Rookies"
         ></div>
         <div class="flex items-center justify-between justify-start-ns pv3">
-          <img src="logos/yrlogo.svg" class="db ph3 mw3" alt="YR Media Logo" />
+          <img
+            src="logos/yrlogo.svg"
+            class="db ph3 mw4 mw3"
+            alt="YR Media Logo"
+          />
           <div class="dn db-ns pr3">
             <p class="mb1 mt0">YR Media Social</p>
             <div class="flex items-center justify-between">
@@ -286,7 +290,11 @@
             </div>
           </div>
           <div class="dn db-ns br bw1 self-stretch mv3"></div>
-          <img src="logos/wnyclogo.svg" class="db ph3 mw3" alt="WNYC Logo" />
+          <img
+            src="logos/wnyclogo.svg"
+            class="db ph3 mw4 mw3-ns"
+            alt="WNYC Logo"
+          />
           <div class="dn db-ns ph3">
             <p class="mb1 mt0">WNYC Social</p>
             <div class="flex items-center justify-between">
