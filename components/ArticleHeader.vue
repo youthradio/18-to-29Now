@@ -10,19 +10,32 @@
       </div>
       <nav class="serif pl2 pl4-ns">
         <div class="flex flex-column justify-between">
-          <a class="link blue b dim f6 f5-ns dib mr3 pv1" href="#" title="Home"
-            >About this Project</a
+          <nuxt-link
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            title="About"
+            :to="{ path: '/', hash: 'about' }"
           >
-          <a class="link blue b dim f6 f5-ns dib mr3 pv1" href="#" title="About"
-            >Stories</a
+            About this Project
+          </nuxt-link>
+          <nuxt-link
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            title="Lates"
+            :to="{ path: '/', hash: 'latest' }"
           >
-          <a class="link blue b dim f6 f5-ns dib mr3 pv1" href="#" title="Store"
-            >Contributors</a
+            Stories
+          </nuxt-link>
+          <nuxt-link
+            :to="{ path: '/', hash: 'contributors' }"
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            href="#contributors"
+            title="Contributors"
           >
+            Contributors
+          </nuxt-link>
         </div>
       </nav>
       <div class="dn db-ns w-30 ml-auto">
-        <p class="serif">
+        <p class="sans-serif">
           Young adults from around the country document what’s at stake for them
           in this election
         </p>

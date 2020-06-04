@@ -12,7 +12,7 @@
         A conversation with Grecia Sánchez Blanco, a student who used to cross
         the U.S.-Mexico border daily for school.
       </p>
-      <article class="sans-serif measure-wide lh-copy">
+      <article class="sans-serif measure-wide lh-copy center">
         <p>
           Green juice semiotics church-key direct trade forage palo santo. Tacos
           pour-over tbh la croix, pop-up trust fund bushwick cred XOXO brooklyn.
@@ -91,15 +91,17 @@
         </p>
       </article>
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 // import matchAll from 'string.prototype.matchall'
 import ArticleHeader from '~/components/ArticleHeader.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
-  components: { ArticleHeader },
+  components: { ArticleHeader, Footer },
   async asyncData(ctx) {
     const slug = await ctx.params.slug
     return {

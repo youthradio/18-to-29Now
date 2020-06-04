@@ -1,25 +1,50 @@
 <template>
-  <div
-    class="min-vh-100 flex bg-dark-gray white cover justify-center items-center"
-    style="background:url(header.jpg) no-repeat center;"
-  >
-    <div>
-      <header class="white-70">
-        <h2 class="f6 fw1 ttu tracked mb2 lh-title">Issue Six</h2>
-        <h3 class="f6 fw1 lh-title">Summer MMXVI</h3>
-      </header>
-      <h1 class="f1 f-headline-l fw1 i white-60">The Chronicles</h1>
-      <blockquote class="ph0 mh0 measure f4 lh-copy center">
-        <p class="fw1 white-70">
-          It's the space you put between the notes that make the music.
+  <header class="min-vh-100 bg-washed-red pv4">
+    <div class="flex mw8 center ph3 justify-between items-center">
+      <div class="w-50 w-auto-ns">
+        <img
+          src="logos/logoindexstroke.svg"
+          class="db"
+          alt="Photo of a dimly lit room with a computer interface terminal."
+        />
+      </div>
+      <nav class="serif pl2 pl4-ns">
+        <div class="flex flex-column justify-between">
+          <nuxt-link
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            title="About"
+            :to="{ path: '/', hash: 'about' }"
+          >
+            About this Project
+          </nuxt-link>
+          <nuxt-link
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            title="Lates"
+            :to="{ path: '/', hash: 'latest' }"
+          >
+            Stories
+          </nuxt-link>
+          <nuxt-link
+            :to="{ path: '/', hash: 'contributors' }"
+            class="link blue b dim f6 f5-ns dib mr3 pv1"
+            href="#contributors"
+            title="Contributors"
+          >
+            Contributors
+          </nuxt-link>
+        </div>
+      </nav>
+      <div class="dn db-ns w-30 ml-auto">
+        <p class="serif">
+          Young adults from around the country document what’s at stake for them
+          in this election
         </p>
-        <cite class="f6 ttu tracked fs-normal">Massimo Vignelli</cite>
-      </blockquote>
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 <script>
 export default {}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
