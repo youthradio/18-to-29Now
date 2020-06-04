@@ -130,6 +130,9 @@ export default {
         vue.transformAssetUrls.source = ['data-srcset', 'srcset']
       }
     }
+  },
+  generate: {
+    routes: ['/article/test']
   }
   // server: {
   //   https: {
