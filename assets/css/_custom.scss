@@ -17,6 +17,12 @@
     column-count: 2;
     // column-gap: 040px;
   }
+  .mr-unset-ns {
+    margin-right: unset;
+  }
+  .ml-unset-ns {
+    margin-left: unset;
+  }
 }
 
 @media #{$breakpoint-medium} {

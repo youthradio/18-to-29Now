@@ -11,7 +11,7 @@
         <div class="w-33 w-auto-ns">
           <img
             src="logos/yrlogo.svg"
-            class="db ph3-ns mw3-ns"
+            class="db ph3-ns h3-ns"
             alt="YR Media Logo"
           />
         </div>
@@ -19,14 +19,14 @@
         <div class="w-33 w-auto-ns">
           <img
             src="logos/wnyclogo.svg"
-            class="db ph3-ns mw3-ns center"
+            class="db ph3-ns h3-ns center"
             alt="WNYC Logo"
           />
         </div>
         <div class="w-33 w-auto-ns">
           <img
             src="logos/radio-rookies.svg"
-            class="db ph3-ns mw3-ns ml-auto"
+            class="db ph3-ns h3-ns ml-auto"
             alt="Radio Rookies"
           />
         </div>
@@ -55,11 +55,9 @@
             />
           </div>
         </div> -->
-        <div class="mt3 mt0-ns pl3-ns w-100-ns center">
-          <div class="fr-ns">
-            <p class="di db-ns ph2 ph0-ns">Privacy Policy</p>
-            <p class="di db-ns ph2 ph0-ns">Terms of Use</p>
-          </div>
+        <div class="mt3 mt0-ns pl3-ns center mr-unset-ns">
+          <p class="di db-ns ph2 ph0-ns">Privacy Policy</p>
+          <p class="di db-ns ph2 ph0-ns">Terms of Use</p>
         </div>
       </div>
     </div>
