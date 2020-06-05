@@ -2,11 +2,13 @@
   <header class="bg-washed-red pv4">
     <div class="flex mw8 center ph3 justify-between items-center">
       <div class="w-50 w-auto-ns">
-        <img
-          src="logos/logoarticle.svg"
-          class="db"
-          alt="Photo of a dimly lit room with a computer interface terminal."
-        />
+        <nuxt-link title="Home" :to="{ path: '/' }">
+          <img
+            src="logos/logoarticle.svg"
+            class="db"
+            alt="Young America 18 to 29 Now Speaks UP"
+          />
+        </nuxt-link>
       </div>
       <nav class="serif pl2 pl4-ns">
         <div class="flex flex-column justify-between">
