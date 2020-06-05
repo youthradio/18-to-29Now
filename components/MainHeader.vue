@@ -26,7 +26,7 @@
         </nuxt-link>
       </div>
     </nav>
-    <div class="layers relative">
+    <div class="layers relative flex justify-center">
       <div class="grid-container grid-container-ns">
         <div class="aspect-ratio aspect-ratio--1x1 grid-col-start-2">
           <img src="images/grid/Rectangle-1.jpg" class="db mw-none w-100" />
@@ -44,7 +44,7 @@
           <div class="flex justify-end items-end h-100">
             <img
               src="logos/ygamerica.svg"
-              class="db"
+              class="db h-100"
               alt="Photo of a dimly lit room with a computer interface terminal."
             />
           </div>
@@ -75,7 +75,7 @@
           <div class="flex h-100">
             <img
               src="logos/speaksup.svg"
-              class="db"
+              class="db h-100"
               alt="Photo of a dimly lit room with a computer interface terminal."
             />
           </div>
@@ -93,23 +93,6 @@
             class="db mw-none w-100 db-ns"
           />
         </div>
-      </div>
-      <div class="mw8 center ph3 relative">
-        <img
-          src="logos/logoindexstroke.svg"
-          class="dn db-ns"
-          alt="Photo of a dimly lit room with a computer interface terminal."
-        />
-        <img
-          src="logos/youngamerica.svg"
-          class="db dn-ns"
-          alt="Photo of a dimly lit room with a computer interface terminal."
-        />
-        <img
-          src="logos/18to29Now.svg"
-          class="db dn-ns"
-          alt="Photo of a dimly lit room with a computer interface terminal."
-        />
       </div>
     </div>
     <div class="ml-auto ph3">
