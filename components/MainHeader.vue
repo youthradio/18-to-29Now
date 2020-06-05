@@ -1,7 +1,7 @@
 <template>
-  <header class="min-vh-100 bg-washed-red flex flex-column justify-between">
-    <nav class="serif pl2 pl4-ns ph3 pv2">
-      <div class="dn db-ns">
+  <header class="min-vh-100 bg-washed-red flex flex-column justify-around">
+    <nav class="serif pl2 pl4-ns ph3 pv2 dn db-ns">
+      <div class="">
         <nuxt-link
           class="link blue b dim f6 f5-ns dib mr3 pv1"
           title="About"
@@ -26,18 +26,24 @@
         </nuxt-link>
       </div>
     </nav>
-    <div class="layers relative flex justify-center">
+    <div class="layers relative flex justify-center ph3 ph0-ns mt0-ns mt5">
       <div class="grid-container grid-container-ns">
-        <div class="aspect-ratio aspect-ratio--1x1 grid-col-start-2">
+        <div class="grid-col-start-2 dn db-ns">
           <img src="images/grid/Rectangle-1.jpg" class="db mw-none w-100" />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="relative">
           <img src="images/grid/Rectangle-2.jpg" class="db mw-none w-100" />
+          <img
+            src="logos/youngamerica.svg"
+            class="absolute mw-none bottom-1 left-1 z-1 db dn-ns mt5"
+            style="width: 200%"
+            alt="Photo of a dimly lit room with a computer interface terminal."
+          />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-3.jpg" class="db mw-none w-100" />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-4.jpg" class="db mw-none w-100" />
         </div>
         <div class="dn db-ns grid-col-1-4 z-2">
@@ -50,28 +56,28 @@
           </div>
         </div>
         <!-- <div class="dn db-ns"></div> -->
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-5.jpg" class="db mw-none w-100" />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-6.jpg" class="db mw-none w-100" />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1 grid-col-start-2">
+        <div class=" grid-col-start-2 dn db-ns">
           <img src="images/grid/Rectangle-7.jpg" class="db mw-none w-100" />
         </div>
         <div class="relative">
           <img src="images/grid/Rectangle-8.jpg" class="db mw-none w-100" />
           <img
             src="logos/18to29stroke.svg"
-            class="absolute mw-none bottom-1 z-1"
+            class="absolute mw-none bottom-1 z-1 dn db-ns"
             style="width: 220%"
             alt="Photo of a dimly lit room with a computer interface terminal."
           />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-9.jpg" class="db mw-none w-100" />
         </div>
-        <div class="dn db-ns grid-col-5-7">
+        <div class="dn db-ns grid-col-5-7 z-2">
           <div class="flex h-100">
             <img
               src="logos/speaksup.svg"
@@ -80,23 +86,50 @@
             />
           </div>
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1 grid-col-start-2">
+        <div class="grid-col-start-2">
           <img src="images/grid/Rectangle-10.jpg" class="db mw-none w-100" />
         </div>
 
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img src="images/grid/Rectangle-11.jpg" class="dbmw-none w-100" />
         </div>
-        <div class="aspect-ratio aspect-ratio--1x1">
+        <div class="">
           <img
             src="images/grid/Rectangle-13.jpg"
             class="db mw-none w-100 db-ns"
           />
         </div>
+        <div class="db dn-ns">
+          <img
+            src="images/grid/Rectangle-1.jpg"
+            class="db mw-none w-100 db-ns"
+          />
+        </div>
+        <div class="measure dn db-ns grid-col-5-7">
+          <p class="serif f3 lh-title">
+            Young adults from around the country document what’s at stake for
+            them in this election
+          </p>
+          <div class="flex items-center pt3">
+            <div class="ph3">
+              <img src="logos/yrlogo.svg" class="db " alt="YR Media Logo" />
+            </div>
+            <div class="ph3">
+              <img src="logos/wnyclogo.svg" class="db" alt="WNYC Logo" />
+            </div>
+            <div class="ph3">
+              <img
+                src="logos/radio-rookies.svg"
+                class="db"
+                alt="Radio Rookies"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="ml-auto ph3">
-      <p class="serif">
+    <div class="ml-auto ph4 db dn-ns">
+      <p class="serif f5 lh-title">
         Young adults from around the country document what’s at stake for them
         in this election
       </p>
