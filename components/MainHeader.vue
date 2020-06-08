@@ -1,6 +1,9 @@
 <template>
-  <header class="min-vh-100 bg-washed-red flex flex-column justify-around">
-    <nav class="serif pl2 pl4-ns ph3 pv2 dn db-ns">
+  <header
+    ref="header"
+    class="min-vh-100 bg-washed-red flex flex-column justify-around relative"
+  >
+    <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2">
       <div class="">
         <nuxt-link
           class="link blue b dim f6 f5-ns dib mr3 pv1"
@@ -26,7 +29,9 @@
         </nuxt-link>
       </div>
     </nav>
-    <div class="layers relative flex justify-center ph3 ph0-ns mt0-ns mt5">
+    <div
+      class="layers relative flex justify-center ph3 ph0-ns mt0-ns mb3-ns z-2"
+    >
       <div class="grid-container grid-container-ns">
         <div class="grid-col-start-2 dn db-ns">
           <img src="images/grid/Rectangle-1.jpg" class="db mw-none w-100" />
@@ -35,7 +40,7 @@
           <img src="images/grid/Rectangle-2.jpg" class="db mw-none w-100" />
           <img
             src="logos/youngamerica.svg"
-            class="absolute mw-none bottom-1 left-1 z-1 db dn-ns mt5"
+            class="absolute mw-none bottom-1 left-1 db dn-ns mt5 z-3"
             style="width: 200%"
             alt="Photo of a dimly lit room with a computer interface terminal."
           />
@@ -69,7 +74,7 @@
           <img src="images/grid/Rectangle-8.jpg" class="db mw-none w-100" />
           <img
             src="logos/18to29stroke.svg"
-            class="absolute mw-none bottom-1 z-1 dn db-ns"
+            class="absolute mw-none bottom-1 dn db-ns"
             style="width: 220%"
             alt="Photo of a dimly lit room with a computer interface terminal."
           />
@@ -77,7 +82,7 @@
         <div class="">
           <img src="images/grid/Rectangle-9.jpg" class="db mw-none w-100" />
         </div>
-        <div class="dn db-ns grid-col-5-7 z-2">
+        <div class="dn db-ns grid-col-5-7 z-3">
           <div class="flex h-100">
             <img
               src="logos/speaksup.svg"
@@ -106,11 +111,11 @@
           />
         </div>
         <div class="measure dn db-ns grid-col-5-7">
-          <p class="serif f3 lh-title">
+          <p class="serif f4 lh-title mt0">
             Young adults from around the country document what’s at stake for
             them in this election
           </p>
-          <div class="flex items-center pt3">
+          <div class="flex items-center">
             <div class="ph3">
               <img src="logos/yrlogo.svg" class="db " alt="YR Media Logo" />
             </div>
@@ -128,6 +133,7 @@
         </div>
       </div>
     </div>
+
     <div class="ml-auto ph4 db dn-ns">
       <p class="serif f5 lh-title">
         Young adults from around the country document what’s at stake for them
@@ -137,7 +143,40 @@
   </header>
 </template>
 <script>
-export default {}
+import icons from './../utils/icons'
+export default {
+  data() {
+    return {}
+  },
+  computed: {},
+  mounted() {
+    // const vh = window.innerHeight
+    const num = 5
+    for (const dir of ['left', 'right']) {
+      for (let i = 0; i < num; i++) {
+        const ico = icons[~~(Math.random() * icons.length)]
+        const svg = document.createElementNS(
+          'http://www.w3.org/2000/svg',
+          'svg'
+        )
+        const randx = Math.random() * 10
+        const randy = Math.random() * 2
+
+        svg.setAttribute('width', ico.width)
+        svg.setAttribute('height', ico.height)
+        svg.setAttribute('viewBox', `0 0 ${ico.width} ${ico.height}`)
+        svg.innerHTML = ico.path
+        svg.style.cssText = `
+        position:absolute;
+        z-index:1;
+        top:${randy + (i * 100) / num}%;
+        ${dir}: ${randx}%;
+      `
+        this.$refs.header.appendChild(svg)
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss"></style>
