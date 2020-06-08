@@ -132,7 +132,7 @@ export default {
     }
   },
   generate: {
-    routes: ['/article/test']
+    routes: ['/article/test', 'contribuitor/sdsdsdsds']
   }
   // server: {
   //   https: {

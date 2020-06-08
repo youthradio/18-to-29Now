@@ -7,7 +7,6 @@
           title=""
           :to="{ path: 'article/sdsdsdsds' }"
           class="link db dim black"
-          href="#0"
         >
           <div class="flex flex-column">
             <div class="mb4 mb0-ns">
@@ -18,13 +17,13 @@
               />
             </div>
             <div class="w-100 w-90-ns">
-              <h1 class="blue f2 serif mt0 lh-title">
+              <h1 class="blue f2 serif ma0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title">
+              <h3 class="dark-red lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy">
+              <p class="f4-l lh-copy">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -37,7 +36,6 @@
           title="About"
           :to="{ path: 'article/sdsdsdsds' }"
           class="link db dim black"
-          href="#0"
         >
           <div class="flex flex-column">
             <div class="mb4 mb0-ns">
@@ -48,13 +46,13 @@
               />
             </div>
             <div class="w-100 w-90-ns">
-              <h1 class="blue f2 serif mt0 lh-title">
+              <h1 class="blue f2 serif ma0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title">
+              <h3 class="dark-red lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy">
+              <p class="f4-l lh-copy">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -70,7 +68,6 @@
           title="About"
           :to="{ path: 'article/sdsdsdsds' }"
           class="link db dim black"
-          href="#0"
         >
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
@@ -84,10 +81,10 @@
               <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title mv1">
+              <h3 class="dark-red lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy mv0">
+              <p class="f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -100,7 +97,6 @@
           title="About"
           :to="{ path: 'article/sdsdsdsds' }"
           class="link db dim black"
-          href="#0"
         >
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
@@ -114,10 +110,10 @@
               <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title mv1">
+              <h3 class="dark-red lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy mv0">
+              <p class="f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -130,7 +126,6 @@
           title="About"
           :to="{ path: 'article/sdsdsdsds' }"
           class="link db dim black"
-          href="#0"
         >
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
@@ -144,10 +139,10 @@
               <h1 class="blue f3 serif mv0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red sans-serif lh-title mv1">
+              <h3 class="dark-red lh-title mv1">
                 Antonio Villaseñor-Baca | <small>Print</small>
               </h3>
-              <p class="sans-serif f4-l lh-copy mv0">
+              <p class="f4-l lh-copy mv0">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
               </p>
@@ -177,64 +172,88 @@
       <div class="mw9 center">
         <div class="cf">
           <div class="fl w-50 w-25-ns ph2">
-            <div class="bb bw2 pb3 b--dark-red">
-              <img
-                src="profile.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <h1 class="blue f4 serif mt3 mb0 lh-title">
-              Kharon Benson
-            </h1>
-            <h4 class="sans-serif normal lh-title mt0">
-              New York, NY
-            </h4>
+            <nuxt-link
+              title=""
+              :to="{ path: 'contribuitor/sdsdsdsds' }"
+              class="link db dim black"
+            >
+              <div class="bb bw2 pb3 b--dark-red">
+                <img
+                  src="profile.jpg"
+                  class="db img-fluid"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </div>
+              <h1 class="blue f4 serif mt3 mb0 lh-title">
+                Kharon Benson
+              </h1>
+              <h4 class="normal lh-title mt0">
+                New York, NY
+              </h4>
+            </nuxt-link>
           </div>
           <div class="fl w-50 w-25-ns ph2">
-            <div class="bb bw2 pb3 b--dark-red">
-              <img
-                src="profile.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <h1 class="blue f4 serif mt3 mb0 lh-title">
-              Kharon Benson
-            </h1>
-            <h4 class="sans-serif normal lh-title mt0">
-              New York, NY
-            </h4>
+            <nuxt-link
+              title=""
+              :to="{ path: 'contribuitor/sdsdsdsds' }"
+              class="link db dim black"
+            >
+              <div class="bb bw2 pb3 b--dark-red">
+                <img
+                  src="profile.jpg"
+                  class="db img-fluid"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </div>
+              <h1 class="blue f4 serif mt3 mb0 lh-title">
+                Kharon Benson
+              </h1>
+              <h4 class="normal lh-title mt0">
+                New York, NY
+              </h4>
+            </nuxt-link>
           </div>
           <div class="fl w-50 w-25-ns ph2">
-            <div class="bb bw2 pb3 b--dark-red">
-              <img
-                src="profile.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <h1 class="blue f4 serif mt3 mb0 lh-title">
-              Kharon Benson
-            </h1>
-            <h4 class="sans-serif normal lh-title mt0">
-              New York, NY
-            </h4>
+            <nuxt-link
+              title=""
+              :to="{ path: 'contribuitor/sdsdsdsds' }"
+              class="link db dim black"
+            >
+              <div class="bb bw2 pb3 b--dark-red">
+                <img
+                  src="profile.jpg"
+                  class="db img-fluid"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </div>
+              <h1 class="blue f4 serif mt3 mb0 lh-title">
+                Kharon Benson
+              </h1>
+              <h4 class="normal lh-title mt0">
+                New York, NY
+              </h4>
+            </nuxt-link>
           </div>
           <div class="fl w-50 w-25-ns ph2">
-            <div class="bb bw2 pb3 b--dark-red">
-              <img
-                src="profile.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <h1 class="blue f4 serif mt3 mb0 lh-title">
-              Kharon Benson
-            </h1>
-            <h4 class="sans-serif normal lh-title mt0">
-              New York, NY
-            </h4>
+            <nuxt-link
+              title=""
+              :to="{ path: 'contribuitor/sdsdsdsds' }"
+              class="link db dim black"
+            >
+              <div class="bb bw2 pb3 b--dark-red">
+                <img
+                  src="profile.jpg"
+                  class="db img-fluid"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </div>
+              <h1 class="blue f4 serif mt3 mb0 lh-title">
+                Kharon Benson
+              </h1>
+              <h4 class="normal lh-title mt0">
+                New York, NY
+              </h4>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -244,7 +263,7 @@
         About
       </h1>
       <div class="mw9 center two-col-ns ph2">
-        <p class="sans-serif lh-copy f4 mt0">
+        <p class="lh-copy f4 mt0">
           When political analysts talk about the “youth vote”, they are talking
           about us - young people, 18- to 29-years-old. There is a lot of
           speculation in mainstream media about which candidate we will vote for
@@ -255,13 +274,13 @@
           define our communities and our futures. They are our stories, they
           need to be told, and we want to be the ones to tell them.
         </p>
-        <p class="sans-serif lh-copy f4">
+        <p class="lh-copy f4">
           We are excited to announce the official launch of 18-29 Now, a
           collaborative elections coverage project of YR Media and Radio Rookies
           designed to amplify the voices of the young people with the most at
           stake in the 2020 elections.
         </p>
-        <p class="sans-serif lh-copy f4">
+        <p class="lh-copy f4">
           Earlier this year, YR Media and Radio Rookies carried out a national
           contributor search. From more than one hundred applications to our
           Open Call for contributors, we selected a team of 12 talented young

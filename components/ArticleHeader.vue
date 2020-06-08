@@ -37,7 +37,7 @@
         </div>
       </nav>
       <div class="dn db-ns w-30 ml-auto">
-        <p class="sans-serif">
+        <p>
           Young adults from around the country document what’s at stake for them
           in this election
         </p>

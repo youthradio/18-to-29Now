@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-washed-red sans-serif">
+  <footer class="bg-washed-red">
     <div class="mw8 center ph3">
       <div
         class="bb bw2"
