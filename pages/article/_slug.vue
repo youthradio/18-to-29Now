@@ -1,6 +1,13 @@
 <template>
   <div>
     <ArticleHeader />
+    <div class="center mw8 pa3">
+      <img
+        src="images/feature.jpg"
+        class="db img-fluid"
+        alt="Photo of a dimly lit room with a computer interface terminal."
+      />
+    </div>
     <main class="center mw8 ph3">
       <h1 class="serif blue f3 f2-ns lh-title tc-ns mb0">
         In Conversation with Grecia Sánchez Blanco

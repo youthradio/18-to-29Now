@@ -20,9 +20,15 @@
               <h1 class="blue f2 serif ma0 lh-title">
                 In Conversation with Grecia Sánchez Blanco
               </h1>
-              <h3 class="dark-red lh-title mv1">
-                Antonio Villaseñor-Baca | <small>Print</small>
-              </h3>
+              <nuxt-link
+                title=""
+                :to="{ path: 'contribuitor/sdsdsdsds' }"
+                class="link db blue dim black"
+              >
+                <h3 class="dark-red lh-title mv1">
+                  Antonio Villaseñor-Baca | <small>Print</small>
+                </h3>
+              </nuxt-link>
               <p class="f4-l lh-copy">
                 A conversation with Grecia Sánchez Blanco, a student who used to
                 cross the U.S.-Mexico border daily for school.
@@ -301,6 +307,7 @@
 </template>
 
 <script>
+import ArticleData from '../data/data.json'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
 
@@ -308,6 +315,11 @@ export default {
   components: {
     MainHeader,
     Footer
+  },
+  asyncData(ctx) {
+    return {
+      articleData: ArticleData
+    }
   },
   mounted() {
     if (this.$route.hash) {
