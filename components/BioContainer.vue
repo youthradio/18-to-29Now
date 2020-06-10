@@ -34,7 +34,7 @@ export default {
     },
     author: {
       type: Object,
-      required: false,
+      required: true,
       default: null
     }
   },

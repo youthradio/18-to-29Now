@@ -28,6 +28,14 @@ marked.setOptions({
   xhtml: false
 })
 
+const renderer = {
+  link(href, title, text) {
+    return `<a href="${href}" class="link blue dim underline">${text}</a>`
+  }
+}
+
+marked.use({ renderer })
+
 function markdown2html(data) {
   const copy = Object.assign(data, {})
   const interate = (obj) => {

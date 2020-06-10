@@ -2,160 +2,85 @@
   <div>
     <MainHeader />
     <main class="flex flex-column flex-row-ns mw8 center ph3">
-      <article class="pt4 pr2-ns ph2">
-        <nuxt-link
-          title=""
-          :to="{ path: 'article/sdsdsdsds' }"
-          class="link db dim black"
-        >
-          <div class="flex flex-column">
-            <div class="mb4 mb0-ns">
-              <img
-                src="images/sample1.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
+      <template v-for="feature in featured">
+        <article :key="feature.slug" class="pt4 pr2-ns ph2 w-50-ns">
+          <nuxt-link
+            title=""
+            :to="{ path: `article/${feature.slug}` }"
+            class="link db dim black"
+          >
+            <div class="flex flex-column">
+              <div class="mb4 mb0-ns">
+                <img
+                  :data-src="feature.featureImage"
+                  src="blankfeature.jpg"
+                  class="db lazyload"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                  style="object-fit: cover;"
+                />
+              </div>
+              <div class="w-100 w-90-ns">
+                <h1 class="blue f2 serif ma0 lh-title">
+                  {{ feature.title }}
+                </h1>
+                <nuxt-link
+                  title=""
+                  :to="{ path: `contribuitor/${feature.authorslug}` }"
+                  class="link db blue dim black"
+                >
+                  <h3 class="dark-red lh-title mv1">
+                    {{ feature.author }} |
+                    <small class="ttc"> {{ feature.format }} </small>
+                  </h3>
+                </nuxt-link>
+                <p class="f4-l lh-copy">
+                  {{ feature.summary }}
+                </p>
+              </div>
             </div>
-            <div class="w-100 w-90-ns">
-              <h1 class="blue f2 serif ma0 lh-title">
-                In Conversation with Grecia Sánchez Blanco
-              </h1>
-              <nuxt-link
-                title=""
-                :to="{ path: 'contribuitor/sdsdsdsds' }"
-                class="link db blue dim black"
-              >
-                <h3 class="dark-red lh-title mv1">
-                  Antonio Villaseñor-Baca | <small>Print</small>
-                </h3>
-              </nuxt-link>
-              <p class="f4-l lh-copy">
-                A conversation with Grecia Sánchez Blanco, a student who used to
-                cross the U.S.-Mexico border daily for school.
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </article>
-      <article class="pt4 pr2-ns ph2">
-        <nuxt-link
-          title="About"
-          :to="{ path: 'article/sdsdsdsds' }"
-          class="link db dim black"
-        >
-          <div class="flex flex-column">
-            <div class="mb4 mb0-ns">
-              <img
-                src="images/sample2.jpg"
-                class="db img-fluid"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <div class="w-100 w-90-ns">
-              <h1 class="blue f2 serif ma0 lh-title">
-                In Conversation with Grecia Sánchez Blanco
-              </h1>
-              <h3 class="dark-red lh-title mv1">
-                Antonio Villaseñor-Baca | <small>Print</small>
-              </h3>
-              <p class="f4-l lh-copy">
-                A conversation with Grecia Sánchez Blanco, a student who used to
-                cross the U.S.-Mexico border daily for school.
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </article>
+          </nuxt-link>
+        </article>
+      </template>
     </main>
     <section class="mw8 center ph3">
       <h3 id="latest" class="blue serif bb bw2 ttu ph2">Latest</h3>
-      <article class="pb4 ph2">
-        <nuxt-link
-          title="About"
-          :to="{ path: 'article/sdsdsdsds' }"
-          class="link db dim black"
-        >
-          <div class="flex flex-column flex-row-ns">
-            <div class="pr3-ns mb4 mb0-ns w-30-ns">
-              <img
-                src="images/sample2.jpg"
-                class="db"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
+      <template v-for="article in latest">
+        <article :key="article.slug" class="pb4 ph2">
+          <nuxt-link
+            title=""
+            :to="{ path: `article/${article.slug}` }"
+            class="link db dim black"
+          >
+            <div class="flex flex-column flex-row-ns">
+              <div class="pr3-ns mb4 mb0-ns w-30-ns">
+                <img
+                  :data-src="article.featureImage"
+                  class="db lazyload"
+                  src="blankfeature.jpg"
+                  style="object-fit: cover;"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </div>
+              <div class="w-70-ns pl3-ns">
+                <h1 class="blue f3 serif mv0 lh-title">
+                  {{ article.title }}
+                </h1>
+                <nuxt-link
+                  title=""
+                  :to="{ path: `contribuitor/${article.authorslug}` }"
+                  class="link db blue dim black"
+                >
+                  <h3 class="dark-red lh-title mv1">
+                    {{ article.author }} |
+                    <small class="ttc"> {{ article.format }}</small>
+                  </h3>
+                </nuxt-link>
+                <p class="f4-l lh-copy mv0">{{ article.summary }} |</p>
+              </div>
             </div>
-            <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mv0 lh-title">
-                In Conversation with Grecia Sánchez Blanco
-              </h1>
-              <h3 class="dark-red lh-title mv1">
-                Antonio Villaseñor-Baca | <small>Print</small>
-              </h3>
-              <p class="f4-l lh-copy mv0">
-                A conversation with Grecia Sánchez Blanco, a student who used to
-                cross the U.S.-Mexico border daily for school.
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </article>
-      <article class="pb4 ph2">
-        <nuxt-link
-          title="About"
-          :to="{ path: 'article/sdsdsdsds' }"
-          class="link db dim black"
-        >
-          <div class="flex flex-column flex-row-ns">
-            <div class="pr3-ns mb4 mb0-ns w-30-ns">
-              <img
-                src="images/sample2.jpg"
-                class="db"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mv0 lh-title">
-                In Conversation with Grecia Sánchez Blanco
-              </h1>
-              <h3 class="dark-red lh-title mv1">
-                Antonio Villaseñor-Baca | <small>Print</small>
-              </h3>
-              <p class="f4-l lh-copy mv0">
-                A conversation with Grecia Sánchez Blanco, a student who used to
-                cross the U.S.-Mexico border daily for school.
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </article>
-      <article class="pb4 ph2">
-        <nuxt-link
-          title="About"
-          :to="{ path: 'article/sdsdsdsds' }"
-          class="link db dim black"
-        >
-          <div class="flex flex-column flex-row-ns">
-            <div class="pr3-ns mb4 mb0-ns w-30-ns">
-              <img
-                src="images/sample2.jpg"
-                class="db"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </div>
-            <div class="w-70-ns pl3-ns">
-              <h1 class="blue f3 serif mv0 lh-title">
-                In Conversation with Grecia Sánchez Blanco
-              </h1>
-              <h3 class="dark-red lh-title mv1">
-                Antonio Villaseñor-Baca | <small>Print</small>
-              </h3>
-              <p class="f4-l lh-copy mv0">
-                A conversation with Grecia Sánchez Blanco, a student who used to
-                cross the U.S.-Mexico border daily for school.
-              </p>
-            </div>
-          </div>
-        </nuxt-link>
-      </article>
+          </nuxt-link>
+        </article>
+      </template>
     </section>
     <div class="bg-washed-red">
       <blockquote
@@ -263,6 +188,14 @@ export default {
   asyncData(ctx) {
     return {
       articleData: ArticleData
+    }
+  },
+  computed: {
+    featured() {
+      return this.articleData.stories.filter((e) => e.feature === 'true')
+    },
+    latest() {
+      return this.articleData.stories
     }
   },
   mounted() {

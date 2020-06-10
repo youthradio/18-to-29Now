@@ -23,7 +23,8 @@ module.exports = {
   POLLSERVER: 'https://ee51aej7u4.execute-api.us-west-2.amazonaws.com/latest',
   docs: [
     '1TnpNdAl7OWnvnZjJbrYwK3dCl5ZvWlvYr6s6HDnLXSM',
-    '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg'
+    '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg',
+    '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM'
   ],
   dataPath: 'data/data.json'
 }
