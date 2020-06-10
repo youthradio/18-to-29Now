@@ -1,3 +1,6 @@
+body, html{
+  font-size: 18px;
+}
 .img-fluid {
   width: 100%;
   max-width: 100%;
@@ -40,6 +43,9 @@
 @media #{$breakpoint-not-small} {
   .two-col-ns {
     column-count: 2;
+    p:first-of-type {
+      margin-top: 0;
+    }
   }
   .mr-unset-ns {
     margin-right: unset;

@@ -84,15 +84,21 @@
     </section>
     <div class="bg-washed-red">
       <blockquote
-        class="flex flex-column flex-row-ns items-end f4 f1-ns center mw8 ph3"
+        class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3"
       >
         <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns">
-          “We are individual voices that form a collective voice for our younger
-          generation at this moment.”
+          {{ randomQuote.quote }}
         </p>
         <cite class="blue sans f6 tracked fs-normal w-20-ns mv3 mv5-ns">
-          <span class="cite-symbol">Juan Mireles Palomar </span>
-          <br />Stockton, CA</cite
+          <span class="cite-symbol">
+            <nuxt-link
+              title=""
+              :to="{ path: `contribuitor/${randomQuote.authorslug}` }"
+              class="link db blue dim black"
+              >{{ randomQuote.author }}
+            </nuxt-link></span
+          >
+          <br />{{ randomQuote.location }}</cite
         >
       </blockquote>
     </div>
@@ -137,39 +143,10 @@
       <h1 id="about" class="blue f3 serif mt0 lh-title ttu ph2">
         About
       </h1>
-      <div class="mw9 center two-col-ns ph2">
-        <p class="lh-copy f4 mt0">
-          When political analysts talk about the “youth vote”, they are talking
-          about us - young people, 18- to 29-years-old. There is a lot of
-          speculation in mainstream media about which candidate we will vote for
-          and how many of us will actually go to the polls, but very little
-          attention paid to our actual experiences and perspectives when it
-          comes to the issues being debated on the national stage. These issues
-          are more than talking points for us. They are the struggles that
-          define our communities and our futures. They are our stories, they
-          need to be told, and we want to be the ones to tell them.
-        </p>
-        <p class="lh-copy f4">
-          We are excited to announce the official launch of 18-29 Now, a
-          collaborative elections coverage project of YR Media and Radio Rookies
-          designed to amplify the voices of the young people with the most at
-          stake in the 2020 elections.
-        </p>
-        <p class="lh-copy f4">
-          Earlier this year, YR Media and Radio Rookies carried out a national
-          contributor search. From more than one hundred applications to our
-          Open Call for contributors, we selected a team of 12 talented young
-          media makers. Contributors are racially and ethnically diverse,
-          identify across the political spectru m, and represent every region in
-          the country. With support from YR Media and Radio Rookies editorial
-          staff, they are producing content in audio, video, and print formats
-          on issues including health care access, poverty, education, gun
-          violence, LGBTQ rights, college affordability, homelessness, opioid
-          addiction, immigration, and climate change, among others. Stories all
-          focus on issues that directly impact the young people and their
-          communities.
-        </p>
-      </div>
+      <div
+        class="mw9 center two-col-ns ph2 lh-copy f5 f4-ns"
+        v-html="articleData.main.about.text"
+      ></div>
     </section>
     <Footer />
   </div>
@@ -196,6 +173,10 @@ export default {
     },
     latest() {
       return this.articleData.stories
+    },
+    randomQuote() {
+      const l = this.articleData.main.quotes.length
+      return this.articleData.main.quotes[~~(Math.random() * l)]
     }
   },
   mounted() {

@@ -5,7 +5,6 @@ const customFetcher = require('./dataFetcher')
 
 const getData = async () => {
   const dataToWrite = {
-    bios: null,
     stories: []
   }
   for (const docId of POSTCONFIG.docs) {
@@ -16,6 +15,8 @@ const getData = async () => {
         dataToWrite.bios = data.bios
       } else if (key === 'story') {
         dataToWrite.stories.push(data)
+      } else if (key === 'about') {
+        dataToWrite.main = data
       }
     }
   }
