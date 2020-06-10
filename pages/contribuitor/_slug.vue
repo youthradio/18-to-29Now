@@ -2,6 +2,9 @@
   <div>
     <ArticleHeader />
     <main class="center mw8 pa3">
+      <h1 class="blue f3 serif mt0 lh-title ttu ph2">
+        Contributor
+      </h1>
       <BioContainer :author="authordata" />
       <div class="flex justify-center pv3">
         <nuxt-link

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <MainHeader />
     <main class="flex flex-column flex-row-ns mw8 center ph3">
       <template v-for="feature in featured">
@@ -106,36 +106,33 @@
       <h1 id="contributors" class="blue f3 serif mt0 lh-title ttu ph2">
         Contributors
       </h1>
-      <div class="mw9 center">
-        <div class="cf">
-          <div
-            v-for="bio in articleData.bios"
-            :key="bio.authorslug"
-            class="fl w-50 w-25-ns ph2"
+      <div class="flex flex-wrap">
+        <div
+          v-for="bio in articleData.bios"
+          :key="bio.authorslug"
+          class="w-50 w-25-ns ph2"
+        >
+          <a
+            class="link pointer db dim black"
+            @click.prevent="toggleBioModal(bio)"
           >
-            <nuxt-link
-              title=""
-              :to="{ path: `contribuitor/${bio.authorslug}` }"
-              class="link db dim black"
-            >
-              <div class="bb bw2 pb3 b--dark-red">
-                <div class="aspect-ratio aspect-ratio--1x1">
-                  <img
-                    :data-src="bio.image"
-                    src="blank.jpg"
-                    class="aspect-ratio--object db img-fluid lazyload"
-                    alt="Photo of a dimly lit room with a computer interface terminal."
-                  />
-                </div>
+            <div class="bb bw2 pb3 b--dark-red">
+              <div class="aspect-ratio aspect-ratio--1x1">
+                <img
+                  :data-src="bio.image"
+                  src="blank.jpg"
+                  class="aspect-ratio--object db img-fluid lazyload"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
               </div>
-              <h1 class="blue f4 serif mt3 mb0 lh-title">
-                {{ bio.name }}
-              </h1>
-              <h4 class="normal lh-title mt0">
-                {{ bio.location }}
-              </h4>
-            </nuxt-link>
-          </div>
+            </div>
+            <h1 class="blue f5 f4-ns serif mt3 mb0 lh-title">
+              {{ bio.name }}
+            </h1>
+            <h4 class="normal lh-title mt0 f6 f5-ns">
+              {{ bio.location }}
+            </h4>
+          </a>
         </div>
       </div>
     </section>
@@ -148,6 +145,11 @@
         v-html="articleData.main.about.text"
       ></div>
     </section>
+    <Modal
+      v-if="modelBioData"
+      :authordata="modelBioData"
+      @toggleModal="toggleBioModal"
+    />
     <Footer />
   </div>
 </template>
@@ -156,15 +158,22 @@
 import ArticleData from '../data/data.json'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
+import Modal from '~/components/Modal.vue'
 
 export default {
   components: {
     MainHeader,
-    Footer
+    Footer,
+    Modal
   },
   asyncData(ctx) {
     return {
       articleData: ArticleData
+    }
+  },
+  data() {
+    return {
+      modelBioData: null
     }
   },
   computed: {
@@ -187,6 +196,13 @@ export default {
   methods: {
     scrollFix(hash) {
       location.href = hash
+    },
+    toggleBioModal(authordata) {
+      if (authordata) {
+        this.modelBioData = authordata
+        return
+      }
+      this.modelBioData = null
     }
   }
 }

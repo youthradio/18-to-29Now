@@ -1,27 +1,24 @@
 <template>
-  <aside class="pt3 measure-wide center">
-    <h1 id="about" class="blue f3 serif mt0 lh-title ttu ph2">
-      Contributor
-    </h1>
-    <div class="flex items-end">
+  <aside class="measure-wide center">
+    <div class="flex items-end flex-wrap">
       <div class="pr3">
         <img
           src="blank.jpg"
           :data-src="author.image"
-          class="lazyload mw5"
+          class="lazyload mw4"
           :alt="`${author.name} Profile Picture`"
         />
       </div>
       <div class="bb bw2 b--dark-red">
-        <h1 class="blue f4 serif ma0 p0 lh-title">
+        <h1 class="blue f5 f4-ns serif ma0 p0 lh-title">
           {{ author.name }}
         </h1>
-        <h4 class="normal lh-title ma0">
+        <h4 class="normal f6 5-ns lh-title ma0">
           {{ author.location }}
         </h4>
       </div>
     </div>
-    <div v-html="author.text"></div>
+    <div class="f5 f4-ns" v-html="author.text"></div>
   </aside>
 </template>
 <script>
