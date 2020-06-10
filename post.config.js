@@ -25,5 +25,5 @@ module.exports = {
     '1TnpNdAl7OWnvnZjJbrYwK3dCl5ZvWlvYr6s6HDnLXSM',
     '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg'
   ],
-  dataPath: '../data/data.json'
+  dataPath: 'data/data.json'
 }

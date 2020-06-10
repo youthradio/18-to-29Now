@@ -165,9 +165,9 @@
           “We are individual voices that form a collective voice for our younger
           generation at this moment.”
         </p>
-        <cite class="blue sans f6 tracked fs-normal w-20-ns mv3 mv5-ns"
-          ><span class="cite-symbol">Juan Mireles Palomar </span><br />Stockton,
-          CA</cite
+        <cite class="blue sans f6 tracked fs-normal w-20-ns mv3 mv5-ns">
+          <span class="cite-symbol">Juan Mireles Palomar </span>
+          <br />Stockton, CA</cite
         >
       </blockquote>
     </div>
@@ -177,87 +177,31 @@
       </h1>
       <div class="mw9 center">
         <div class="cf">
-          <div class="fl w-50 w-25-ns ph2">
+          <div
+            v-for="bio in articleData.bios"
+            :key="bio.authorslug"
+            class="fl w-50 w-25-ns ph2"
+          >
             <nuxt-link
               title=""
-              :to="{ path: 'contribuitor/sdsdsdsds' }"
+              :to="{ path: `contribuitor/${bio.authorslug}` }"
               class="link db dim black"
             >
               <div class="bb bw2 pb3 b--dark-red">
-                <img
-                  src="profile.jpg"
-                  class="db img-fluid"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                />
+                <div class="aspect-ratio aspect-ratio--1x1">
+                  <img
+                    :data-src="bio.image"
+                    src="blank.jpg"
+                    class="aspect-ratio--object db img-fluid lazyload"
+                    alt="Photo of a dimly lit room with a computer interface terminal."
+                  />
+                </div>
               </div>
               <h1 class="blue f4 serif mt3 mb0 lh-title">
-                Kharon Benson
+                {{ bio.name }}
               </h1>
               <h4 class="normal lh-title mt0">
-                New York, NY
-              </h4>
-            </nuxt-link>
-          </div>
-          <div class="fl w-50 w-25-ns ph2">
-            <nuxt-link
-              title=""
-              :to="{ path: 'contribuitor/sdsdsdsds' }"
-              class="link db dim black"
-            >
-              <div class="bb bw2 pb3 b--dark-red">
-                <img
-                  src="profile.jpg"
-                  class="db img-fluid"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                />
-              </div>
-              <h1 class="blue f4 serif mt3 mb0 lh-title">
-                Kharon Benson
-              </h1>
-              <h4 class="normal lh-title mt0">
-                New York, NY
-              </h4>
-            </nuxt-link>
-          </div>
-          <div class="fl w-50 w-25-ns ph2">
-            <nuxt-link
-              title=""
-              :to="{ path: 'contribuitor/sdsdsdsds' }"
-              class="link db dim black"
-            >
-              <div class="bb bw2 pb3 b--dark-red">
-                <img
-                  src="profile.jpg"
-                  class="db img-fluid"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                />
-              </div>
-              <h1 class="blue f4 serif mt3 mb0 lh-title">
-                Kharon Benson
-              </h1>
-              <h4 class="normal lh-title mt0">
-                New York, NY
-              </h4>
-            </nuxt-link>
-          </div>
-          <div class="fl w-50 w-25-ns ph2">
-            <nuxt-link
-              title=""
-              :to="{ path: 'contribuitor/sdsdsdsds' }"
-              class="link db dim black"
-            >
-              <div class="bb bw2 pb3 b--dark-red">
-                <img
-                  src="profile.jpg"
-                  class="db img-fluid"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                />
-              </div>
-              <h1 class="blue f4 serif mt3 mb0 lh-title">
-                Kharon Benson
-              </h1>
-              <h4 class="normal lh-title mt0">
-                New York, NY
+                {{ bio.location }}
               </h4>
             </nuxt-link>
           </div>

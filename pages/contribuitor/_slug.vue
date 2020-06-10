@@ -2,7 +2,7 @@
   <div>
     <ArticleHeader />
     <main class="center mw8 pa3">
-      <BioContainer />
+      <BioContainer :author="authordata" />
       <div class="flex justify-center pv3">
         <nuxt-link
           title="Home"
@@ -20,6 +20,7 @@
 
 <script>
 // import matchAll from 'string.prototype.matchall'
+import ArticleData from '../../data/data.json'
 import ArticleHeader from '~/components/ArticleHeader.vue'
 import Footer from '~/components/Footer.vue'
 import BioContainer from '~/components/BioContainer.vue'
@@ -29,7 +30,13 @@ export default {
   async asyncData(ctx) {
     const slug = await ctx.params.slug
     return {
-      slug
+      slug,
+      articleData: ArticleData
+    }
+  },
+  computed: {
+    authordata() {
+      return this.articleData.bios.find((e) => e.authorslug === this.slug)
     }
   }
 }
