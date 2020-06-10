@@ -1,3 +1,4 @@
+import ArticleData from './data/data.json'
 import POSTCONFIG from './post.config'
 
 export default {
@@ -132,7 +133,10 @@ export default {
     }
   },
   generate: {
-    routes: ['/article/test', 'contribuitor/sdsdsdsds']
+    routes: [
+      ArticleData.bios.map((e) => `contribuitor/${e.authorslug}`),
+      ArticleData.stories.map((e) => `article/${e.slug}`)
+    ].flat()
   }
   // server: {
   //   https: {
