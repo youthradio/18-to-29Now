@@ -6,10 +6,9 @@ module.exports = {
   location: 'Oakland, CA',
   description:
     "Artificial Intelligence is everywhere, including the device you're using this minute. We asked experts Sam Lavigne, Alexis Madrigal, Deb Raji and Rachel Thomas to tell us how it works, what it's great at, and how to stop it from taking us down a path that would make even the creators of Black Mirror cringe.",
-  url:
-    'https://interactive.yr.media/What-Artificial-Intelligence-Means-for-Race-Art-and-the-Apocalypse',
+  url: 'https://https://youthradio.github.io/18-to-29Now/',
   featureImage:
-    'https://interactive.yr.media/What-Artificial-Intelligence-Means-for-Race-Art-and-the-Apocalypse/images/feature_image.jpg',
+    'https://https://youthradio.github.io/18-to-29Now/socialmain.jpg',
   featureImagePath: 'images/feature',
   featureImageDescription: 'GAN neural network generated Images',
   featureImageCaption: '',

@@ -46,6 +46,9 @@ html {
 .bg-oc-washed-red {
   background: rgba($washed-red, 0.5);
 }
+.bg-blur{
+  backdrop-filter: blur(2px);
+}
 @media #{$breakpoint-not-small} {
   .two-col-ns {
     column-count: 2;
