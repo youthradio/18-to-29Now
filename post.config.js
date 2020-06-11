@@ -7,8 +7,7 @@ module.exports = {
   description:
     "Artificial Intelligence is everywhere, including the device you're using this minute. We asked experts Sam Lavigne, Alexis Madrigal, Deb Raji and Rachel Thomas to tell us how it works, what it's great at, and how to stop it from taking us down a path that would make even the creators of Black Mirror cringe.",
   url: 'https://https://youthradio.github.io/18-to-29Now/',
-  featureImage:
-    'https://https://youthradio.github.io/18-to-29Now/socialmain.jpg',
+  featureImage: 'https://youthradio.github.io/18-to-29Now/socialmain.jpg',
   featureImagePath: 'images/feature',
   featureImageDescription: 'GAN neural network generated Images',
   featureImageCaption: '',
