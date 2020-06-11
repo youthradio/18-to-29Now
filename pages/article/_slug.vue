@@ -14,17 +14,17 @@
         {{ article.title }}
       </h1>
       <div class="flex flex-column flex-row-ns justify-between">
-        <h3 class="dark-red lh-title w-20-ns">
+        <h3 class="dark-red lh-title w-20-ns pr3-ns">
           {{ article.author }} <span class="di dn-ns"> | </span>
           <br class="dn db-ns" /><small class="normal">{{
             article.location
           }}</small>
         </h3>
 
-        <p class="dn db-ns f4 lh-copy order-2 w-20-ns">
+        <p class="dn db-ns f4 lh-copy order-2 w-20-ns pl3-ns">
           {{ article.summary }}
         </p>
-        <div class="measure-wide lh-copy center f5 f4-ns">
+        <div class="measure-wide ph3-ns lh-copy center f5 f4-ns">
           <article v-html="article.text"></article>
           <BioContainer mode="small" :author="authordata" />
         </div>

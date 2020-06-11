@@ -3,17 +3,17 @@
     ref="header"
     class="min-vh-100 bg-washed-red flex flex-column justify-around relative"
   >
-    <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2">
+    <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2 f6 f4-ns">
       <div class="">
         <nuxt-link
-          class="link blue b dim f6 f5-ns dib mr3 pv1"
+          class="link blue b dim  dib mr3 pv1"
           title="About"
           :to="{ path: '/', hash: 'about' }"
         >
           About this Project
         </nuxt-link>
         <nuxt-link
-          class="link blue b dim f6 f5-ns dib mr3 pv1"
+          class="link blue b dim dib mr3 pv1"
           title="Lates"
           :to="{ path: '/', hash: 'latest' }"
         >
@@ -21,7 +21,7 @@
         </nuxt-link>
         <nuxt-link
           :to="{ path: '/', hash: 'contributors' }"
-          class="link blue b dim f6 f5-ns dib mr3 pv1"
+          class="link blue b dim dib mr3 pv1"
           href="#contributors"
           title="Contributors"
         >
@@ -30,20 +30,19 @@
       </div>
     </nav>
     <div
-      class="layers relative flex justify-center ph3 ph0-ns mt0-ns mb3-ns z-2"
+      class="layers relative flex flex-row-ns flex-column justify-center ph3 ph0-ns mt0-ns mb3-ns z-2"
     >
+      <img
+        src="logos/youngamerica.svg"
+        class="db dn-ns z-3 w-50 mt3 nb4 ml3"
+        alt="Photo of a dimly lit room with a computer interface terminal."
+      />
       <div class="grid-container grid-container-ns">
         <div class="grid-col-start-2 dn db-ns">
           <img src="images/grid/Rectangle-1.jpg" class="db mw-none w-100" />
         </div>
-        <div class="relative">
+        <div class="">
           <img src="images/grid/Rectangle-2.jpg" class="db mw-none w-100" />
-          <img
-            src="logos/youngamerica.svg"
-            class="absolute mw-none bottom-1 left-1 db dn-ns mt5 z-3"
-            style="width: 200%"
-            alt="Photo of a dimly lit room with a computer interface terminal."
-          />
         </div>
         <div class="">
           <img src="images/grid/Rectangle-3.jpg" class="db mw-none w-100" />
@@ -67,7 +66,26 @@
         <div class="">
           <img src="images/grid/Rectangle-6.jpg" class="db mw-none w-100" />
         </div>
-        <div class=" grid-col-start-2 dn db-ns">
+        <div class="grid-col-start-1 dn db-ns">
+          <div class="">
+            <img
+              src="logos/yrlogo.svg"
+              class="db ml-auto pa1"
+              alt="YR Media Logo"
+            />
+            <img
+              src="logos/wnyclogo.svg"
+              class="db ml-auto pa1"
+              alt="WNYC Logo"
+            />
+            <img
+              src="logos/radio-rookies.svg"
+              class="db ml-auto pa1"
+              alt="Radio Rookies"
+            />
+          </div>
+        </div>
+        <div class="grid-col-start-2 dn db-ns">
           <img src="images/grid/Rectangle-7.jpg" class="db mw-none w-100" />
         </div>
         <div class="relative">
@@ -110,32 +128,17 @@
             class="db mw-none w-100 db-ns"
           />
         </div>
-        <div class="measure dn db-ns grid-col-5-7">
-          <p class="serif f4 lh-title mt0">
+        <div class="measure dn db-ns">
+          <p class="serif lh-title mt0">
             Young adults from around the country document what’s at stake for
             them in this election
           </p>
-          <div class="flex items-center">
-            <div class="ph3">
-              <img src="logos/yrlogo.svg" class="db " alt="YR Media Logo" />
-            </div>
-            <div class="ph3">
-              <img src="logos/wnyclogo.svg" class="db" alt="WNYC Logo" />
-            </div>
-            <div class="ph3">
-              <img
-                src="logos/radio-rookies.svg"
-                class="db"
-                alt="Radio Rookies"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
     <div class="ml-auto ph4 db dn-ns">
-      <p class="serif f5 lh-title">
+      <p class="serif lh-title">
         Young adults from around the country document what’s at stake for them
         in this election
       </p>
@@ -152,6 +155,7 @@ export default {
   mounted() {
     // const vh = window.innerHeight
     const num = 5
+    const scaleFact = window.innerWidth < 900 ? 0.5 : 1
     for (const dir of ['left', 'right']) {
       for (let i = 0; i < num; i++) {
         const ico = icons[~~(Math.random() * icons.length)]
@@ -162,8 +166,8 @@ export default {
         const randx = Math.random() * 10
         const randy = Math.random() * 2
 
-        svg.setAttribute('width', ico.width)
-        svg.setAttribute('height', ico.height)
+        svg.setAttribute('width', ico.width * scaleFact)
+        svg.setAttribute('height', ico.height * scaleFact)
         svg.setAttribute('viewBox', `0 0 ${ico.width} ${ico.height}`)
         svg.innerHTML = ico.path
         svg.style.cssText = `

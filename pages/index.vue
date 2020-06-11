@@ -3,7 +3,7 @@
     <MainHeader />
     <main class="flex flex-column flex-row-ns mw8 center ph3">
       <template v-for="feature in featured">
-        <article :key="feature.slug" class="pt4 pr2-ns ph2 w-50-ns">
+        <article :key="feature.slug" class="pt4 pr2-ns w-50-ns">
           <nuxt-link
             title=""
             :to="{ path: `article/${feature.slug}` }"
@@ -20,7 +20,7 @@
                 />
               </div>
               <div class="w-100 w-90-ns">
-                <h1 class="blue f2 serif ma0 lh-title">
+                <h1 class="blue f3 f2-ns serif ma0 lh-title">
                   {{ feature.title }}
                 </h1>
                 <nuxt-link
@@ -28,7 +28,7 @@
                   :to="{ path: `contribuitor/${feature.authorslug}` }"
                   class="link db blue dim black"
                 >
-                  <h3 class="dark-red lh-title mv1">
+                  <h3 class="dark-red f5 f4-ns lh-title mv1">
                     {{ feature.author }} |
                     <small class="ttc"> {{ feature.format }} </small>
                   </h3>
@@ -43,9 +43,9 @@
       </template>
     </main>
     <section class="mw8 center ph3">
-      <h3 id="latest" class="blue serif bb bw2 ttu ph2">Latest</h3>
+      <h3 id="latest" class="blue serif bb bw2 ttu">Latest</h3>
       <template v-for="article in latest">
-        <article :key="article.slug" class="pb4 ph2">
+        <article :key="article.slug" class="pb4">
           <nuxt-link
             title=""
             :to="{ path: `article/${article.slug}` }"
@@ -103,14 +103,14 @@
       </blockquote>
     </div>
     <section class="mw8 center ph3">
-      <h1 id="contributors" class="blue f3 serif mt0 lh-title ttu ph2">
+      <h1 id="contributors" class="blue f3 serif mt0 lh-title ttu">
         Contributors
       </h1>
       <div class="flex flex-wrap">
         <div
           v-for="bio in articleData.bios"
           :key="bio.authorslug"
-          class="w-50 w-25-ns ph2"
+          class="w-50 w-25-ns pr2"
         >
           <a
             class="link pointer db dim black"
