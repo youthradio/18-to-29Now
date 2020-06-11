@@ -94,6 +94,10 @@ export default {
     {
       src: '~plugins/lazysizes.js',
       ssr: false
+    },
+    {
+      src: '~/plugins/vueplyr.js',
+      ssr: false
     }
   ],
   /*

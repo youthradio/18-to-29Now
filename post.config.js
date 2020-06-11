@@ -25,7 +25,8 @@ module.exports = {
     '1TnpNdAl7OWnvnZjJbrYwK3dCl5ZvWlvYr6s6HDnLXSM',
     '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg',
     '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM',
-    '1cNErfFhlQKT-xZlDVcbmeq4u9U-pANm3tDzNrSijZA8'
+    '1cNErfFhlQKT-xZlDVcbmeq4u9U-pANm3tDzNrSijZA8',
+    '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8'
   ],
   dataPath: 'data/data.json'
 }

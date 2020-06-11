@@ -178,7 +178,9 @@ export default {
   },
   computed: {
     featured() {
-      return this.articleData.stories.filter((e) => e.feature === 'true')
+      return this.articleData.stories
+        .filter((e) => e.feature === 'true')
+        .slice(0, 2)
     },
     latest() {
       return this.articleData.stories
