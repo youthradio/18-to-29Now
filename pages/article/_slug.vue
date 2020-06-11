@@ -3,8 +3,8 @@
     <ArticleHeader />
     <div class="center mw8 pa3">
       <img
-        data-src="images/feature.jpg"
-        src="blank.jpg"
+        :data-src="article.featureImage"
+        src="blankfeature.jpg"
         class="db img-fluid lazyload"
         alt="Photo of a dimly lit room with a computer interface terminal."
       />
