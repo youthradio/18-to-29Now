@@ -33,7 +33,7 @@
               value="agree"
               required
             />
-            <small class="reset-p-m" v-html="message"></small>
+            <div class="reset-p-m f7" v-html="message"></div>
           </label>
           <div v-if="error" class="red pa0">
             <small>{{ error }}</small>

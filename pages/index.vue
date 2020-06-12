@@ -26,16 +26,16 @@
                 :to="{ path: `article/${feature.slug}` }"
                 class="link db underline-hover blue"
               >
-                <h1 class="blue f3 f2-ns serif ma0 lh-title">
+                <h2 class="blue f3 f2-ns serif ma0 lh-title">
                   {{ feature.title }}
-                </h1>
+                </h2>
               </nuxt-link>
               <nuxt-link
                 title=""
                 :to="{ path: `contribuitor/${feature.authorslug}` }"
                 class="link db blue dim black"
               >
-                <h3 class="dark-red f5 f4-ns lh-title mv1">
+                <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ feature.author }} |
                   <small class="ttc"> {{ feature.format }} </small>
                 </h3>
@@ -80,16 +80,16 @@
                 :to="{ path: `article/${article.slug}` }"
                 class="link db blue underline-hover"
               >
-                <h1 class="blue f3 serif mv0 lh-title">
+                <h2 class="blue serif mv0 lh-title f4 f3-ns">
                   {{ article.title }}
-                </h1>
+                </h2>
               </nuxt-link>
               <nuxt-link
                 title=""
                 :to="{ path: `contribuitor/${article.authorslug}` }"
                 class="link db blue dim black"
               >
-                <h3 class="dark-red lh-title mv1">
+                <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ article.author }} |
                   <small class="ttc"> {{ article.format }}</small>
                 </h3>
@@ -150,9 +150,9 @@
                 />
               </div>
             </div>
-            <h1 class="blue f5 f4-ns serif mt3 mb0 lh-title">
+            <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
               {{ bio.name }}
-            </h1>
+            </h3>
             <h4 class="normal lh-title mt0 f6 f5-ns">
               {{ bio.location }}
             </h4>
@@ -161,11 +161,11 @@
       </div>
     </section>
     <section class="mw8 center ph3 mt4 mt5-ns">
-      <h1 id="about" class="blue f3 serif mt0 lh-title ttu ph2">
+      <h2 id="about" class="blue serif mt0 lh-title ttu">
         About
-      </h1>
+      </h2>
       <div
-        class="mw9 center two-col-ns ph2 lh-copy f5 f4-ns"
+        class="mw9 center two-col-ns lh-copy f5 f4-ns"
         v-html="articleData.main.about.text"
       ></div>
     </section>

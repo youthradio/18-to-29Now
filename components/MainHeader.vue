@@ -29,38 +29,58 @@
       class="layers relative flex flex-row-ns flex-column justify-center ph3 ph0-ns mt0-ns mb3-ns z-2"
     >
       <img
+        alt=""
         src="logos/youngamerica.svg"
         class="db dn-ns z-3 w-50 mt3 nb4 ml3"
-        alt="Photo of a dimly lit room with a computer interface terminal."
       />
       <div class="grid-container grid-container-ns">
         <div class="grid-col-start-2 dn db-ns">
-          <img src="images/grid/Rectangle-1.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-1.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="">
-          <img src="images/grid/Rectangle-2.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-2.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="">
-          <img src="images/grid/Rectangle-3.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-3.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="">
-          <img src="images/grid/Rectangle-4.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-4.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="dn db-ns grid-col-1-4 z-2">
           <div class="flex justify-end items-end h-100">
-            <img
-              src="logos/ygamerica.svg"
-              class="db h-100"
-              alt="Photo of a dimly lit room with a computer interface terminal."
-            />
+            <img alt="" src="logos/ygamerica.svg" class="db h-100" />
           </div>
         </div>
         <!-- <div class="dn db-ns"></div> -->
         <div class="">
-          <img src="images/grid/Rectangle-5.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-5.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="">
-          <img src="images/grid/Rectangle-6.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-6.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="grid-col-start-1 dn db-ns">
           <div class="">
@@ -82,44 +102,62 @@
           </div>
         </div>
         <div class="grid-col-start-2 dn db-ns">
-          <img src="images/grid/Rectangle-7.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-7.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="relative">
-          <img src="images/grid/Rectangle-8.jpg" class="db mw-none w-100" />
           <img
+            alt=""
+            src="images/grid/Rectangle-8.jpg"
+            class="db mw-none w-100"
+          />
+          <img
+            alt=""
             src="logos/18to29stroke.svg"
             class="absolute mw-none bottom-1 dn db-ns"
             style="width: 220%"
-            alt="Photo of a dimly lit room with a computer interface terminal."
           />
         </div>
         <div class="">
-          <img src="images/grid/Rectangle-9.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-9.jpg"
+            class="db mw-none w-100"
+          />
         </div>
         <div class="dn db-ns grid-col-5-7 z-3">
           <div class="flex h-100">
-            <img
-              src="logos/speaksup.svg"
-              class="db h-100"
-              alt="Photo of a dimly lit room with a computer interface terminal."
-            />
+            <img alt="" src="logos/speaksup.svg" class="db h-100" />
           </div>
         </div>
         <div class="grid-col-start-2">
-          <img src="images/grid/Rectangle-10.jpg" class="db mw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-10.jpg"
+            class="db mw-none w-100"
+          />
         </div>
 
         <div class="">
-          <img src="images/grid/Rectangle-11.jpg" class="dbmw-none w-100" />
+          <img
+            alt=""
+            src="images/grid/Rectangle-11.jpg"
+            class="dbmw-none w-100"
+          />
         </div>
         <div class="">
           <img
+            alt=""
             src="images/grid/Rectangle-13.jpg"
             class="db mw-none w-100 db-ns"
           />
         </div>
         <div class="db dn-ns">
           <img
+            alt=""
             src="images/grid/Rectangle-1.jpg"
             class="db mw-none w-100 db-ns"
           />

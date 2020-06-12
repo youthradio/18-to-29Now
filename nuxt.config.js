@@ -15,8 +15,13 @@ export default {
   },
   head: {
     title: POSTCONFIG.title,
+    htmlAttrs: {
+      lang: 'en',
+      charset: 'utf-8'
+    },
     meta: [
       { charset: 'utf-8' },
+      { lang: 'en' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
