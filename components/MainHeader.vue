@@ -1,7 +1,7 @@
 <template>
   <header
     ref="header"
-    class="min-vh-100 bg-washed-red flex flex-column justify-around relative"
+    class="min-vh-100 bg-washed-red flex flex-column justify-arounds"
   >
     <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2 f6 f4-ns">
       <div class="">
@@ -145,39 +145,15 @@
   </header>
 </template>
 <script>
-import icons from './../utils/icons'
+import mixinMethods from './../utils/mixinMethods'
 export default {
+  mixins: [mixinMethods],
   data() {
     return {}
   },
   computed: {},
   mounted() {
-    // const vh = window.innerHeight
-    const num = 5
-    const scaleFact = window.innerWidth < 900 ? 0.5 : 1
-    for (const dir of ['left', 'right']) {
-      for (let i = 0; i < num; i++) {
-        const ico = icons[~~(Math.random() * icons.length)]
-        const svg = document.createElementNS(
-          'http://www.w3.org/2000/svg',
-          'svg'
-        )
-        const randx = Math.random() * 10
-        const randy = Math.random() * 2
-
-        svg.setAttribute('width', ico.width * scaleFact)
-        svg.setAttribute('height', ico.height * scaleFact)
-        svg.setAttribute('viewBox', `0 0 ${ico.width} ${ico.height}`)
-        svg.innerHTML = ico.path
-        svg.style.cssText = `
-        position:absolute;
-        z-index:1;
-        top:${randy + (i * 100) / num}%;
-        ${dir}: ${randx}%;
-      `
-        this.$refs.header.appendChild(svg)
-      }
-    }
+    this.randomIcons(this.$refs.header)
   }
 }
 </script>

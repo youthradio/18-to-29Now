@@ -82,11 +82,11 @@
         </article>
       </template>
     </section>
-    <div class="bg-washed-red">
+    <div ref="blockquote" class="bg-washed-red">
       <blockquote
         class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3"
       >
-        <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns">
+        <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns z-1">
           {{ randomQuote.quote }}
         </p>
         <cite class="blue sans f6 tracked fs-normal w-20-ns mv3 mv5-ns">
@@ -156,6 +156,7 @@
 
 <script>
 import ArticleData from '../data/data.json'
+import mixinMethods from './../utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
 import Modal from '~/components/Modal.vue'
@@ -166,6 +167,7 @@ export default {
     Footer,
     Modal
   },
+  mixins: [mixinMethods],
   asyncData(ctx) {
     return {
       articleData: ArticleData
@@ -194,6 +196,7 @@ export default {
     if (this.$route.hash) {
       setTimeout(() => this.scrollFix(this.$route.hash), 1)
     }
+    this.randomIcons(this.$refs.blockquote, 2)
   },
   methods: {
     scrollFix(hash) {
