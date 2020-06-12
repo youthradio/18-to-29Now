@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>VIDEO</h1>
     <vue-plyr>
       <div class="plyr__video-embed">
         <iframe

@@ -17,7 +17,7 @@
         </nuxt-link>
       </div>
     </main>
-    <Footer />
+    <Footer :content="articleData.main.footer" />
   </div>
 </template>
 

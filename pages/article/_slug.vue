@@ -20,7 +20,7 @@
         </nuxt-link>
       </div>
     </main>
-    <Footer />
+    <Footer :content="articleData.main.footer" />
   </div>
 </template>
 
@@ -53,7 +53,7 @@ export default {
   },
   computed: {
     articleFormatComponent() {
-      if (this.article.format === 'text') {
+      if (this.article.format === 'print') {
         return 'article-text'
       } else if (this.article.format === 'video') {
         return 'article-video'

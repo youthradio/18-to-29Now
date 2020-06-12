@@ -4,13 +4,13 @@
     <main class="flex flex-column flex-row-ns mw8 center ph3">
       <template v-for="feature in featured">
         <article :key="feature.slug" class="pt4 pr2-ns w-50-ns">
-          <nuxt-link
-            title=""
-            :to="{ path: `article/${feature.slug}` }"
-            class="link db dim black"
-          >
-            <div class="flex flex-column">
-              <div class="mb4 mb0-ns">
+          <div class="flex flex-column">
+            <div class="mb4 mb0-ns">
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${feature.slug}` }"
+                class="link db dim black"
+              >
                 <img
                   :data-src="feature.featureImage"
                   src="blankfeature.jpg"
@@ -18,27 +18,39 @@
                   alt="Photo of a dimly lit room with a computer interface terminal."
                   style="object-fit: cover;"
                 />
-              </div>
-              <div class="w-100 w-90-ns">
+              </nuxt-link>
+            </div>
+            <div class="w-100 w-90-ns">
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${feature.slug}` }"
+                class="link db underline-hover blue"
+              >
                 <h1 class="blue f3 f2-ns serif ma0 lh-title">
                   {{ feature.title }}
                 </h1>
-                <nuxt-link
-                  title=""
-                  :to="{ path: `contribuitor/${feature.authorslug}` }"
-                  class="link db blue dim black"
-                >
-                  <h3 class="dark-red f5 f4-ns lh-title mv1">
-                    {{ feature.author }} |
-                    <small class="ttc"> {{ feature.format }} </small>
-                  </h3>
-                </nuxt-link>
+              </nuxt-link>
+              <nuxt-link
+                title=""
+                :to="{ path: `contribuitor/${feature.authorslug}` }"
+                class="link db blue dim black"
+              >
+                <h3 class="dark-red f5 f4-ns lh-title mv1">
+                  {{ feature.author }} |
+                  <small class="ttc"> {{ feature.format }} </small>
+                </h3>
+              </nuxt-link>
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${feature.slug}` }"
+                class="link db dim black"
+              >
                 <p class="f4-l lh-copy">
                   {{ feature.summary }}
                 </p>
-              </div>
+              </nuxt-link>
             </div>
-          </nuxt-link>
+          </div>
         </article>
       </template>
     </main>
@@ -46,13 +58,13 @@
       <h3 id="latest" class="blue serif bb bw2 ttu">Latest</h3>
       <template v-for="article in latest">
         <article :key="article.slug" class="pb4">
-          <nuxt-link
-            title=""
-            :to="{ path: `article/${article.slug}` }"
-            class="link db dim black"
-          >
-            <div class="flex flex-column flex-row-ns">
-              <div class="pr3-ns mb4 mb0-ns w-30-ns">
+          <div class="flex flex-column flex-row-ns">
+            <div class="pr3-ns mb4 mb0-ns w-30-ns">
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${article.slug}` }"
+                class="link db dim black"
+              >
                 <img
                   :data-src="article.featureImage"
                   class="db lazyload"
@@ -60,25 +72,37 @@
                   style="object-fit: cover;"
                   alt="Photo of a dimly lit room with a computer interface terminal."
                 />
-              </div>
-              <div class="w-70-ns pl3-ns">
+              </nuxt-link>
+            </div>
+            <div class="w-70-ns pl3-ns">
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${article.slug}` }"
+                class="link db blue underline-hover"
+              >
                 <h1 class="blue f3 serif mv0 lh-title">
                   {{ article.title }}
                 </h1>
-                <nuxt-link
-                  title=""
-                  :to="{ path: `contribuitor/${article.authorslug}` }"
-                  class="link db blue dim black"
-                >
-                  <h3 class="dark-red lh-title mv1">
-                    {{ article.author }} |
-                    <small class="ttc"> {{ article.format }}</small>
-                  </h3>
-                </nuxt-link>
+              </nuxt-link>
+              <nuxt-link
+                title=""
+                :to="{ path: `contribuitor/${article.authorslug}` }"
+                class="link db blue dim black"
+              >
+                <h3 class="dark-red lh-title mv1">
+                  {{ article.author }} |
+                  <small class="ttc"> {{ article.format }}</small>
+                </h3>
+              </nuxt-link>
+              <nuxt-link
+                title=""
+                :to="{ path: `article/${article.slug}` }"
+                class="link db dim black"
+              >
                 <p class="f4-l lh-copy mv0">{{ article.summary }} |</p>
-              </div>
+              </nuxt-link>
             </div>
-          </nuxt-link>
+          </div>
         </article>
       </template>
     </section>

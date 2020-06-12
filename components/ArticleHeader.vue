@@ -11,23 +11,23 @@
         </nuxt-link>
       </div>
       <nav class="serif pl2 pl4-ns f7 f5-ns ">
-        <div class="flex flex-column justify-between underline">
+        <div class="flex flex-column justify-between">
           <nuxt-link
-            class="link blue b dim dib pv1 underline"
+            class="link b dib pv1 underline-hover blue"
             title="About"
             :to="{ path: '/', hash: 'about' }"
           >
             About this Project
           </nuxt-link>
           <nuxt-link
-            class="link blue b dim dib pv1 underline"
+            class="link b dib pv1 underline-hover blue"
             title="Latest"
             :to="{ path: '/', hash: 'latest' }"
           >
             Stories
           </nuxt-link>
           <nuxt-link
-            class="link blue b dim dib pv1 underline"
+            class="link b dib pv1 underline-hover blue"
             title="Contributors"
             :to="{ path: '/', hash: 'contributors' }"
           >
