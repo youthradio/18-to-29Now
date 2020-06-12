@@ -25,7 +25,8 @@
               Sign Up
             </button>
           </div>
-          <label class="flex items-start pt2">
+
+          <label class="flex items-center pt2 f7">
             <input
               class="checkbox-size-2 checkbox-size-2-ns mr1"
               type="checkbox"
@@ -33,8 +34,10 @@
               value="agree"
               required
             />
-            <div class="reset-p-m f7" v-html="message"></div>
+            I agree to the Terms and Conditions
           </label>
+          <div class="reset-p-m f7" v-html="message"></div>
+
           <div v-if="error" class="red pa0">
             <small>{{ error }}</small>
           </div>

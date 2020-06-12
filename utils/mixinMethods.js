@@ -50,12 +50,14 @@ const mixinMethods = {
     randomIcons(element, num = 5) {
       // const vh = window.innerHeight
       element.style.position = 'relative'
-      const { width } = element.getBoundingClientRect().width
+      const width = element.getBoundingClientRect().width
       const scaleFact = width < 900 ? 0.5 : 1
       const marg = 0
       const step = 100 / num
       for (const dir of ['left', 'right']) {
         for (let i = 0; i < num; i++) {
+          const scale = 0.5 + Math.random() * (scaleFact - 0.5)
+
           const ico = icons[~~(Math.random() * icons.length)]
           const svg = document.createElementNS(
             'http://www.w3.org/2000/svg',
@@ -64,8 +66,8 @@ const mixinMethods = {
           const randx = Math.random() * 10
           const randy = Math.random() * 0
 
-          svg.setAttribute('width', ico.width * scaleFact)
-          svg.setAttribute('height', ico.height * scaleFact)
+          svg.setAttribute('width', ico.width * scale)
+          svg.setAttribute('height', ico.height * scale)
           svg.setAttribute('viewBox', `0 0 ${ico.width} ${ico.height}`)
           svg.innerHTML = ico.path
           svg.style.cssText = `

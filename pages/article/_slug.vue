@@ -32,6 +32,7 @@ import Footer from '~/components/Footer.vue'
 import BioContainer from '~/components/BioContainer.vue'
 import ArticleText from '~/components/ArticleText.vue'
 import ArticleVideo from '~/components/ArticleVideo.vue'
+import ArticleAudio from '~/components/ArticleAudio.vue'
 
 export default {
   components: {
@@ -39,7 +40,8 @@ export default {
     Footer,
     BioContainer,
     ArticleText,
-    ArticleVideo
+    ArticleVideo,
+    ArticleAudio
   },
   async asyncData(ctx) {
     const slug = await ctx.params.slug
@@ -57,6 +59,8 @@ export default {
         return 'article-text'
       } else if (this.article.format === 'video') {
         return 'article-video'
+      } else if (this.article.format === 'audio') {
+        return 'article-audio'
       }
       return null
     },
