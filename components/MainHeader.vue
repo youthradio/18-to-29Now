@@ -6,23 +6,22 @@
     <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2 f6 f4-ns">
       <div class="">
         <nuxt-link
-          class="link blue b dim  dib mr3 pv1"
+          class="link blue b dim  dib mr3 pv1 underline"
           title="About"
           :to="{ path: '/', hash: 'about' }"
         >
           About this Project
         </nuxt-link>
         <nuxt-link
-          class="link blue b dim dib mr3 pv1"
-          title="Lates"
+          class="link blue b dim dib mr3 pv1 underline"
+          title="Latest"
           :to="{ path: '/', hash: 'latest' }"
         >
           Stories
         </nuxt-link>
         <nuxt-link
           :to="{ path: '/', hash: 'contributors' }"
-          class="link blue b dim dib mr3 pv1"
-          href="#contributors"
+          class="link blue b dim dib mr3 pv1 underline"
           title="Contributors"
         >
           Contributors

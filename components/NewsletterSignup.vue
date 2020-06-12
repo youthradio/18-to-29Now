@@ -1,0 +1,77 @@
+<template>
+  <div class="pv3 sans-serif">
+    <h4 class="mb2 blue">Sign up for our newsletter</h4>
+    <mailchimp-subscribe
+      :url="newsletter.url"
+      :user-id="newsletter.uid"
+      :list-id="newsletter.id"
+    >
+      <template v-slot="{ subscribe, setEmail, error, success, loading }">
+        <form @submit.prevent="subscribe">
+          <div class="flex">
+            <div class="flex-auto self-stretch pr2">
+              <input
+                class="db sans-serif w-100 h-100 ph2 bn f6 f5-ns"
+                placeholder="Enter your email"
+                type="email"
+                @input="setEmail($event.target.value)"
+              />
+            </div>
+            <button
+              class="sans-serif f6 f5-ns grow no-underline ph3 pv2 dib white bg-blue
+        center nowrap"
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </div>
+          <label class="flex items-start pt2">
+            <input
+              class="checkbox-size-2 checkbox-size-2-ns mr1"
+              type="checkbox"
+              name="toc"
+              value="agree"
+              required
+            />
+            <small class="reset-p-m" v-html="message"></small>
+          </label>
+          <div v-if="error" class="red pa0">
+            <small>{{ error }}</small>
+          </div>
+          <div v-if="success" class="pa0">
+            <small>Thank You!</small>
+          </div>
+          <div v-if="loading" class="pa0">
+            <small>Sending...</small>
+          </div>
+        </form>
+      </template>
+    </mailchimp-subscribe>
+  </div>
+</template>
+
+<script>
+import MailchimpSubscribe from 'vue-mailchimp-subscribe'
+import POSTCONFIG from './../post.config'
+
+export default {
+  components: { MailchimpSubscribe },
+  props: {
+    message: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+  data() {
+    return {}
+  },
+  computed: {
+    newsletter() {
+      return POSTCONFIG.newsletter
+    }
+  }
+}
+</script>
+
+<style lang="scss"></style>

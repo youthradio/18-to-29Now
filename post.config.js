@@ -26,5 +26,10 @@ module.exports = {
     '1cNErfFhlQKT-xZlDVcbmeq4u9U-pANm3tDzNrSijZA8',
     '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8'
   ],
-  dataPath: 'data/data.json'
+  dataPath: 'data/data.json',
+  newsletter: {
+    uid: '4251cb25446a2d7c0ef5822bc',
+    id: 'c04648ea24',
+    url: 'https://google.us10.list-manage.com/subscribe/post-json'
+  }
 }

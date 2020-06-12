@@ -19,6 +19,7 @@
     "lazysizes": "^5.2.2",
     "nuxt": "^2.12.2",
     "plyr": "^3.6.2",
+    "vue-mailchimp-subscribe": "^1.1.0",
     "vue-plyr": "^6.0.4"
   },
   "devDependencies": {

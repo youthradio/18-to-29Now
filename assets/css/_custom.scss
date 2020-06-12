@@ -49,12 +49,26 @@ html {
 .bg-oc-washed-red {
   background: rgba($washed-red, 0.5);
 }
-.bg-blur{
+.bg-blur {
   backdrop-filter: blur(2px);
 }
+.checkbox-size-2 {
+  zoom: 2;
+}
+.reset-p-m {
+  p:first-of-type {
+    margin-top: 0;
+  }
+}
+
 @media #{$breakpoint-not-small} {
+  .checkbox-size-2-ns {
+    zoom: 2.5;
+  }
   .two-col-ns {
+    max-height: 25rem;
     column-count: 2;
+    column-gap: 2rem;
     p:first-of-type {
       margin-top: 0;
     }

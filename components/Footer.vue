@@ -1,10 +1,10 @@
 <template>
   <footer class="bg-washed-red">
     <div class="mw8 center ph3">
-      <div
-        class="bb bw2"
-        data-pym-src="https://apps.nypr.org/newsletter-signup/?partnerOrg=Other&brand=wnyc-studios-gray&headline=Sign%20up%20for%20our%20newsletter&legalText=By%20submitting%20your%20information%2C%20you're%20agreeing%20to%20receive%20communications%20from%20New%20York%20Public%20Radio%20in%20accordance%20with%20our%20Terms%20of%20Use%20(https%3A%2F%2Fwww.wnyc.org%2Fterms)%20and%20in%20accordance%20with%20the%20Privacy%20Policy%20of%20YR%20Media%20(https%3A%2F%2Fyr.media%2Fprivacy-policy).&mailchimpId=04ba4787d5&mailchimpName=Newsletter%3A%20Radio%20Rookies"
-      ></div>
+      <div class="bb bw2 flex flex-column flex-row-ns items-center">
+        <NewsletterSignup :message="content.newsletter.text" />
+        <div class="blue ml4-ns" v-html="content.text"></div>
+      </div>
       <div
         class="flex flex-wrap flex-nowrap-ns items-center justify-between justify-start-ns pv3"
       >
@@ -64,19 +64,21 @@
   </footer>
 </template>
 <script>
+import NewsletterSignup from '~/components/NewsletterSignup.vue'
+
 export default {
-  mounted() {
-    this.loadPym()
+  components: {
+    NewsletterSignup
   },
-  methods: {
-    loadPym() {
-      const script = document.createElement('script')
-      script.src = 'https://pym.nprapps.org/pym.v1.min.js'
-      script.type = 'text/javascript'
-      script.defer = true
-      document.head.appendChild(script)
+  props: {
+    content: {
+      type: Object,
+      required: false,
+      default: null
     }
-  }
+  },
+  mounted() {},
+  methods: {}
 }
 </script>
 

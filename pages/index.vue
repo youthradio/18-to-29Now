@@ -150,7 +150,7 @@
       :authordata="modelBioData"
       @toggleModal="toggleBioModal"
     />
-    <Footer />
+    <Footer :content="articleData.main.footer" />
   </div>
 </template>
 
