@@ -16,6 +16,10 @@
   },
   "dependencies": {
     "@nuxtjs/google-gtag": "^1.0.4",
+    "d3-array": "^2.4.0",
+    "d3-drag": "^1.2.5",
+    "d3-scale": "^3.2.1",
+    "d3-selection": "^1.4.1",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.12.2",
     "plyr": "^3.6.2",

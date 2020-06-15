@@ -1,12 +1,13 @@
 <template>
   <div>
-    <iframe
+    <AudioPlayer v-if="songData.svgStr" :song-data="songData" />
+    <!-- <iframe
       frameborder="0"
       scrolling="no"
       height="130"
       width="100%"
       src="https://www.wnyc.org/widgets/ondemand_player/18-to-29-now/#file=/audio/json/975844/&share=1"
-    ></iframe>
+    ></iframe> -->
     <h1 class="serif blue f3 f2-ns lh-title mb0 ttc">
       {{ article.title }}
     </h1>
@@ -29,7 +30,11 @@
 </template>
 
 <script>
+import AudioPlayer from '~/components/AudioPlayer.vue'
+import generateWaveform from '~/utils/waveformGenerator'
+
 export default {
+  components: { AudioPlayer },
   props: {
     article: {
       type: Object,
@@ -37,7 +42,34 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      svgStr: null
+    }
+  },
+  computed: {
+    songData() {
+      return {
+        svgStr: this.svgStr,
+        songUrl: this.article.audioURL,
+        title: this.article.title,
+        url: '',
+        author: this.article.author
+      }
+    }
+  },
+  mounted() {
+    this.svgStr = this.generateWaveformSVG(
+      JSON.parse(atob(this.article.audioWaveform)),
+      {
+        height: 100,
+        width: 500
+      }
+    )
+  },
+  methods: {
+    generateWaveformSVG(data, options) {
+      return generateWaveform(data, options)
+    }
   }
 }
 </script>
