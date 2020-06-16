@@ -26,13 +26,13 @@
           <svg class="pointer db" width="50" height="50" viewBox="0 0 510 510">
             <path
               v-if="isPlaying"
-              style="fill:white;"
+              style="fill:#FFD299;"
               d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm96-280v160c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16zm-112 0v160c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16z"
               class=""
             ></path>
             <path
               v-else
-              style="fill:white;"
+              style="fill:#FFD299;"
               d="M371.7 238l-176-107c-15.8-8.8-35.7 2.5-35.7 21v208c0 18.4 19.8 29.8 35.7 21l176-101c16.4-9.1 16.4-32.8 0-42zM504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256z"
               class=""
             ></path>
@@ -44,7 +44,7 @@
           tabindex="0"
           role="button"
           style="text-decoration:none!important;"
-          class="grow no-underline db"
+          class="grow no-underline db "
           target="_blank"
           :href="songData.url"
         >
@@ -175,10 +175,12 @@ export default {
   },
   methods: {
     onPlay() {
-      console.log(this.player.currentTime)
+      this.isPlaying = true
+      this.$refs.playbtn.setAttribute('aria-play', this.isPlaying)
     },
     onPause() {
-      console.log(this.player.currentTime)
+      this.isPlaying = false
+      this.$refs.playbtn.setAttribute('aria-play', this.isPlaying)
     },
     onTime() {
       this.currentTime = this.player.currentTime
@@ -189,17 +191,19 @@ export default {
       this.duration = this.player.duration
     },
     dragged(d) {
-      const w = ~~this.waveformSVG.node().getBoundingClientRect().width
-      const x = Math.max(0, Math.min(selection.event.x, w))
-      const p = x / w
+      const box = this.waveformSVG.node().getBoundingClientRect()
+      const x = Math.max(
+        0,
+        Math.min(selection.event.sourceEvent.layerX - box.x, box.width)
+      )
+      const p = x / box.width
       this.player.currentTime = this.duration * p
       this.currentTime = this.player.currentTime
       this.updateCursor(p)
     },
     dragended(d) {},
     updateCursor(p) {
-      const w = this.waveformSVG.node().getBoundingClientRect().width
-      this.cursor.attr('x', w * p)
+      this.cursor.attr('x', this.w * p)
     },
     toggleTimeMode() {
       this.reverseTimeMode = !this.reverseTimeMode
