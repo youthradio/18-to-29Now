@@ -62,7 +62,8 @@ export default {
       JSON.parse(atob(this.article.audioWaveform)),
       {
         height: 100,
-        width: 500
+        width: 500,
+        padding: 0.8
       }
     )
   },

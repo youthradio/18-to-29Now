@@ -8,19 +8,22 @@
       class="flex items-center br-pill white"
       style="background-color:#204D8F"
       tabindex="0"
-      @keyup.left="seekAudio(-1)"
-      @keyup.right="seekAudio(1)"
-      @keyup.space="togglePlay"
+      @keydown.left="seekAudio(-1)"
+      @keydown.right="seekAudio(1)"
+      @keydown.space="togglePlay"
     >
-      <div class="pa4 pl4 pr2">
+      <div class="pa2 pa4-ns pl4-ns pr2-ns">
         <a
-          tabindex="1"
+          ref="playbtn"
+          tabindex="0"
           role="button"
           href="#"
-          class="grow no-underline dib"
+          class="grow no-underline db"
+          aria-pressed="false"
+          aria-text="play pause"
           @click.prevent="togglePlay"
         >
-          <svg class="pointer db" width="50" height="50" viewBox="0 0 552 552">
+          <svg class="pointer db" width="50" height="50" viewBox="0 0 510 510">
             <path
               v-if="isPlaying"
               style="fill:white;"
@@ -36,12 +39,12 @@
           </svg>
         </a>
       </div>
-      <div class="ph2">
+      <div class="ph2 dn db-ns">
         <a
-          tabindex="2"
+          tabindex="0"
           role="button"
           style="text-decoration:none!important;"
-          class="grow no-underline dib"
+          class="grow no-underline db"
           target="_blank"
           :href="songData.url"
         >
@@ -51,13 +54,13 @@
       </div>
       <div
         ref="waveform"
-        tabindex="3"
+        tabindex="0"
         class="ph2"
         v-html="songData.svgStr"
       ></div>
-      <p class="lh-title pl2 pr4 b nowrap f7 f5-ns">
+      <p class="lh-title ph1 b nowrap f7 f5-ns">
         <span
-          tabindex="4"
+          tabindex="0"
           role="button"
           class="pointer"
           @keyup.enter="toggleTimeMode"
@@ -69,6 +72,30 @@
         </span>
         / {{ duration | formatSeconds }}
       </p>
+      <div
+        class="pl1 pr3 pl2-ns pr4-ns"
+        tabindex="0"
+        role="button "
+        @click="setVolume"
+      >
+        <svg
+          :style="{
+            transform: `scale(${(currentVolume + 1) / 5}`
+          }"
+          width="30.75"
+          height="35.51"
+          viewBox="0 0 30.75 35.51"
+          fill="none"
+          class="db bounce-transition"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 17.7535V13.2535C0 11.5967 1.34315 10.2535 3 10.2535H12.9904L30.75 0L30.75 35.507L12.9904 25.2535H3C1.34315 25.2535 0 23.9104 0 22.2535V17.7535Z"
+            fill="#FFD299"
+          ></path>
+        </svg>
+      </div>
     </div>
   </div>
 </template>
@@ -107,6 +134,7 @@ export default {
       h: null,
       duration: null,
       currentTime: 0,
+      currentVolume: 4,
       reverseTimeMode: false,
       isPlaying: false
     }
@@ -175,13 +203,20 @@ export default {
     },
     toggleTimeMode() {
       this.reverseTimeMode = !this.reverseTimeMode
+      this.$refs.timeMode.setAttribute('aria-pressed', this.reverseTimeMode)
     },
     seekAudio(dir) {
       this.player.currentTime = this.player.currentTime + dir * 5
     },
-    async togglePlay() {
+    setVolume() {
+      this.currentVolume = (this.currentVolume + 1) % 5
+      this.player.volume = (this.currentVolume + 1) / 5
+    },
+    async togglePlay(e) {
+      e.preventDefault()
       if (!this.player.paused) {
         this.isPlaying = false
+        this.$refs.playbtn.setAttribute('aria-play', this.isPlaying)
         this.player.pause()
         return
       }
@@ -191,6 +226,7 @@ export default {
       } catch (err) {
         this.isPlaying = false
       }
+      this.$refs.playbtn.setAttribute('aria-play', this.isPlaying)
     }
   }
 }
