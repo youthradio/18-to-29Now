@@ -1,6 +1,6 @@
 <template>
   <div class="pv3 sans-serif">
-    <h4 class="mb2 blue">Sign up for our newsletter</h4>
+    <h4 class="mb2 blue">Sign up for our newsletters</h4>
     <mailchimp-subscribe
       :url="newsletter.url"
       :user-id="newsletter.uid"

@@ -54,6 +54,7 @@ function markdown2html(data) {
             ALLOWED_TAGS: [
               'a',
               'p',
+              'b',
               'img',
               'div',
               'iframe',
