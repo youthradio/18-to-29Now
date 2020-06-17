@@ -1,5 +1,5 @@
 <template>
-  <header ref="header" class="min-vh-100 bg-washed-red flex flex-column">
+  <header ref="header" class="min-vh-100 bg-washed-red">
     <nav class="serif pl2 dn db-ns pv2 z-2 f6 f4-ns bg-blue">
       <div class="tc">
         <nuxt-link
