@@ -1,16 +1,16 @@
 <template>
   <header ref="header" class="min-vh-100 bg-washed-red flex flex-column">
-    <nav class="serif pl2 pl4-ns ph3 dn db-ns center pv2 z-2 f6 f4-ns">
-      <div class="">
+    <nav class="serif pl2 dn db-ns pv2 z-2 f6 f4-ns bg-blue">
+      <div class="tc">
         <nuxt-link
-          class="link b dib mr3 pv1 underline-hover blue"
+          class="link dib mr3 pv1 underline-hover washed-red"
           title="About"
           :to="{ path: '/', hash: 'about' }"
         >
           About this Project
         </nuxt-link>
         <nuxt-link
-          class="link b dib mr3 pv1 underline-hover blue"
+          class="link dib mr3 pv1 underline-hover washed-red"
           title="Latest"
           :to="{ path: '/', hash: 'latest' }"
         >
@@ -18,7 +18,7 @@
         </nuxt-link>
         <nuxt-link
           :to="{ path: '/', hash: 'contributors' }"
-          class="link b dib mr3 pv1 underline-hover blue"
+          class="link dib mr3 pv1 underline-hover washed-red"
           title="Contributors"
         >
           Contributors
