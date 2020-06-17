@@ -132,9 +132,9 @@
       </h1>
       <div class="flex flex-wrap">
         <div
-          v-for="bio in articleData.bios"
+          v-for="bio in biosData"
           :key="bio.authorslug"
-          class="w-50 w-25-ns pr2"
+          class="w-50 w-20-ns pr2"
         >
           <a
             class="link pointer db dim black"
@@ -214,6 +214,13 @@ export default {
     randomQuote() {
       const l = this.articleData.main.quotes.length
       return this.articleData.main.quotes[~~(Math.random() * l)]
+    },
+    biosData() {
+      // bios data sorted by last name
+      const bios = this.articleData.bios
+      return bios.sort((a, b) =>
+        a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
+      )
     }
   },
   mounted() {
