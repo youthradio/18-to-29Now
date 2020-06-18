@@ -1,7 +1,7 @@
 <template>
   <div class="overflow-hidden">
     <MainHeader />
-    <main class="flex flex-column flex-row-ns mw8 center ph3">
+    <main id="header" class="flex flex-column flex-row-ns mw8 center ph3">
       <template v-for="feature in featured">
         <article :key="feature.slug" class="pt4 pr2-ns w-50-ns">
           <div class="flex flex-column">
@@ -174,6 +174,15 @@
       :authordata="modelBioData"
       @toggleModal="toggleBioModal"
     />
+    <div class="flex justify-center pv3">
+      <a
+        href="#header"
+        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue
+        center"
+      >
+        Back to Top
+      </a>
+    </div>
     <Footer :content="articleData.main.footer" />
   </div>
 </template>

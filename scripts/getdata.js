@@ -7,8 +7,8 @@ const getData = async () => {
   const dataToWrite = {
     stories: []
   }
-  for (const docId of POSTCONFIG.docs) {
-    const data = await customFetcher(docId)
+  for (const doc of POSTCONFIG.docs) {
+    const data = await customFetcher(doc.id)
     if (data) {
       const key = data.type.trim()
       if (key === 'bio') {

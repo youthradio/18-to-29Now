@@ -20,12 +20,25 @@ module.exports = {
   twitterHandler: '@itsyrmedia',
   POLLSERVER: 'https://ee51aej7u4.execute-api.us-west-2.amazonaws.com/latest',
   docs: [
-    '1TnpNdAl7OWnvnZjJbrYwK3dCl5ZvWlvYr6s6HDnLXSM',
-    '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg',
-    '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM',
-    '1cNErfFhlQKT-xZlDVcbmeq4u9U-pANm3tDzNrSijZA8',
-    '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8',
-    '1iaWKK1W4uZi_X13MieT4jemysA1C6bZkW1E8jkT7a_Q'
+    {
+      name: 'Project Bios',
+      id: '1TnpNdAl7OWnvnZjJbrYwK3dCl5ZvWlvYr6s6HDnLXSM'
+    },
+    {
+      name: 'Now_KelveyVanderHart',
+      id: '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg'
+    },
+    { name: 'test', id: '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM' },
+    {
+      name: 'Main about quotes',
+      id: '1cNErfFhlQKT-xZlDVcbmeq4u9U-pANm3tDzNrSijZA8'
+    },
+    { name: 'test video', id: '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8' },
+    { name: 'audio test', id: '1iaWKK1W4uZi_X13MieT4jemysA1C6bZkW1E8jkT7a_Q' },
+    {
+      name: ' Pandemic Reflections from Borderland Antonio ',
+      id: '1u5V-ectva2CoZ5_YkSK-ddzy8YzwE9NxjP-9559Z3Vw'
+    }
   ],
   dataPath: 'data/data.json',
   newsletter: {

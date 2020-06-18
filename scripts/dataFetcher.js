@@ -30,7 +30,7 @@ marked.setOptions({
 
 const renderer = {
   link(href, title, text) {
-    return `<a href="${href}" class="link blue dim underline">${text}</a>`
+    return `<a href="${href}" target="_blank" class="link blue dim underline">${text}</a>`
   }
 }
 
