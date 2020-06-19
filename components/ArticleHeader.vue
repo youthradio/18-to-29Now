@@ -35,7 +35,7 @@
           </nuxt-link>
         </div>
       </nav>
-      <div class="dn db-ns w-30 ml-auto">
+      <div class="dn db-ns w-30 ml-auto serif tr">
         <p>
           Young adults from around the country document what’s at stake for them
           in this election

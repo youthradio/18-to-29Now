@@ -18,7 +18,7 @@
               />
             </div>
             <button
-              class="sans-serif f6 f5-ns grow no-underline ph3 pv2 dib white bg-blue
+              class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue
         center nowrap"
               type="submit"
             >

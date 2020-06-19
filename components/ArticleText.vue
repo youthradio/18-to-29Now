@@ -20,7 +20,7 @@
       <p class="dn db-ns f4 lh-copy order-2 w-20-ns pl3-ns">
         {{ article.summary }}
       </p>
-      <div class="measure-wide ph3-ns lh-copy center f5 f4-ns">
+      <div class="measure-wide w-60-ns ph3-ns lh-copy f5 f4-ns">
         <article v-html="article.text"></article>
       </div>
     </div>

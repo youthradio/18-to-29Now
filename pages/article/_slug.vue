@@ -5,21 +5,26 @@
       <component
         :is="articleFormatComponent"
         v-bind="{ article: article }"
-        class="pt3"
+        class="pt4"
       />
-      <BioContainer mode="small" :author="authordata" />
 
-      <div class="flex justify-center pv3">
-        <nuxt-link
-          title="Home"
-          :to="{ path: '/' }"
-          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue
-        center"
-        >
-          Back to Main Page
-        </nuxt-link>
-      </div>
+      <BioContainer
+        class="pt4 w-60-ns center"
+        mode="small"
+        :author="authordata"
+      />
     </main>
+
+    <div class="flex justify-center pv3">
+      <nuxt-link
+        title="Home"
+        :to="{ path: '/' }"
+        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
+        center"
+      >
+        Back to Main Page
+      </nuxt-link>
+    </div>
     <Footer :content="articleData.main.footer" />
   </div>
 </template>

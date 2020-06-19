@@ -1,11 +1,11 @@
 <template>
-  <aside class="measure-wide center">
-    <div class="flex items-end flex-wrap">
+  <aside>
+    <div class="flex items-end flex-wrap ph3-ns">
       <div class="pr3">
         <img
           src="blank.jpg"
           :data-src="author.image"
-          class="lazyload mw4"
+          class="db lazyload mw4"
           :alt="`${author.name} Profile Picture`"
         />
       </div>
@@ -18,7 +18,7 @@
         </h4>
       </div>
     </div>
-    <div class="f5 f4-ns" v-html="author.text"></div>
+    <div class="f5 f4-ns measure-wide ph3-ns" v-html="author.text"></div>
   </aside>
 </template>
 <script>

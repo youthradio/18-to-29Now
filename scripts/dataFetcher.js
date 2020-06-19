@@ -56,6 +56,7 @@ function markdown2html(data) {
               'p',
               'b',
               'img',
+              'br',
               'div',
               'iframe',
               'style',

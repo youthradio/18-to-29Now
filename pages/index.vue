@@ -2,10 +2,13 @@
   <div class="overflow-hidden">
     <MainHeader />
     <main id="header" class="flex flex-column flex-row-ns mw8 center ph3">
-      <template v-for="feature in featured">
-        <article :key="feature.slug" class="pt4 pr2-ns w-50-ns">
+      <template v-for="(feature, i) in featured">
+        <article
+          :key="feature.slug"
+          :class="[i % 2 ? 'pl2-ns' : 'pr2-ns', 'pt4 w-50-ns']"
+        >
           <div class="flex flex-column">
-            <div class="mb4 mb0-ns">
+            <div class="mb2">
               <nuxt-link
                 title=""
                 :to="{ path: `article/${feature.slug}` }"
@@ -37,7 +40,7 @@
               >
                 <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ feature.author }} |
-                  <small class="ttc"> {{ feature.format }} </small>
+                  <span class="ttc normal"> {{ feature.format }} </span>
                 </h3>
               </nuxt-link>
               <nuxt-link
@@ -45,7 +48,7 @@
                 :to="{ path: `article/${feature.slug}` }"
                 class="link db dim black"
               >
-                <p class="f4-l lh-copy">
+                <p class="f4-l lh-copy mt0">
                   {{ feature.summary }}
                 </p>
               </nuxt-link>
@@ -55,7 +58,7 @@
       </template>
     </main>
     <section class="mw8 center ph3">
-      <h3 id="latest" class="blue serif bb bw2 ttu">Latest</h3>
+      <h3 id="latest" class="blue bb bw2 ttu">Latest</h3>
       <template v-for="article in latest">
         <article :key="article.slug" class="pb4">
           <div class="flex flex-column flex-row-ns">
@@ -91,7 +94,7 @@
               >
                 <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ article.author }} |
-                  <small class="ttc"> {{ article.format }}</small>
+                  <span class="ttc normal"> {{ article.format }}</span>
                 </h3>
               </nuxt-link>
               <nuxt-link
@@ -113,12 +116,12 @@
         <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns z-1">
           {{ randomQuote.quote }}
         </p>
-        <cite class="blue sans f6 tracked fs-normal w-20-ns mv3 mv5-ns">
+        <cite class="blue sans f6 fs-normal w-20-ns mv3 mv5-ns">
           <span class="cite-symbol">
             <nuxt-link
               title=""
               :to="{ path: `contribuitor/${randomQuote.authorslug}` }"
-              class="link db blue dim black"
+              class="lh-title db blue dim black"
               >{{ randomQuote.author }}
             </nuxt-link></span
           >
@@ -126,42 +129,40 @@
         >
       </blockquote>
     </div>
-    <section class="mw8 center ph3">
-      <h1 id="contributors" class="blue f3 serif mt0 lh-title ttu">
+    <section class="mw8 center">
+      <h1 id="contributors" class="blue f3 mt0 lh-title ttu ph3">
         Contributors
       </h1>
-      <div class="flex flex-wrap">
-        <div
-          v-for="bio in biosData"
-          :key="bio.authorslug"
-          class="w-50 w-20-ns pr2"
-        >
-          <a
-            class="link pointer db dim black"
-            @click.prevent="toggleBioModal(bio)"
-          >
-            <div class="bb bw2 pb3 b--dark-red">
-              <div class="aspect-ratio aspect-ratio--1x1">
-                <img
-                  :data-src="bio.image"
-                  src="blank.jpg"
-                  class="aspect-ratio--object db img-fluid lazyload"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                />
+      <div class="flex flex-wrap ph2">
+        <div v-for="bio in biosData" :key="bio.authorslug" class="w-50 w-20-ns">
+          <div class="ph2 ph2-ns">
+            <a
+              class="link pointer db dim black"
+              @click.prevent="toggleBioModal(bio)"
+            >
+              <div class="bb bw2 pb3 b--dark-red">
+                <div class="aspect-ratio aspect-ratio--1x1">
+                  <img
+                    :data-src="bio.image"
+                    src="blank.jpg"
+                    class="aspect-ratio--object db img-fluid lazyload"
+                    alt="Photo of a dimly lit room with a computer interface terminal."
+                  />
+                </div>
               </div>
-            </div>
-            <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
-              {{ bio.name }}
-            </h3>
-            <h4 class="normal lh-title mt0 f6 f5-ns">
-              {{ bio.location }}
-            </h4>
-          </a>
+              <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
+                {{ bio.name }}
+              </h3>
+              <h4 class="normal lh-title mt0 f6 f5-ns">
+                {{ bio.location }}
+              </h4>
+            </a>
+          </div>
         </div>
       </div>
     </section>
     <section class="mw8 center ph3 mt4 mt5-ns">
-      <h2 id="about" class="blue serif mt0 lh-title ttu">
+      <h2 id="about" class="blue mt0 lh-title ttu">
         About
       </h2>
       <div
@@ -177,7 +178,7 @@
     <div class="flex justify-center pv3">
       <a
         href="#header"
-        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue
+        class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
         center"
       >
         Back to Top

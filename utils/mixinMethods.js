@@ -51,13 +51,11 @@ const mixinMethods = {
       // const vh = window.innerHeight
       element.style.position = 'relative'
       const width = element.getBoundingClientRect().width
-      const scaleFact = width < 900 ? 0.5 : 1
+      const scale = width < 900 ? 0.5 : 1
       const marg = 0
       const step = 100 / num
       for (const dir of ['left', 'right']) {
         for (let i = 0; i < num; i++) {
-          const scale = 0.5 + Math.random() * (scaleFact - 0.5)
-
           const ico = icons[~~(Math.random() * icons.length)]
           const svg = document.createElementNS(
             'http://www.w3.org/2000/svg',
@@ -73,6 +71,7 @@ const mixinMethods = {
           svg.style.cssText = `
           position:absolute;
           z-index:0;
+          opacity: 0.8;
           top:${-marg + randy + i * step}%;
           ${dir}: ${randx}%;
         `
