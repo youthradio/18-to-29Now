@@ -45,6 +45,16 @@ module.exports = {
     {
       name: 'A Dreamer Who Wants To Be Normal',
       id: '1tlCOZnuvFN1gFwMLRAMBhsNVAlUWcH3AVt1DlsDhIDQ'
+    },
+    {
+      name:
+        'To Move Forward After Bernie, A Young Progressive Looks To The Past',
+      id: '1iP_KiKuKvJku97AkNFgW77Lq7ETXLtIsSYPDE9n8VUo'
+    },
+    {
+      name:
+        'Expecting the Unexpected: Graduating High School During a Pandemic',
+      id: '1rIjRKFW3B73onuxgLTJT2MZmY80FfpIx-xCWVeGrqeE'
     }
   ],
   dataPath: 'data/data.json',
