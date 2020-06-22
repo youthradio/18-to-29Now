@@ -11,7 +11,7 @@
           <div class="flex">
             <div class="flex-auto self-stretch pr2">
               <input
-                class="db sans-serif w-100 h-100 ph2 bn f6 f5-ns"
+                class="db sans-serif w-100 h-100 ph2 bn f6 f5-ns br-pill"
                 placeholder="Enter your email"
                 type="email"
                 @input="setEmail($event.target.value)"
@@ -19,7 +19,7 @@
             </div>
             <button
               class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue
-        center nowrap"
+        center nowrap  br-pill"
               type="submit"
             >
               Sign Up

@@ -55,6 +55,7 @@ html {
 }
 .checkbox-size-2 {
   zoom: 2;
+  border-radius: 9999px;
 }
 .reset-p-m {
   p:first-of-type {
@@ -68,10 +69,16 @@ html {
 a:focus {
   outline: thin dotted;
 }
+.mwimg {
+  width: calc(0.5 * MIN(64rem, calc(100vw - 1rem)));
+}
 
 @media #{$breakpoint-not-small} {
+  .mwimg {
+    width: calc(0.2 * MIN(64rem, calc(100vw - 1rem)));
+  }
   .checkbox-size-2-ns {
-    zoom: 2.5;
+    zoom: 2;
   }
   .two-col-ns {
     max-height: 25rem;
