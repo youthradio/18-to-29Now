@@ -170,7 +170,33 @@
         </div>
       </div>
     </div>
+    <div class="db dn-ns mt3">
+      <div class="flex w-80 center items-baseline justify-center">
+        <div class="w-25 pa1">
+          <img
+            src="logos/yrlogo.svg"
+            class="db img-fluid-h"
+            alt="YR Media Logo"
+          />
+        </div>
 
+        <div class="w-30 pa1">
+          <img
+            src="logos/wnyclogo.svg"
+            class="db img-fluid-h"
+            alt="WNYC Logo"
+          />
+        </div>
+
+        <div class="w-25 pa1">
+          <img
+            src="logos/radio-rookies.svg"
+            class="db img-fluid-h"
+            alt="Radio Rookies"
+          />
+        </div>
+      </div>
+    </div>
     <div class="ml-auto ph4 db dn-ns">
       <p class="serif lh-title">
         Young adults from around the country document what’s at stake for them

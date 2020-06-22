@@ -10,12 +10,18 @@
       {{ article.title }}
     </h1>
     <div class="flex flex-column flex-row-ns justify-between">
-      <h3 class="dark-red lh-title w-20-ns pr3-ns">
-        {{ article.author }} <span class="di dn-ns"> | </span>
-        <br class="dn db-ns" /><small class="normal">{{
-          article.location
-        }}</small>
-      </h3>
+      <div class="w-20-ns">
+        <h5 class="dark-red lh-title pr3-ns normal mb0">WRITTEN BY</h5>
+        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
+          {{ article.author }}
+        </h3>
+        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
+          {{ article.location }}
+        </h3>
+        <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
+          {{ article.date }}
+        </h5>
+      </div>
 
       <p class="dn db-ns f4 lh-copy order-2 w-20-ns pl3-ns">
         {{ article.summary }}
