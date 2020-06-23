@@ -8,26 +8,18 @@
       <div
         class="flex flex flex-column flex-row-ns items-center justify-between justify-start-ns pv3"
       >
-        <div class="flex w-100 w-60-ns justify-around justify-start-ns">
-          <div>
-            <img
-              src="logos/yrlogo.svg"
-              class="db ph3-ns h-100"
-              alt="YR Media Logo"
-            />
+        <div class="flex w-80 w-60-ns justify-around justify-start-ns">
+          <div class="ph2">
+            <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
-          <div>
-            <img
-              src="logos/wnyclogo.svg"
-              class="db ph3-ns h-100"
-              alt="WNYC Logo"
-            />
+          <div class="ph2">
+            <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
           </div>
-          <div>
+          <div class="ph2">
             <img
               src="logos/radio-rookies.svg"
-              class="db ph3-ns h-100"
+              class="db h-100"
               alt="Radio Rookies"
             />
           </div>
