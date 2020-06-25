@@ -11,7 +11,7 @@
             <div class="mb2">
               <nuxt-link
                 :title="feature.title"
-                :to="{ path: `article/${feature.slug}` }"
+                :to="{ path: `story/${feature.slug}` }"
                 class="link db dim black"
               >
                 <img
@@ -26,7 +26,7 @@
             <div class="w-100 w-90-ns">
               <nuxt-link
                 :title="feature.title"
-                :to="{ path: `article/${feature.slug}` }"
+                :to="{ path: `story/${feature.slug}` }"
                 class="link db underline-hover blue"
               >
                 <h2 class="blue f3 f2-ns serif ma0 lh-title">
@@ -45,7 +45,7 @@
               </a>
               <nuxt-link
                 :title="feature.summary"
-                :to="{ path: `article/${feature.slug}` }"
+                :to="{ path: `story/${feature.slug}` }"
                 class="link db dim black"
               >
                 <p class="f4-l lh-copy mt0">
@@ -65,7 +65,7 @@
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
               <nuxt-link
                 :title="article.title"
-                :to="{ path: `article/${article.slug}` }"
+                :to="{ path: `story/${article.slug}` }"
                 class="link db dim black"
               >
                 <img
@@ -81,7 +81,7 @@
             <div class="w-70-ns pl3-ns">
               <nuxt-link
                 :title="article.title"
-                :to="{ path: `article/${article.slug}` }"
+                :to="{ path: `story/${article.slug}` }"
                 class="link db blue underline-hover"
               >
                 <h2 class="blue serif mv0 lh-title f4 f3-ns">
@@ -100,7 +100,7 @@
               </a>
               <nuxt-link
                 :title="article.summary"
-                :to="{ path: `article/${article.slug}` }"
+                :to="{ path: `story/${article.slug}` }"
                 class="link db dim black"
               >
                 <p class="f4-l lh-copy mv0">{{ article.summary }} |</p>

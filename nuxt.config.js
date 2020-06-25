@@ -143,7 +143,7 @@ export default {
   generate: {
     routes: [
       ArticleData.bios.map((e) => `contribuitor/${e.authorslug}`),
-      ArticleData.stories.map((e) => `article/${e.slug}`)
+      ArticleData.stories.map((e) => `story/${e.slug}`)
     ].flat()
   }
   // server: {
