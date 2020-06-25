@@ -10,7 +10,7 @@
           <div class="flex flex-column">
             <div class="mb2">
               <nuxt-link
-                title=""
+                :title="feature.title"
                 :to="{ path: `article/${feature.slug}` }"
                 class="link db dim black"
               >
@@ -25,7 +25,7 @@
             </div>
             <div class="w-100 w-90-ns">
               <nuxt-link
-                title=""
+                :title="feature.title"
                 :to="{ path: `article/${feature.slug}` }"
                 class="link db underline-hover blue"
               >
@@ -33,18 +33,18 @@
                   {{ feature.title }}
                 </h2>
               </nuxt-link>
-              <nuxt-link
-                title=""
-                :to="{ path: `contribuitor/${feature.authorslug}` }"
-                class="link db blue dim black"
+              <a
+                :title="`${feature.author} Bio`"
+                class="pointer link db blue dim black"
+                @click.prevent="toggleBioModalSlug(feature.authorslug)"
               >
                 <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ feature.author }} |
                   <span class="ttc normal"> {{ feature.format }} </span>
                 </h3>
-              </nuxt-link>
+              </a>
               <nuxt-link
-                title=""
+                :title="feature.summary"
                 :to="{ path: `article/${feature.slug}` }"
                 class="link db dim black"
               >
@@ -64,13 +64,14 @@
           <div class="flex flex-column flex-row-ns">
             <div class="pr3-ns mb4 mb0-ns w-30-ns">
               <nuxt-link
-                title=""
+                :title="article.title"
                 :to="{ path: `article/${article.slug}` }"
                 class="link db dim black"
               >
                 <img
                   :data-src="article.featureImage"
                   class="db lazyload"
+                  `
                   src="blankfeature.jpg"
                   style="object-fit: cover;"
                   alt="Photo of a dimly lit room with a computer interface terminal."
@@ -79,7 +80,7 @@
             </div>
             <div class="w-70-ns pl3-ns">
               <nuxt-link
-                title=""
+                :title="article.title"
                 :to="{ path: `article/${article.slug}` }"
                 class="link db blue underline-hover"
               >
@@ -87,18 +88,18 @@
                   {{ article.title }}
                 </h2>
               </nuxt-link>
-              <nuxt-link
-                title=""
-                :to="{ path: `contribuitor/${article.authorslug}` }"
-                class="link db blue dim black"
+              <a
+                :title="`${article.author} Bio`"
+                class="pointer link db blue dim black"
+                @click.prevent="toggleBioModalSlug(article.authorslug)"
               >
                 <h3 class="dark-red lh-title mv1 f5 f4-ns">
                   {{ article.author }} |
                   <span class="ttc normal"> {{ article.format }}</span>
                 </h3>
-              </nuxt-link>
+              </a>
               <nuxt-link
-                title=""
+                :title="article.summary"
                 :to="{ path: `article/${article.slug}` }"
                 class="link db dim black"
               >
@@ -111,22 +112,23 @@
     </section>
     <div ref="blockquote" class="bg-washed-red">
       <blockquote
-        class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3"
+        class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3 z-1"
       >
         <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns z-1">
           {{ randomQuote.quote }}
         </p>
         <cite class="blue sans f6 fs-normal w-20-ns mv3 mv5-ns">
-          <span class="cite-symbol">
-            <nuxt-link
-              title=""
-              :to="{ path: `contribuitor/${randomQuote.authorslug}` }"
-              class="lh-title db blue dim black"
-              >{{ randomQuote.author }}
-            </nuxt-link></span
+          <a
+            :title="`${randomQuote.author} Bio`"
+            class="pointer link db blue dim black"
+            @click.prevent="toggleBioModalSlug(randomQuote.authorslug)"
           >
-          <br />{{ randomQuote.location }}</cite
-        >
+            <div class="cite-symbol">
+              {{ randomQuote.author }}
+            </div>
+            {{ randomQuote.location }}
+          </a>
+        </cite>
       </blockquote>
     </div>
     <section class="mw8 center">
@@ -138,6 +140,7 @@
           <div class="ph2 ph2-ns">
             <a
               class="link pointer db dim black"
+              :title="`${bio.name}\n${bio.location}`"
               @click.prevent="toggleBioModal(bio)"
             >
               <div class="bb bw2 pb3 b--dark-red">
@@ -180,6 +183,7 @@
         href="#header"
         class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
         center"
+        title="Back to Top"
       >
         Back to Top
       </a>
@@ -246,6 +250,13 @@ export default {
     toggleBioModal(authordata) {
       if (authordata) {
         this.modelBioData = authordata
+        return
+      }
+      this.modelBioData = null
+    },
+    toggleBioModalSlug(slug) {
+      if (slug) {
+        this.modelBioData = this.biosData.find((e) => e.authorslug === slug)
         return
       }
       this.modelBioData = null

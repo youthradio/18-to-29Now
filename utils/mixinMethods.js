@@ -72,6 +72,7 @@ const mixinMethods = {
           position:absolute;
           z-index:0;
           opacity: 0.8;
+          pointer-events: none;
           top:${-marg + randy + i * step}%;
           ${dir}: ${randx}%;
         `

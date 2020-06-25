@@ -2,16 +2,17 @@
   <div>
     <ArticleHeader />
     <main class="center mw8 pa3">
-      <h1 class="blue f3 serif mt0 lh-title ttu ph2">
-        Contributor
-      </h1>
-      <BioContainer :author="authordata" />
+      <div class="measure-wide center w-60-ns ph3-ns lh-copy f5 f4-ns">
+        <h1 class="blue f3 sans-serif mt0 lh-title ttu ph3-ns">
+          Contributor
+        </h1>
+        <BioContainer :author="authordata" />
+      </div>
       <div class="flex justify-center pv3">
         <nuxt-link
           title="Home"
           :to="{ path: '/' }"
-          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-blue
-        center"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue"
         >
           Back to Main Page
         </nuxt-link>

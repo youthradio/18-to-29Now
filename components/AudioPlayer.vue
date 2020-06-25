@@ -40,17 +40,10 @@
         </a>
       </div>
       <div class="ph2 dn db-ns">
-        <a
-          tabindex="0"
-          role="button"
-          style="text-decoration:none!important;"
-          class="grow no-underline db "
-          target="_blank"
-          :href="songData.url"
-        >
+        <div>
           <h2 class="f6 white sans-serif">{{ songData.title }}</h2>
           <h3 class="f7 white sans-serif fw4">{{ songData.author }}</h3>
-        </a>
+        </div>
       </div>
       <div
         ref="waveform"
