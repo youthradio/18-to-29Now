@@ -19,7 +19,7 @@
             </div>
             <button
               class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue
-        center nowrap  br-pill"
+        center nowrap  br-pill bn"
               type="submit"
             >
               Sign Up
@@ -36,7 +36,7 @@
             />
             I agree to the Terms and Conditions
           </label>
-          <div class="reset-p-m f7" v-html="message"></div>
+          <div class="reset-p-m f7 pv2" v-html="message"></div>
 
           <div v-if="error" class="red pa0">
             <small>{{ error }}</small>

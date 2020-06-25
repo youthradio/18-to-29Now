@@ -63,7 +63,7 @@
           />
         </div>
         <div class="dn db-ns grid-col-1-4 z-2">
-          <div class="flex justify-end items-end h-100">
+          <div class="flex justify-end items-end h-100 pl4">
             <img alt="" src="logos/ygamerica.svg" class="db h-100" />
           </div>
         </div>
@@ -86,17 +86,17 @@
           <div class="">
             <img
               src="logos/yrlogo.svg"
-              class="db ml-auto pa1"
+              class="db ml-auto pa1 pr0"
               alt="YR Media Logo"
             />
             <img
               src="logos/wnyclogo.svg"
-              class="db ml-auto pa1"
+              class="db ml-auto pa1 pr0"
               alt="WNYC Logo"
             />
             <img
               src="logos/radio-rookies.svg"
-              class="db ml-auto pa1"
+              class="db ml-auto pa1 pr0"
               alt="Radio Rookies"
             />
           </div>
@@ -129,7 +129,7 @@
           />
         </div>
         <div class="dn db-ns grid-col-5-7 z-3">
-          <div class="flex h-100">
+          <div class="flex h-100 pr5">
             <img alt="" src="logos/speaksup.svg" class="db h-100" />
           </div>
         </div>
@@ -171,7 +171,9 @@
       </div>
     </div>
     <div class="db dn-ns mt3 ph3">
-      <div class="flex w-80 center justify-around justify-start-ns">
+      <div
+        class="flex w-80 center justify-around justify-start-ns items-baseline"
+      >
         <div class="ph2">
           <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
         </div>

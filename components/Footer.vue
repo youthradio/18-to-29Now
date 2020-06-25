@@ -8,20 +8,39 @@
       <div
         class="flex flex flex-column flex-row-ns items-center justify-between justify-start-ns pv3"
       >
-        <div class="flex w-80 w-60-ns justify-around justify-start-ns">
+        <div
+          class="flex w-80 w-60-ns justify-around justify-start-ns items-baseline"
+        >
           <div class="ph2">
-            <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
+            <a
+              href="https://yr.media"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo"
+            /></a>
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
           <div class="ph2">
-            <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
+            <a
+              href="https://wnyc.org"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo"
+            /></a>
           </div>
           <div class="ph2">
-            <img
-              src="logos/radio-rookies.svg"
-              class="db h-100"
-              alt="Radio Rookies"
-            />
+            <a
+              href="https://www.wnyc.org/shows/rookies"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/radio-rookies.svg"
+                class="db h-100"
+                alt="Radio Rookies"
+            /></a>
           </div>
         </div>
         <div class="mt3 mt0-ns ml4-ns w-40-ns">

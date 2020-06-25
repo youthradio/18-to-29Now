@@ -103,7 +103,7 @@
                 :to="{ path: `story/${article.slug}` }"
                 class="link db dim black"
               >
-                <p class="f4-l lh-copy mv0">{{ article.summary }} |</p>
+                <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
               </nuxt-link>
             </div>
           </div>
