@@ -29,7 +29,7 @@
         </h5>
       </div>
 
-      <p class="dn db-ns f4 lh-copy order-2 w-20-ns pl3-ns">
+      <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns">
         {{ article.summary }}
       </p>
       <div class="measure-wide ph3-ns w-60-ns lh-copy center f5 f4-ns">
