@@ -1,62 +1,7 @@
 <template>
   <div class="overflow-hidden">
     <MainHeader />
-    <main id="header" class="flex flex-column flex-row-ns mw8 center ph3">
-      <template v-for="(feature, i) in featured">
-        <article
-          :key="feature.slug"
-          :class="[i % 2 ? 'pl2-ns' : 'pr2-ns', 'pt4 w-50-ns']"
-        >
-          <div class="flex flex-column">
-            <div class="mb2">
-              <nuxt-link
-                :title="feature.title"
-                :to="{ path: `story/${feature.slug}` }"
-                class="link db dim black"
-              >
-                <img
-                  :data-src="feature.featureImage"
-                  src="blankfeature.jpg"
-                  class="db lazyload"
-                  alt="Photo of a dimly lit room with a computer interface terminal."
-                  style="object-fit: cover;"
-                />
-              </nuxt-link>
-            </div>
-            <div class="w-100 w-90-ns">
-              <nuxt-link
-                :title="feature.title"
-                :to="{ path: `story/${feature.slug}` }"
-                class="link db underline-hover blue"
-              >
-                <h2 class="blue f3 f2-ns serif ma0 lh-title">
-                  {{ feature.title }}
-                </h2>
-              </nuxt-link>
-              <a
-                :title="`${feature.author} Bio`"
-                class="pointer link db blue dim black"
-                @click.prevent="toggleBioModalSlug(feature.authorslug)"
-              >
-                <h3 class="dark-red lh-title mv1 f5 f4-ns">
-                  {{ feature.author }} |
-                  <span class="ttc normal"> {{ feature.format }} </span>
-                </h3>
-              </a>
-              <nuxt-link
-                :title="feature.summary"
-                :to="{ path: `story/${feature.slug}` }"
-                class="link db dim black"
-              >
-                <p class="f4-l lh-copy mt0">
-                  {{ feature.summary }}
-                </p>
-              </nuxt-link>
-            </div>
-          </div>
-        </article>
-      </template>
-    </main>
+    <HorizontalContainer :articles="featured" class="ph3 pt4" />
     <section class="mw8 center ph3">
       <h3 id="latest" class="blue bb bw2 ttu">Latest</h3>
       <template v-for="article in latest">
@@ -202,12 +147,14 @@ import mixinMethods from '~/utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
 import Modal from '~/components/Modal.vue'
+import HorizontalContainer from '~/components/HorizontalContainer.vue'
 
 export default {
   components: {
     MainHeader,
     Footer,
-    Modal
+    Modal,
+    HorizontalContainer
   },
   mixins: [mixinMethods],
   asyncData(ctx) {

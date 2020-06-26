@@ -66,7 +66,7 @@ const mixinMethods = {
             'http://www.w3.org/2000/svg',
             'svg'
           )
-          const randx = 20 - 2 * (Math.random() * 20)
+          const randx = 60 - 2 * (Math.random() * 60)
 
           svg.setAttribute('width', ico.width * scale)
           svg.setAttribute('height', ico.height * scale)

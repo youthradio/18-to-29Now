@@ -168,8 +168,8 @@
             class="gridimg db mw-none w-100 db-ns"
           />
         </div>
-        <div class="measure dn db-ns">
-          <p class="serif lh-title mt0">
+        <div class="measure dn db-ns grid-col-5-7">
+          <p class="serif lh-title mt0 b">
             Young adults from around the country document what’s at stake for
             them in this election
           </p>

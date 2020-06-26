@@ -13,6 +13,10 @@
         mode="small"
         :author="authordata"
       />
+
+      <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
+
+      <HorizontalContainer :articles="randomArticles" />
     </main>
 
     <div class="flex justify-center pv3">
@@ -38,6 +42,7 @@ import BioContainer from '~/components/BioContainer.vue'
 import ArticleText from '~/components/ArticleText.vue'
 import ArticleVideo from '~/components/ArticleVideo.vue'
 import ArticleAudio from '~/components/ArticleAudio.vue'
+import HorizontalContainer from '~/components/HorizontalContainer.vue'
 
 export default {
   components: {
@@ -46,7 +51,8 @@ export default {
     BioContainer,
     ArticleText,
     ArticleVideo,
-    ArticleAudio
+    ArticleAudio,
+    HorizontalContainer
   },
   async asyncData(ctx) {
     const slug = await ctx.params.slug
@@ -71,6 +77,12 @@ export default {
     },
     article() {
       return this.articleData.stories.find((e) => e.slug === this.slug)
+    },
+    randomArticles() {
+      const stories = this.articleData.stories.filter(
+        (e) => e.slug !== this.slug
+      )
+      return stories.sort(() => 0.5 - Math.random()).slice(0, 2)
     },
     authordata() {
       return this.articleData.bios.find(

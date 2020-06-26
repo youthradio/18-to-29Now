@@ -1,12 +1,15 @@
 <template>
   <div
     class="vh-100 w-100 flex flex-column justify-center-ns overflow-scroll fixed top-0 z-999 bg-oc-washed-red bg-blur"
+    tabindex="0"
+    @keydown.esc="$emit('toggleModal')"
   >
     <div class="bg-washed-red mw8 center pv5 ph4 mt-auto mb-auto">
       <div class="relative center lh-copy f5 f4-ns">
         <a
           class="absolute right-1 top-1 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue
         center"
+          tabindex="0"
           @click.prevent="$emit('toggleModal')"
         >
           Close
@@ -28,16 +31,10 @@
                     {{ article.title }}
                   </h2>
                 </nuxt-link>
-                <a
-                  :title="`${article.author} Bio`"
-                  class="pointer link db blue dim black"
-                  @click.prevent="toggleBioModalSlug(article.authorslug)"
-                >
-                  <h3 class="dark-red lh-title mv1 f5 f4-ns">
-                    {{ article.author }} |
-                    <span class="ttc normal"> {{ article.format }}</span>
-                  </h3>
-                </a>
+                <h3 class="dark-red lh-title mv1 f5 f4-ns">
+                  {{ article.author }} |
+                  <span class="ttc normal"> {{ article.format }}</span>
+                </h3>
                 <nuxt-link
                   :title="article.summary"
                   :to="{ path: `/story/${article.slug}` }"
@@ -75,6 +72,9 @@ export default {
         (e) => e.authorslug === this.authordata.authorslug
       )
     }
+  },
+  mounted() {
+    this.$el.focus()
   }
 }
 </script>
