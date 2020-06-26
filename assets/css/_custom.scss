@@ -30,6 +30,17 @@ html {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 }
+@media (orientation: portrait){
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,  MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px));
+    grid-template-rows:  repeat(4, MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+ 
+}
 .grid-col-start-1 {
   grid-column-start: 1;
 }
@@ -105,16 +116,52 @@ a:focus {
     display: grid;
     grid-template-columns: repeat(
       6,
-      MIN(calc(100vw / 6 - 5 * 1rem / 6), 350px)
+      MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px)
     );
-    grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 350px));
+    grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
   }
+  @media (orientation: portrait){
+
+    .grid-container-ns {
+      display: grid;
+      grid-template-columns: repeat(
+        6,
+        MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px)
+      );
+      grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 120px));
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+    }
+   
+  }
 }
+
+ 
+// .grid-container-ns {
+//   display: grid;
+//   grid-template-columns: repeat(
+//     6,
+//     MIN(calc(100vw / 6 - 5 * 1rem / 6), 100px)
+//   );
+//   grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 100px));
+//   grid-column-gap: 1rem;
+//   grid-row-gap: 1rem;
+// }
 
 @media #{$breakpoint-medium} {
 }
 
 @media #{$breakpoint-large} {
+  .grid-container-l {
+    display: grid;
+    grid-template-columns: repeat(
+      6,
+      MIN(calc(100vw / 6 - 5 * 1rem / 6), 250px)
+    );
+    grid-template-rows: repeat(4, MIN(calc(100vw / 6 - 5 * 1rem / 6), 250px));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
 }
