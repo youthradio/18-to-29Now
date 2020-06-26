@@ -2,7 +2,7 @@
   <div>
     <ArticleHeader />
     <main class="center mw8 pa3">
-      <div class="measure-wide center w-60-ns lh-copy f5 f4-ns">
+      <div class="center w-60-ns lh-copy f5 f4-ns">
         <h1 class="blue f3 sans-serif mt0 lh-title ttu ph3-ns">
           Contributor
         </h1>

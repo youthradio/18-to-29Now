@@ -2,50 +2,53 @@
   <div
     class="vh-100 w-100 flex flex-column justify-center-ns overflow-scroll fixed top-0 z-999 bg-oc-washed-red bg-blur"
   >
-    <div class="relative bg-washed-red mw8 center pv5 ph4 mt-auto mb-auto">
-      <a
-        class="absolute right-2 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue
+    <div class="bg-washed-red mw8 center pv5 ph4 mt-auto mb-auto">
+      <div class="relative center lh-copy f5 f4-ns">
+        <a
+          class="absolute right-1 top-1 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue
         center"
-        @click.prevent="$emit('toggleModal')"
-      >
-        Close
-      </a>
-      <BioContainer :author="authordata" />
-
-      <div class="">
-        <h4 class="dark-red ttu">WRITTEN BY {{ authordata.name | first }}</h4>
-        <template v-for="article in articlesbyauthor">
-          <article :key="article.slug" class="pb4">
-            <div class="">
-              <nuxt-link
-                :title="article.title"
-                :to="{ path: `/story/${article.slug}` }"
-                class="link db blue underline-hover"
-              >
-                <h2 class="blue serif mv0 lh-title f4 f3-ns">
-                  {{ article.title }}
-                </h2>
-              </nuxt-link>
-              <a
-                :title="`${article.author} Bio`"
-                class="pointer link db blue dim black"
-                @click.prevent="toggleBioModalSlug(article.authorslug)"
-              >
-                <h3 class="dark-red lh-title mv1 f5 f4-ns">
-                  {{ article.author }} |
-                  <span class="ttc normal"> {{ article.format }}</span>
-                </h3>
-              </a>
-              <nuxt-link
-                :title="article.summary"
-                :to="{ path: `/story/${article.slug}` }"
-                class="link db dim black"
-              >
-                <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
-              </nuxt-link>
-            </div>
-          </article>
-        </template>
+          @click.prevent="$emit('toggleModal')"
+        >
+          Close
+        </a>
+        <BioContainer :author="authordata" />
+        <div v-if="articlesbyauthor.length" class="measure-wide">
+          <h4 class="dark-red ttu ph3">
+            WRITTEN BY {{ authordata.name | first }}
+          </h4>
+          <template v-for="article in articlesbyauthor">
+            <article :key="article.slug" class="pb4 ph3">
+              <div class="">
+                <nuxt-link
+                  :title="article.title"
+                  :to="{ path: `/story/${article.slug}` }"
+                  class="link db blue underline-hover"
+                >
+                  <h2 class="blue serif mv0 lh-title f4 f3-ns">
+                    {{ article.title }}
+                  </h2>
+                </nuxt-link>
+                <a
+                  :title="`${article.author} Bio`"
+                  class="pointer link db blue dim black"
+                  @click.prevent="toggleBioModalSlug(article.authorslug)"
+                >
+                  <h3 class="dark-red lh-title mv1 f5 f4-ns">
+                    {{ article.author }} |
+                    <span class="ttc normal"> {{ article.format }}</span>
+                  </h3>
+                </a>
+                <nuxt-link
+                  :title="article.summary"
+                  :to="{ path: `/story/${article.slug}` }"
+                  class="link db dim black"
+                >
+                  <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
+                </nuxt-link>
+              </div>
+            </article>
+          </template>
+        </div>
       </div>
     </div>
   </div>
