@@ -49,35 +49,37 @@ const mixinMethods = {
   methods: {
     randomIcons(element, num = 5) {
       // const vh = window.innerHeight
-      element.style.position = 'relative'
       const width = element.getBoundingClientRect().width
       const scale = width < 900 ? 0.5 : 1
-      const marg = 0
-      const step = 100 / num
-      for (const dir of ['left', 'right']) {
-        for (let i = 0; i < num; i++) {
+      // const marg = 0
+      // const step = 100 / num
+      for (let i = 0; i < num; i++) {
+        const div = document.createElement('div')
+        div.style.cssText = `
+          display:flex;
+          justify-content: space-between;
+        `
+        for (let l = 0; l < 2; l++) {
           const ico = icons[~~(Math.random() * icons.length)]
+
           const svg = document.createElementNS(
             'http://www.w3.org/2000/svg',
             'svg'
           )
-          const randx = Math.random() * 10
-          const randy = Math.random() * 0
+          const randx = 20 - 2 * (Math.random() * 20)
 
           svg.setAttribute('width', ico.width * scale)
           svg.setAttribute('height', ico.height * scale)
           svg.setAttribute('viewBox', `0 0 ${ico.width} ${ico.height}`)
           svg.innerHTML = ico.path
           svg.style.cssText = `
-          position:absolute;
-          z-index:0;
-          opacity: 0.8;
           pointer-events: none;
-          top:${-marg + randy + i * step}%;
-          ${dir}: ${randx}%;
+          margin-left: ${randx}px
+          z-index: 0;
         `
-          element.appendChild(svg)
+          div.appendChild(svg)
         }
+        element.appendChild(div)
       }
     }
   }

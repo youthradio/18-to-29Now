@@ -10,8 +10,8 @@
           />
         </nuxt-link>
       </div>
-      <nav class="serif pl2 pl4-ns f7 f5-ns ">
-        <div class="flex flex-column justify-between">
+      <nav class="serif pl2 pl4-ns f7 f5-ns b">
+        <div class="flex flex-column justify-between b">
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
             title="About"

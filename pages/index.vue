@@ -71,7 +71,6 @@
                 <img
                   :data-src="article.featureImage"
                   class="db lazyload"
-                  `
                   src="blankfeature.jpg"
                   style="object-fit: cover;"
                   alt="Photo of a dimly lit room with a computer interface terminal."
@@ -110,7 +109,11 @@
         </article>
       </template>
     </section>
-    <div ref="blockquote" class="bg-washed-red">
+    <div class="bg-washed-red relative">
+      <div
+        ref="flourishes"
+        class="absolute flex flex-column justify-around w-100 h-100 z-0 top-0 left-0"
+      />
       <blockquote
         class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3 z-1"
       >
@@ -193,8 +196,8 @@
 </template>
 
 <script>
-import ArticleData from '../data/data.json'
-import mixinMethods from './../utils/mixinMethods'
+import ArticleData from '~/data/data.json'
+import mixinMethods from '~/utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
 import Modal from '~/components/Modal.vue'
@@ -238,10 +241,10 @@ export default {
     }
   },
   mounted() {
-    if (this.$route.hash) {
-      setTimeout(() => this.scrollFix(this.$route.hash), 1)
-    }
-    this.randomIcons(this.$refs.blockquote, 2)
+    // if (this.$route.hash) {
+    // setTimeout(() => this.scrollFix(this.$route.hash), 1)
+    // }
+    this.randomIcons(this.$refs.flourishes, 2)
   },
   methods: {
     scrollFix(hash) {
