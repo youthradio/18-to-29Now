@@ -179,6 +179,7 @@
     <Modal
       v-if="modelBioData"
       :authordata="modelBioData"
+      :article-data="articleData"
       @toggleModal="toggleBioModal"
     />
     <div class="flex justify-center pv3">
