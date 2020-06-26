@@ -30,7 +30,7 @@ marked.setOptions({
 
 const renderer = {
   link(href, title, text) {
-    return `<a href="${href}" target="_blank" class="link blue dim underline">${text}</a>`
+    return `<a target="_blank" rel="nofollow" href="${href}" class="link blue no-underline underline-hover hover-dark-red">${text}</a>`
   }
 }
 
@@ -51,6 +51,7 @@ function markdown2html(data) {
         }
         if (key === 'text') {
           configDom = {
+            ADD_ATTR: ['target'],
             ALLOWED_TAGS: [
               'a',
               'p',
