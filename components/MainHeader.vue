@@ -1,10 +1,10 @@
 <template>
-  <header class="min-vh-100 bg-washed-red">
+  <header class="relative min-vh-100 bg-washed-red">
     <div
       ref="flourishes"
       class="absolute flex flex-column justify-around w-100 h-100 z-0 top-0 left-0"
     />
-    <nav class="serif pl2 dn db-ns pv2  f6 f4-ns bg-blue b">
+    <nav class="relative serif pl2 dn db-ns pv2  f6 f4-ns bg-blue b">
       <div class="tc">
         <nuxt-link
           class="link dib mh4 pv1 underline-hover washed-red"
@@ -30,7 +30,7 @@
       </div>
     </nav>
     <div
-      class="min-vh-100 layers ph3 ph0-ns mt0-ns pb4-ns flex flex-column justify-center"
+      class="relative min-vh-100 layers ph3 ph0-ns mt0-ns pb4-ns flex flex-column justify-center"
     >
       <img
         alt=""
