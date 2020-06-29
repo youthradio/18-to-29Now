@@ -26,7 +26,7 @@
       <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns">
         {{ article.summary }}
       </p>
-      <div class="measure-wide w-60-ns ph3-ns lh-copy f5 f4-ns">
+      <div class="relative measure-wide w-60-ns ph3-ns lh-copy f5 f4-ns">
         <article v-html="article.text"></article>
       </div>
     </div>
@@ -34,7 +34,11 @@
 </template>
 
 <script>
+import mixinMethods from '~/utils/mixinMethods'
+
 export default {
+  mixins: [mixinMethods],
+
   props: {
     article: {
       type: Object,
@@ -43,6 +47,9 @@ export default {
   },
   data() {
     return {}
+  },
+  mounted() {
+    this.randomImage(document.body)
   }
 }
 </script>

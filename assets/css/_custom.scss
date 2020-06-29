@@ -1,6 +1,7 @@
 body,
 html {
   font-size: 18px;
+  position: relative;
 }
 
 .img-fluid {
@@ -89,6 +90,9 @@ a:focus {
 }
 .mwimg {
   width: calc(0.5 * MIN(64rem, calc(100vw - 1rem)));
+}
+.z--1{
+  z-index: -1;
 }
 
 @media #{$breakpoint-not-small} {

@@ -47,6 +47,34 @@ const mixinMethods = {
     return {}
   },
   methods: {
+    randomImage(element) {
+      // const height = element.getBoundingClientRect().width
+
+      const randomImgs = Array(19)
+        .fill()
+        .map((_, i) => i + 1)
+        .sort(() => Math.random() - 0.5) // array possible images
+
+      for (let i = 0; i < 3; i++) {
+        const img = new Image()
+        const r = randomImgs.pop()
+        img.setAttribute('data-src', `images/grid/${r}.jpg`)
+        img.style.cssText = `
+        width: 150px;
+        height: 300px;
+        top:${10 + (i * 100) / 3}%;
+        right: ${i % 2 === 0 ? '0px' : 'unset'};
+        left: ${i % 2 ? '0px' : 'unset'};
+        object-position: left;
+        object-fit: cover;
+        position: absolute;
+        display: block;
+        z-index: -1;
+        `
+        img.classList.add('lazyload')
+        element.appendChild(img)
+      }
+    },
     randomIcons(element, num = 5) {
       // const vh = window.innerHeight
       const width = element.getBoundingClientRect().width
