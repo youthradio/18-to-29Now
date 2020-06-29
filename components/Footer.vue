@@ -44,8 +44,24 @@
           </div>
         </div>
         <div class="mt3 mt0-ns ml4-ns w-40-ns">
-          <p class="di db-ns ph2 ph0-ns">Privacy Policy</p>
-          <p class="di db-ns ph2 ph0-ns">Terms of Use</p>
+          <p class="di db-ns ph2 ph0-ns">
+            <a
+              href="https://www.wnyc.org/terms"
+              target="_blank"
+              class="link blue no-underline underline-hover hover-dark-red"
+            >
+              Terms of Use
+            </a>
+          </p>
+          <p class="di db-ns ph2 ph0-ns">
+            <a
+              href="https://yr.media/privacy-policy/"
+              target="_blank"
+              class="link blue no-underline underline-hover hover-dark-red"
+            >
+              Privacy Policy
+            </a>
+          </p>
         </div>
       </div>
     </div>
