@@ -14,7 +14,7 @@
                 class="link db dim black"
               >
                 <img
-                  :data-src="article.featureImage"
+                  :data-src="article.featureImageSmall"
                   class="db lazyload"
                   src="blankfeature.jpg"
                   style="object-fit: cover;"

@@ -16,7 +16,7 @@
 
       <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
 
-      <HorizontalContainer :articles="randomArticles" />
+      <HorizontalContainer :articles="randomArticles()" />
     </main>
 
     <div class="flex justify-center pv3">
@@ -78,12 +78,6 @@ export default {
     article() {
       return this.articleData.stories.find((e) => e.slug === this.slug)
     },
-    randomArticles() {
-      const stories = this.articleData.stories.filter(
-        (e) => e.slug !== this.slug
-      )
-      return stories.sort(() => 0.5 - Math.random()).slice(0, 2)
-    },
     authordata() {
       return this.articleData.bios.find(
         (e) => e.authorslug === this.article.authorslug
@@ -91,7 +85,15 @@ export default {
     }
   },
   mounted() {},
-  methods: {},
+  methods: {
+    randomArticles() {
+      const stories = this.articleData.stories.filter(
+        (e) => e.slug !== this.slug
+      )
+      const r = stories.sort(() => 0.5 - Math.random()).slice(0, 2)
+      return r
+    }
+  },
   head() {
     return {
       // title: this.markupdata.title

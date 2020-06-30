@@ -13,7 +13,7 @@
               class="link db dim black"
             >
               <img
-                :data-src="feature.featureImage"
+                :data-src="feature.featureImageSmall"
                 src="blankfeature.jpg"
                 class="db lazyload"
                 alt="Photo of a dimly lit room with a computer interface terminal."
