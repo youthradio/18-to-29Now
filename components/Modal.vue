@@ -1,10 +1,10 @@
 <template>
   <div
-    class="vh-100 w-100 flex flex-column justify-center-ns overflow-scroll fixed top-0 left-0 z-999 bg-oc-washed-red bg-blur"
+    class="vh-100 w-100 flex flex-column overflow-scroll fixed top-0 left-0 z-999 bg-oc-washed-red bg-blur"
     tabindex="0"
     @keydown.esc="$emit('toggleModal')"
   >
-    <div class="bg-washed-red mw8 center pv5 ph4 mt-auto mb-auto">
+    <div class="bg-washed-red mw8 center pv4 ph4">
       <div class="relative center lh-copy f5 f4-ns">
         <a
           class="absolute right-1 top-1 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue
@@ -16,11 +16,9 @@
         </a>
         <BioContainer :author="authordata" />
         <div v-if="articlesbyauthor.length" class="measure-wide">
-          <h4 class="dark-red ttu ph3">
-            WRITTEN BY {{ authordata.name | first }}
-          </h4>
+          <h4 class="dark-red ttu">WRITTEN BY {{ authordata.name | first }}</h4>
           <template v-for="article in articlesbyauthor">
-            <article :key="article.slug" class="pb4 ph3">
+            <article :key="article.slug" class="pb4">
               <div class="">
                 <nuxt-link
                   :title="article.title"

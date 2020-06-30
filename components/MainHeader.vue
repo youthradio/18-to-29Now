@@ -214,15 +214,6 @@ export default {
   computed: {},
   mounted() {
     this.randomIcons(this.$refs.flourishes)
-    const randomImgs = Array(19)
-      .fill()
-      .map((_, i) => i + 1)
-      .sort(() => Math.random() - 0.5) // array possible images
-
-    this.$el.querySelectorAll('.gridimg').forEach((img, i) => {
-      const r = randomImgs.pop()
-      setTimeout(() => (img.src = `images/grid/${r}.jpg`), 200 * (i + 1))
-    })
   }
 }
 </script>

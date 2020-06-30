@@ -1,6 +1,6 @@
 <template>
   <aside>
-    <div class="flex items-end flex-wrap ph3-ns">
+    <div class="flex items-end flex-wrap">
       <div class="pr3">
         <img
           src="blank.jpg"
@@ -10,18 +10,15 @@
         />
       </div>
       <div class="bb bw2 b--dark-red">
-        <h1 class="blue f5 f4-ns serif ma0 p0 lh-title">
+        <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
           {{ author.name }}
-        </h1>
-        <h4 class="normal f6 5-ns lh-title ma0 mb2">
+        </h3>
+        <h4 class="normal lh-title mt0 f6 f5-ns mb2">
           {{ author.location }}
         </h4>
       </div>
     </div>
-    <div
-      class="f5 f4-ns measure-wide ph3-ns lh-copy"
-      v-html="author.text"
-    ></div>
+    <div class="f5 f4-ns measure-wide lh-copy" v-html="author.text"></div>
   </aside>
 </template>
 <script>

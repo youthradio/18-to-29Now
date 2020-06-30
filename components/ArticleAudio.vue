@@ -30,7 +30,7 @@
       <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns mt0">
         {{ article.summary }}
       </p>
-      <div class="measure-wide ph3-ns w-60-ns lh-copy center f5 f4-ns">
+      <div class="measure-wide w-60-ns lh-copy center f5 f4-ns">
         <img
           :data-src="article.featureImage"
           src="blankfeature.jpg"
