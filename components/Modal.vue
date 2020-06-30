@@ -1,6 +1,6 @@
 <template>
   <div
-    class="vh-100 w-100 flex flex-column justify-center-ns overflow-scroll fixed top-0 z-999 bg-oc-washed-red bg-blur"
+    class="vh-100 w-100 flex flex-column justify-center-ns overflow-scroll fixed top-0 left-0 z-999 bg-oc-washed-red bg-blur"
     tabindex="0"
     @keydown.esc="$emit('toggleModal')"
   >

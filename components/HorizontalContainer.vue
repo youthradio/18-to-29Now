@@ -54,15 +54,29 @@
         </div>
       </article>
     </template>
+    <Modal
+      v-if="modelBioData"
+      :authordata="modelBioData"
+      :article-data="articleData"
+      @toggleModal="toggleBioModal"
+    />
   </main>
 </template>
 <script>
+import mixinMethods from '~/utils/mixinMethods'
+
 export default {
+  mixins: [mixinMethods],
   props: {
     articles: {
       type: Array,
       required: true,
       default: () => []
+    },
+    articleData: {
+      type: Object,
+      required: true,
+      default: () => {}
     }
   },
   mounted() {},

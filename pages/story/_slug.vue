@@ -16,7 +16,10 @@
 
       <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
 
-      <HorizontalContainer :articles="randomArticles()" />
+      <HorizontalContainer
+        :articles="randomArticles()"
+        :article-data="articleData"
+      />
     </main>
 
     <div class="flex justify-center pv3">

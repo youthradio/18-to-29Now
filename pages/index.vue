@@ -1,7 +1,11 @@
 <template>
   <div class="overflow-hidden">
     <MainHeader />
-    <HorizontalContainer :articles="featured" class="ph3 pt4" />
+    <HorizontalContainer
+      :articles="featured"
+      :article-data="articleData"
+      class="ph3 pt4"
+    />
     <section class="mw8 center ph3">
       <h3 id="latest" class="blue bb bw2 ttu">Latest</h3>
       <template v-for="article in latest">
@@ -146,14 +150,12 @@ import ArticleData from '~/data/data.json'
 import mixinMethods from '~/utils/mixinMethods'
 import MainHeader from '~/components/MainHeader.vue'
 import Footer from '~/components/Footer.vue'
-import Modal from '~/components/Modal.vue'
 import HorizontalContainer from '~/components/HorizontalContainer.vue'
 
 export default {
   components: {
     MainHeader,
     Footer,
-    Modal,
     HorizontalContainer
   },
   mixins: [mixinMethods],
@@ -163,9 +165,7 @@ export default {
     }
   },
   data() {
-    return {
-      modelBioData: null
-    }
+    return {}
   },
   computed: {
     featured() {
@@ -179,13 +179,6 @@ export default {
     randomQuote() {
       const l = this.articleData.main.quotes.length
       return this.articleData.main.quotes[~~(Math.random() * l)]
-    },
-    biosData() {
-      // bios data sorted by last name
-      const bios = this.articleData.bios
-      return bios.sort((a, b) =>
-        a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
-      )
     }
   },
   mounted() {
@@ -197,20 +190,6 @@ export default {
   methods: {
     scrollFix(hash) {
       location.href = hash
-    },
-    toggleBioModal(authordata) {
-      if (authordata) {
-        this.modelBioData = authordata
-        return
-      }
-      this.modelBioData = null
-    },
-    toggleBioModalSlug(slug) {
-      if (slug) {
-        this.modelBioData = this.biosData.find((e) => e.authorslug === slug)
-        return
-      }
-      this.modelBioData = null
     }
   }
 }
