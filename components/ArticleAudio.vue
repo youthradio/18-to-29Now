@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div ref="container" />
+
     <AudioPlayer v-if="songData.svgStr" :song-data="songData" />
     <!-- <iframe
       frameborder="0"
@@ -44,9 +46,11 @@
 <script>
 import AudioPlayer from '~/components/AudioPlayer.vue'
 import generateWaveform from '~/utils/waveformGenerator'
+import mixinMethods from '~/utils/mixinMethods'
 
 export default {
   components: { AudioPlayer },
+  mixins: [mixinMethods],
   props: {
     article: {
       type: Object,
@@ -78,6 +82,7 @@ export default {
         padding: 0.8
       }
     )
+    this.randomImage(this.$refs.container)
   },
   methods: {
     generateWaveformSVG(data, options) {

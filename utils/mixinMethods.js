@@ -35,30 +35,23 @@ const mixinMethods = {
       this.modelBioData = null
     },
     randomImage(element) {
-      // const height = element.getBoundingClientRect().width
+      const height = element.parentNode.getBoundingClientRect().height
 
       const randomImgs = Array(19)
         .fill()
         .map((_, i) => i + 1)
         .sort(() => Math.random() - 0.5) // array possible images
-
-      for (let i = 0; i < 3; i++) {
+      const nimgs = ~~(height / 900)
+      for (let i = 0; i < nimgs; i++) {
         const img = new Image()
         const r = randomImgs.pop()
         img.setAttribute('data-src', `images/grid/${r}.jpg`)
         img.style.cssText = `
-        width: 150px;
-        height: 300px;
-        top:${10 + (i * 100) / 3}%;
+        top:${20 + (i * 60) / nimgs}%;
         right: ${i % 2 === 0 ? '0px' : 'unset'};
         left: ${i % 2 ? '0px' : 'unset'};
-        object-position: left;
-        object-fit: cover;
-        position: absolute;
-        display: block;
-        z-index: -1;
         `
-        img.classList.add('lazyload')
+        img.classList.add('img-texture', 'img-texture-ns', 'lazyload')
         element.appendChild(img)
       }
     },

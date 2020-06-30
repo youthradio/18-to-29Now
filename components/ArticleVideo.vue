@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div ref="container" />
     <vue-plyr>
       <div class="plyr__video-embed">
         <iframe
@@ -40,7 +41,11 @@
 </template>
 
 <script>
+import mixinMethods from '~/utils/mixinMethods'
+
 export default {
+  mixins: [mixinMethods],
+
   props: {
     article: {
       type: Object,
@@ -49,6 +54,9 @@ export default {
   },
   data() {
     return {}
+  },
+  mounted() {
+    this.randomImage(this.$refs.container)
   }
 }
 </script>

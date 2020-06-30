@@ -3,7 +3,6 @@ html {
   font-size: 18px;
   position: relative;
 }
-
 .img-fluid {
   width: 100%;
   max-width: 100%;
@@ -94,8 +93,20 @@ a:focus {
 .z--1{
   z-index: -1;
 }
+.img-texture{
+  width: 10px;
+  height: 300px;
+  object-position: left;
+  object-fit: cover;
+  position: absolute;
+  display: block;
+  z-index: -1;
+}
 
 @media #{$breakpoint-not-small} {
+  .img-texture{
+    width: 150px;
+  }
   .mwimg {
     width: calc(0.2 * MIN(64rem, calc(100vw - 1rem)));
   }

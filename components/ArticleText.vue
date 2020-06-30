@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div ref="container" />
     <img
       :data-src="article.featureImage"
       src="blankfeature.jpg"
@@ -49,7 +50,7 @@ export default {
     return {}
   },
   mounted() {
-    this.randomImage(document.body)
+    this.randomImage(this.$refs.container)
   }
 }
 </script>
