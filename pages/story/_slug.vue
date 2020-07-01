@@ -1,36 +1,42 @@
 <template>
   <div>
     <ArticleHeader />
-    <main class="center mw8 ph3">
-      <component
-        :is="articleFormatComponent"
-        v-bind="{ article: article }"
-        class="pt4"
+    <div class="relative">
+      <div
+        ref="flourishes"
+        class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0"
       />
+      <main class="center mw8 ph3 relative z-1">
+        <component
+          :is="articleFormatComponent"
+          v-bind="{ article: article }"
+          class="pt4"
+        />
 
-      <BioContainer
-        class="pt4 w-60-ns center"
-        mode="small"
-        :author="authordata"
-      />
+        <BioContainer
+          class="pt4 w-60-ns center"
+          mode="small"
+          :author="authordata"
+        />
 
-      <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
+        <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
 
-      <HorizontalContainer
-        :articles="randomArticles()"
-        :article-data="articleData"
-      />
-    </main>
+        <HorizontalContainer
+          :articles="randomArticles()"
+          :article-data="articleData"
+        />
+      </main>
 
-    <div class="flex justify-center pv3">
-      <nuxt-link
-        title="Home"
-        :to="{ path: '/' }"
-        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
+      <div class="flex justify-center pv3">
+        <nuxt-link
+          title="Home"
+          :to="{ path: '/' }"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
         center"
-      >
-        Back to Main Page
-      </nuxt-link>
+        >
+          Back to Main Page
+        </nuxt-link>
+      </div>
     </div>
     <Footer :content="articleData.main.footer" />
   </div>
@@ -46,6 +52,7 @@ import ArticleText from '~/components/ArticleText.vue'
 import ArticleVideo from '~/components/ArticleVideo.vue'
 import ArticleAudio from '~/components/ArticleAudio.vue'
 import HorizontalContainer from '~/components/HorizontalContainer.vue'
+import mixinMethods from '~/utils/mixinMethods'
 
 export default {
   components: {
@@ -57,6 +64,7 @@ export default {
     ArticleAudio,
     HorizontalContainer
   },
+  mixins: [mixinMethods],
   async asyncData(ctx) {
     const slug = await ctx.params.slug
     return {
@@ -87,7 +95,11 @@ export default {
       )
     }
   },
-  mounted() {},
+  mounted() {
+    if (window.innerWidth > 900) {
+      this.randomIcons(this.$refs.flourishes, 6, true, true)
+    }
+  },
   methods: {
     randomArticles() {
       const stories = this.articleData.stories.filter(

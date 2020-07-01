@@ -1,12 +1,14 @@
 <template>
   <div>
     <div ref="container" />
-    <img
-      :data-src="article.featureImage"
-      src="blankfeature.jpg"
-      class="db img-fluid lazyload"
-      alt="Photo of a dimly lit room with a computer interface terminal."
-    />
+    <div class="relative">
+      <img
+        :data-src="article.featureImage"
+        src="blankfeature.jpg"
+        class="db img-fluid lazyload"
+        alt="Photo of a dimly lit room with a computer interface terminal."
+      />
+    </div>
     <h1 class="serif blue f3 f2-ns lh-title mb0 ttc">
       {{ article.title }}
     </h1>

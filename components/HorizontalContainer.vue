@@ -1,5 +1,5 @@
 <template>
-  <main id="header" class="flex flex-column flex-row-ns mw8 center">
+  <main id="header" class="relative flex flex-column flex-row-ns mw8 center">
     <template v-for="(feature, i) in articles">
       <article
         :key="feature.slug"
@@ -12,13 +12,15 @@
               :to="{ path: `/story/${feature.slug}` }"
               class="link db dim black"
             >
-              <img
-                :data-src="feature.featureImageSmall"
-                src="blankfeature.jpg"
-                class="db lazyload"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-                style="object-fit: cover;"
-              />
+              <div class="relative">
+                <img
+                  :data-src="feature.featureImageSmall"
+                  src="blankfeature.jpg"
+                  class="db lazyload"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                  style="object-fit: cover;"
+                />
+              </div>
             </nuxt-link>
           </div>
           <div class="w-100 w-90-ns">

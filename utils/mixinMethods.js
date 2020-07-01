@@ -55,10 +55,10 @@ const mixinMethods = {
         element.appendChild(img)
       }
     },
-    randomIcons(element, num = 5) {
+    randomIcons(element, num = 5, randh = false, randv = false) {
       // const vh = window.innerHeight
-      const width = element.getBoundingClientRect().width
-      const scale = width < 900 ? 0.5 : 1
+      // const width = element.getBoundingClientRect().width
+      const scale = 0.8
       // const marg = 0
       // const step = 100 / num
       for (let i = 0; i < num; i++) {
@@ -67,7 +67,7 @@ const mixinMethods = {
           display:flex;
           justify-content: space-between;
         `
-        const vrand = ~~(3 * Math.random())
+        const vrand = 1 + ~~(2 * Math.random())
         for (let l = 0; l < vrand; l++) {
           const ico = icons[~~(Math.random() * icons.length)]
 
@@ -75,7 +75,8 @@ const mixinMethods = {
             'http://www.w3.org/2000/svg',
             'svg'
           )
-          const randx = 100 - 2 * (Math.random() * 100)
+          const randx = randh ? 50 - 2 * (Math.random() * 50) : 0
+          const randy = randv ? 100 - 2 * (Math.random() * 100) : 0
 
           svg.setAttribute('width', ico.width * scale)
           svg.setAttribute('height', ico.height * scale)
@@ -84,8 +85,9 @@ const mixinMethods = {
           svg.style.cssText = `
           pointer-events: none;
           margin-right: ${randx}px;
+          margin-top: ${randy}px;
           margin-left: ${
-            (vrand === 1) & (Math.random() > 0.5) ? 'auto ' : randx + 'px'
+            vrand === 1 && Math.random() > 0.5 ? 'auto ' : randx + 'px'
           };
           z-index: 0;
         `
