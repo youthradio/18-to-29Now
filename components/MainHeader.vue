@@ -2,7 +2,7 @@
   <header class="relative min-vh-100 bg-washed-red">
     <div
       ref="flourishes"
-      class="absolute flex flex-column justify-around w-100 h-100 z-0 top-0 left-0"
+      class="absolute flex flex-column justify-around z-0 top-0 left--1 right--1 bottom-0"
     />
     <nav class="relative serif pl2 dn db-ns pv2  f6 f4-ns bg-blue b">
       <div class="tc">

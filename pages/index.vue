@@ -61,7 +61,7 @@
     <div class="bg-washed-red relative">
       <div
         ref="flourishes"
-        class="absolute flex flex-column justify-around w-100 h-100 z-0 top-0 left-0"
+        class="absolute flex flex-column justify-around z-0 top-0 left--1 right--1 bottom-0"
       />
       <blockquote
         class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3 z-1"

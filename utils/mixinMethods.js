@@ -67,14 +67,15 @@ const mixinMethods = {
           display:flex;
           justify-content: space-between;
         `
-        for (let l = 0; l < 2; l++) {
+        const vrand = ~~(3 * Math.random())
+        for (let l = 0; l < vrand; l++) {
           const ico = icons[~~(Math.random() * icons.length)]
 
           const svg = document.createElementNS(
             'http://www.w3.org/2000/svg',
             'svg'
           )
-          const randx = 60 - 2 * (Math.random() * 60)
+          const randx = 100 - 2 * (Math.random() * 100)
 
           svg.setAttribute('width', ico.width * scale)
           svg.setAttribute('height', ico.height * scale)
@@ -82,7 +83,10 @@ const mixinMethods = {
           svg.innerHTML = ico.path
           svg.style.cssText = `
           pointer-events: none;
-          margin-left: ${randx}px
+          margin-right: ${randx}px;
+          margin-left: ${
+            (vrand === 1) & (Math.random() > 0.5) ? 'auto ' : randx + 'px'
+          };
           z-index: 0;
         `
           div.appendChild(svg)
