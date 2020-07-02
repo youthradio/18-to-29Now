@@ -14,16 +14,19 @@
     </h1>
     <div class="flex flex-column flex-row-ns justify-between">
       <div class="w-20-ns">
-        <h5 class="dark-red lh-title pr3-ns normal mb0">WRITTEN BY</h5>
-        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
-          {{ article.author }}
-        </h3>
-        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
-          {{ article.location }}
-        </h3>
-        <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
-          {{ article.date }}
-        </h5>
+        <div class="fl fn-ns">
+          <h5 class="dark-red lh-title pr3-ns normal mb0">WRITTEN BY</h5>
+          <h3 class="dark-red lh-title pr3-ns mt1 mb1">
+            {{ article.author }}
+          </h3>
+          <h3 class="dark-red lh-title pr3-ns mt1 mb1">
+            {{ article.location }}
+          </h3>
+          <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
+            {{ article.date }}
+          </h5>
+        </div>
+        <ShareButtons class="mv3 fr fn-ns" />
       </div>
 
       <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns">
@@ -38,10 +41,13 @@
 
 <script>
 import mixinMethods from '~/utils/mixinMethods'
+import ShareButtons from '~/components/ShareButtons.vue'
 
 export default {
+  components: {
+    ShareButtons
+  },
   mixins: [mixinMethods],
-
   props: {
     article: {
       type: Object,

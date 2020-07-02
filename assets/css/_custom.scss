@@ -102,6 +102,9 @@ a:focus {
   display: block;
   z-index: -1;
 }
+.bg-blue-op-50{
+  background-color: rgba($blue, 0.5);
+}
 
 @media #{$breakpoint-not-small} {
   .img-texture{
