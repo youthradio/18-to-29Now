@@ -1,6 +1,6 @@
 <template>
-  <div class="overflow-hidden relative ">
-    <div class="relative">
+  <div class="relative">
+    <div class="relative overflow-x-hidden">
       <div
         ref="flourishes"
         class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0"
