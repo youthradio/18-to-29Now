@@ -9,8 +9,8 @@
 
       <HorizontalContainer
         :articles="featured"
-        :article-data="articleData"
         class="ph3 pt4 relative z-1"
+        @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
       />
       <section class="mw8 center ph3 relative z-1">
         <h3 id="latest" class="blue bb bw2 ttu">Latest</h3>
@@ -133,6 +133,7 @@
       </section>
       <Modal
         v-if="modelBioData"
+        class="z-10"
         :authordata="modelBioData"
         :article-data="articleData"
         @toggleModal="toggleBioModal"
@@ -181,7 +182,7 @@ export default {
         .slice(0, 2)
     },
     latest() {
-      return this.articleData.stories
+      return this.articleData.stories.filter((e) => e.feature !== 'true')
     },
     randomQuote() {
       const l = this.articleData.main.quotes.length

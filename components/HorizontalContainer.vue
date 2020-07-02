@@ -36,7 +36,7 @@
             <a
               :title="`${feature.author} Bio`"
               class="pointer link db blue dim black"
-              @click.prevent="toggleBioModalSlug(feature.authorslug)"
+              @click.prevent="$emit('toggleBioModalSlug', feature.authorslug)"
             >
               <h3 class="dark-red lh-title mv1 f5 f4-ns">
                 {{ feature.author }} |
@@ -56,12 +56,6 @@
         </div>
       </article>
     </template>
-    <Modal
-      v-if="modelBioData"
-      :authordata="modelBioData"
-      :article-data="articleData"
-      @toggleModal="toggleBioModal"
-    />
   </main>
 </template>
 <script>
@@ -74,11 +68,6 @@ export default {
       type: Array,
       required: true,
       default: () => []
-    },
-    articleData: {
-      type: Object,
-      required: true,
-      default: () => {}
     }
   },
   mounted() {},

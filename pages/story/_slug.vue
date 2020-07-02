@@ -23,7 +23,7 @@
 
         <HorizontalContainer
           :articles="randomArticles()"
-          :article-data="articleData"
+          @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
         />
       </main>
 
@@ -38,6 +38,13 @@
         </nuxt-link>
       </div>
     </div>
+    <Modal
+      v-if="modelBioData"
+      class="z-10"
+      :authordata="modelBioData"
+      :article-data="articleData"
+      @toggleModal="toggleBioModal"
+    />
     <Footer :content="articleData.main.footer" />
   </div>
 </template>
