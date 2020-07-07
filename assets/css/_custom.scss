@@ -105,7 +105,9 @@ a:focus {
 .bg-blue-op-50{
   background-color: rgba($blue, 0.5);
 }
-
+.pointer-events-none {
+  pointer-events: none;
+}
 @media #{$breakpoint-not-small} {
   .img-texture{
     width: 150px;

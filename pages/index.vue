@@ -1,12 +1,11 @@
 <template>
   <div class="relative">
     <div class="relative overflow-x-hidden">
+      <MainHeader class="relative" />
       <div
         ref="flourishes"
-        class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0"
+        class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
       />
-      <MainHeader class="relative z--1" />
-
       <HorizontalContainer
         :articles="featured"
         class="ph3 pt4 relative z-1"
