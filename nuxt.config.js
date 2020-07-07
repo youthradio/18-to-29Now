@@ -2,6 +2,7 @@ import ArticleData from './data/data.json'
 import POSTCONFIG from './post.config'
 
 export default {
+  telemetry: false,
   env: {
     baseUrl: POSTCONFIG.baseURL || 'http://localhost:3000'
   },
