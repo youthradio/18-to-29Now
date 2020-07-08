@@ -30,7 +30,11 @@
             {{ article.date }}
           </h5>
         </div>
-        <ShareButtons class="mv3 fr fn-ns" />
+        <ShareButtons
+          :title="article.title"
+          :description="article.summary"
+          class="mv3 fr fn-ns"
+        />
       </div>
 
       <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns">

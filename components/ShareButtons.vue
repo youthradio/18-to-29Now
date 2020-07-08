@@ -64,7 +64,7 @@ export default {
     tweetShare() {
       const url = window.location.href
 
-      const tweet = this.title + ` :${url}`
+      const tweet = this.title + `: ${url} with @itsYRmedia @WNYC @radiorookies`
       const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
         tweet
       )}`
