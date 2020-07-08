@@ -14,6 +14,13 @@
         <div class="flex flex-column justify-between b">
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
+            title="Home"
+            :to="{ path: '/' }"
+          >
+            Home
+          </nuxt-link>
+          <nuxt-link
+            class="link b dib pv1 underline-hover blue"
             title="About"
             :to="{ path: '/', hash: 'about' }"
           >
