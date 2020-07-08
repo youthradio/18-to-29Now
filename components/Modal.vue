@@ -3,6 +3,7 @@
     class="vh-100 w-100 flex flex-column overflow-scroll fixed top-0 left-0 z-999 bg-oc-washed-red bg-blur"
     tabindex="0"
     @keydown.esc="$emit('toggleModal')"
+    @click.self="$emit('toggleModal')"
   >
     <div class="bg-washed-red mw8 center pv4 ph4">
       <div class="relative center lh-copy f5 f4-ns">
