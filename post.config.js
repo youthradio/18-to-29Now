@@ -32,7 +32,10 @@ module.exports = {
       id: '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg'
     },
     // { name: 'test', id: '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM' },
-    { name: 'test video', id: '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8' },
+    {
+      name: 'Barely Making It: Navigating 2020 As a Broke College Student',
+      id: '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8'
+    },
     {
       name: 'A Minnesotan Weighs In: Is There Hope After The Hashtags?',
       id: '1iaWKK1W4uZi_X13MieT4jemysA1C6bZkW1E8jkT7a_Q'
