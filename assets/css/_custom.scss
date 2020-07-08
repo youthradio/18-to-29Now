@@ -115,7 +115,7 @@ a:focus {
 }
 @media #{$breakpoint-not-small} {
   .img-texture {
-    width: auto;
+    width: calc(100vw/6);
     max-width: 300px;
   }
   .mwimg {

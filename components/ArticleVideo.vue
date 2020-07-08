@@ -39,9 +39,7 @@
         />
       </div>
 
-      <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns">
-        {{ article.summary }}
-      </p>
+      <p class="dn db-ns lh-copy order-2 w-20-ns pl3-ns"></p>
       <div class="measure-wide w-60-ns lh-copy center f5 f4-ns">
         <article v-html="article.text"></article>
       </div>
