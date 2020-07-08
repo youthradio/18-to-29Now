@@ -176,7 +176,7 @@ export default {
   },
   computed: {
     featured() {
-      return this.articleData.main.features.map((l) =>
+      return this.articleData.main.featured.map((l) =>
         this.articleData.stories.find((e) => e.slug === l.slug)
       )
     },
