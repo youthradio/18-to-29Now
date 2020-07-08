@@ -47,7 +47,7 @@ const mixinMethods = {
         const r = randomImgs.pop()
         img.setAttribute('data-src', `images/grid/${r}.jpg`)
         img.style.cssText = `
-        top:${20 + (i * 60) / nimgs}%;
+        top:${10 + (i * 60) / nimgs}%;
         right: ${i % 2 === 0 ? '0px' : 'unset'};
         left: ${i % 2 ? '0px' : 'unset'};
         `

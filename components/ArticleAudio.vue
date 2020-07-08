@@ -1,7 +1,5 @@
 <template>
   <div>
-    <div ref="container" />
-
     <AudioPlayer v-if="songData.svgStr" :song-data="songData" />
     <!-- <iframe
       frameborder="0"
@@ -14,6 +12,7 @@
       {{ article.title }}
     </h1>
     <div class="flex flex-column flex-row-ns justify-between mt2">
+      <div ref="container" class="absolute random-textures" />
       <div class="w-20-ns">
         <div class="fl fn-ns">
           <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>

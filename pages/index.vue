@@ -176,12 +176,14 @@ export default {
   },
   computed: {
     featured() {
-      return this.articleData.stories
-        .filter((e) => e.feature === 'true')
-        .slice(0, 2)
+      return this.articleData.main.features.map((l) =>
+        this.articleData.stories.find((e) => e.slug === l.slug)
+      )
     },
     latest() {
-      return this.articleData.stories.filter((e) => e.feature !== 'true')
+      return this.articleData.main.latest.map((l) =>
+        this.articleData.stories.find((e) => e.slug === l.slug)
+      )
     },
     randomQuote() {
       const l = this.articleData.main.quotes.length

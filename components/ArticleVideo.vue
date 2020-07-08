@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div ref="container" />
     <vue-plyr>
       <div class="plyr__video-embed">
         <iframe
@@ -19,6 +18,7 @@
       {{ article.title }}
     </h1>
     <div class="flex flex-column flex-row-ns justify-between">
+      <div ref="container" class="absolute random-textures" />
       <div class="w-20-ns">
         <div class="fl fn-ns">
           <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>

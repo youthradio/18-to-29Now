@@ -13,7 +13,6 @@ html {
   max-width: auto;
   height: 100%;
   max-height: 100%;
-
 }
 .cite-symbol {
   position: relative;
@@ -30,16 +29,17 @@ html {
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
 }
-@media (orientation: portrait){
-
+@media (orientation: portrait) {
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3,  MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px));
-    grid-template-rows:  repeat(4, MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px));
+    grid-template-columns: repeat(
+      3,
+      MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px)
+    );
+    grid-template-rows: repeat(4, MIN(calc(100vw / 3 - 2 * 1rem / 3), 150px));
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
   }
- 
 }
 .grid-col-start-1 {
   grid-column-start: 1;
@@ -90,10 +90,10 @@ a:focus {
 .mwimg {
   width: calc(0.5 * MIN(64rem, calc(100vw - 1rem)));
 }
-.z--1{
+.z--1 {
   z-index: -1;
 }
-.img-texture{
+.img-texture {
   width: 10px;
   height: 300px;
   object-position: left;
@@ -102,15 +102,21 @@ a:focus {
   display: block;
   z-index: -1;
 }
-.bg-blue-op-50{
+.random-textures {
+  height: 100%;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100% + 2rem) / 2);
+}
+.bg-blue-op-50 {
   background-color: rgba($blue, 0.5);
 }
 .pointer-events-none {
   pointer-events: none;
 }
 @media #{$breakpoint-not-small} {
-  .img-texture{
-    width: 150px;
+  .img-texture {
+    width: auto;
+    max-width: 300px;
   }
   .mwimg {
     width: calc(0.2 * MIN(64rem, calc(100vw - 1rem)));
@@ -142,8 +148,7 @@ a:focus {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
   }
-  @media (orientation: portrait){
-
+  @media (orientation: portrait) {
     .grid-container-ns {
       display: grid;
       grid-template-columns: repeat(
@@ -154,11 +159,9 @@ a:focus {
       grid-column-gap: 1rem;
       grid-row-gap: 1rem;
     }
-   
   }
 }
 
- 
 // .grid-container-ns {
 //   display: grid;
 //   grid-template-columns: repeat(
