@@ -58,7 +58,7 @@ const mixinMethods = {
     randomIcons(element, num = 5, randh = false, randv = false) {
       // const vh = window.innerHeight
       // const width = element.getBoundingClientRect().width
-      const scale = 0.8
+      const scale = 0.6
       // const marg = 0
       // const step = 100 / num
       for (let i = 0; i < num; i++) {
@@ -86,6 +86,8 @@ const mixinMethods = {
           pointer-events: none;
           margin-right: ${randx}px;
           margin-top: ${randy}px;
+          transform-origin: center;
+          transform: rotate(${~~(Math.random() * 360)}deg);
           margin-left: ${
             vrand === 1 && Math.random() > 0.5 ? 'auto ' : randx + 'px'
           };
