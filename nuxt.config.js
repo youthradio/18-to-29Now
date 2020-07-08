@@ -28,26 +28,54 @@ export default {
         name: 'description',
         content: POSTCONFIG.description
       },
-      { property: 'og:title', content: POSTCONFIG.title },
-      { property: 'og:site_name', content: POSTCONFIG.title },
+      { hid: 'og:title', property: 'og:title', content: POSTCONFIG.title },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: POSTCONFIG.title
+      },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: POSTCONFIG.url },
-      { property: 'og:image', content: POSTCONFIG.featureImage },
-      { property: 'og:description', content: POSTCONFIG.description },
-      { property: 'og:image:alt', content: POSTCONFIG.featureImageDescription },
+      { hid: 'og:url', property: 'og:url', content: POSTCONFIG.url },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: POSTCONFIG.featureImage
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: POSTCONFIG.description
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: POSTCONFIG.featureImageDescription
+      },
       { property: 'fb:app_id', content: POSTCONFIG.fbAppID },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:creator', content: POSTCONFIG.twitterHandler },
       { name: 'twitter:site', content: POSTCONFIG.twitterHandler },
-      { name: 'twitter:title', content: POSTCONFIG.title },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: POSTCONFIG.title
+      },
       { name: 'twitter:description', content: POSTCONFIG.description },
       { name: 'twitter:image', content: POSTCONFIG.featureImage },
       {
         name: 'twitter:image:alt',
         content: POSTCONFIG.featureImageDescription
       },
-      { itemprop: 'description', content: POSTCONFIG.description },
-      { itemprop: 'image', content: POSTCONFIG.featureImage },
+      {
+        hid: 'twitter:description',
+        itemprop: 'description',
+        content: POSTCONFIG.description
+      },
+      {
+        hid: 'twitter:image',
+        itemprop: 'image',
+        content: POSTCONFIG.featureImage
+      },
       { name: 'msapplication-TileColor', content: '#da532c' },
       { name: 'theme-color', content: '#ffffff' }
     ],
@@ -115,7 +143,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/google-gtag'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/google-gtag'],
   'google-gtag': {
     id: 'UA-6029148-3',
     config: {
@@ -146,6 +174,9 @@ export default {
       ArticleData.bios.map((e) => `contribuitor/${e.authorslug}`),
       ArticleData.stories.map((e) => `story/${e.slug}`)
     ].flat()
+  },
+  sitemap: {
+    hostname: 'https://youngamericaspeaksup.org/'
   }
   // server: {
   //   https: {

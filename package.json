@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-gtag": "^1.0.4",
+    "@nuxtjs/sitemap": "^2.4.0",
     "d3-array": "^2.4.0",
     "d3-drag": "^1.2.5",
     "d3-scale": "^3.2.1",

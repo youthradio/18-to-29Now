@@ -51,7 +51,8 @@
 
 <script>
 // import matchAll from 'string.prototype.matchall'
-import ArticleData from '../../data/data.json'
+import ArticleData from '~/data/data.json'
+import POSTCONFIG from '~/post.config'
 import ArticleHeader from '~/components/ArticleHeader.vue'
 import Footer from '~/components/Footer.vue'
 import BioContainer from '~/components/BioContainer.vue'
@@ -118,7 +119,70 @@ export default {
   },
   head() {
     return {
-      // title: this.markupdata.title
+      title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.summary
+        },
+        { hid: 'og:title', property: 'og:title', content: this.article.title },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: this.article.title
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: POSTCONFIG.url + this.$route.fullPath
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: POSTCONFIG.url + this.article.featureImage
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.summary
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.article.summary
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.summary
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: POSTCONFIG.url + this.article.featureImage
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.article.featureImage
+        },
+        {
+          hid: 'itemprop:description',
+          itemprop: 'description',
+          content: this.article.summary
+        },
+        {
+          hid: 'itemprop:image',
+          itemprop: 'image',
+          content: POSTCONFIG.url + this.article.featureImage
+        }
+      ]
     }
   }
 }
