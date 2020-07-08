@@ -1,16 +1,16 @@
 <template>
   <header class="relative min-vh-100 bg-washed-red">
-    <nav class="relative serif pl2 dn db-ns pv2  f6 f4-ns bg-blue b">
-      <div class="tc">
+    <nav class="fixed w-100 top-0 serif db pv2 f6 f4-ns bg-blue b z-5">
+      <div class="flex justify-around justify-center-ns">
         <nuxt-link
-          class="link dib mh4 pv1 underline-hover washed-red"
+          class="link dib mh4-ns pv1 underline-hover washed-red"
           title="About"
           :to="{ path: '/', hash: 'about' }"
         >
           About this Project
         </nuxt-link>
         <nuxt-link
-          class="link dib mh4 pv1 underline-hover washed-red"
+          class="link dib mh4-ns pv1 underline-hover washed-red"
           title="Latest"
           :to="{ path: '/', hash: 'latest' }"
         >
@@ -18,7 +18,7 @@
         </nuxt-link>
         <nuxt-link
           :to="{ path: '/', hash: 'contributors' }"
-          class="link dib mh4 pv1 underline-hover washed-red"
+          class="link dib mh4-ns pv1 underline-hover washed-red"
           title="Contributors"
         >
           Contributors
@@ -26,7 +26,7 @@
       </div>
     </nav>
     <div
-      class="relative min-vh-100 layers ph3 ph0-ns mt0-ns pb4-ns flex flex-column justify-center"
+      class="relative min-vh-100 layers ph3 ph0-ns mt4 pb4-ns flex flex-column justify-center"
     >
       <img
         alt=""
@@ -191,7 +191,7 @@
           </div>
         </div>
       </div>
-      <div class="flex ml-auto ph4 db dn-ns ">
+      <div class="flex ml-auto ph2 db dn-ns ">
         <p class="serif lh-title b">
           Young adults from around the country document what’s at stake for them
           in this election

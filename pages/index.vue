@@ -139,7 +139,7 @@
       />
       <div class="flex justify-center pv3">
         <a
-          href="#header"
+          href="#"
           class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
         center"
           title="Back to Top"
@@ -206,4 +206,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+[id]::before {
+  content: '';
+  display: block;
+  height: 50px;
+  margin-top: -50px;
+  visibility: hidden;
+}
+</style>
