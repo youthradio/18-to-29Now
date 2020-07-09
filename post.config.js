@@ -5,14 +5,14 @@ module.exports = {
   publishDate: 'April. 14, 2020',
   location: 'Oakland, CA',
   description:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
   url: 'https://youngamericaspeaksup.org/',
   featureImage: 'https://youngamericaspeaksup.org/socialmain.jpg',
   featureImagePath: 'images/feature',
   featureImageDescription:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
   featureImageCaption:
-    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
   wpPostSlug:
     'Black-Mirror-What-Artificial-Intelligence-Means-for-Race-Art-and-the-Apocalypse',
   wpPostID: '60986',
@@ -63,8 +63,8 @@ module.exports = {
   ],
   dataPath: 'data/data.json',
   newsletter: {
-    uid: '4251cb25446a2d7c0ef5822bc',
-    id: 'c04648ea24',
-    url: 'https://google.us10.list-manage.com/subscribe/post-json'
+    uid: '962a6c84da5c12bc5b3486086',
+    id: '6c6dda9845',
+    url: 'https://media.us4.list-manage.com/subscribe/post-json'
   }
 }

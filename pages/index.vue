@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="relative overflow-x-hidden">
+    <div class="relative">
       <MainHeader class="relative" />
       <div
         ref="flourishes"
