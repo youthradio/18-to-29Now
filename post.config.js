@@ -1,16 +1,18 @@
 module.exports = {
   baseURL: process.env.BASE_URL_PRODUCTION || '/18-to-29Now',
-  title: 'Young America Speaks UP - 18 to 19 Now',
+  title: 'Young America Speaks Up: 18-to-29 Now',
   author: 'Static Author',
   publishDate: 'April. 14, 2020',
   location: 'Oakland, CA',
   description:
-    "Artificial Intelligence is everywhere, including the device you're using this minute. We asked experts Sam Lavigne, Alexis Madrigal, Deb Raji and Rachel Thomas to tell us how it works, what it's great at, and how to stop it from taking us down a path that would make even the creators of Black Mirror cringe.",
-  url: 'https://youthradio.github.io/18-to-29Now',
-  featureImage: 'https://youthradio.github.io/18-to-29Now/socialmain.jpg',
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+  url: 'https://youngamericaspeaksup.org/',
+  featureImage: 'https://youngamericaspeaksup.org/socialmain.jpg',
   featureImagePath: 'images/feature',
-  featureImageDescription: 'GAN neural network generated Images',
-  featureImageCaption: '',
+  featureImageDescription:
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
+  featureImageCaption:
+    'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There is a lot of speculation in the media about which candidate we will vote for and how many of us will actually go to the polls, but very little attention paid to our actual experiences and perspectives when it comes to the issues being debated on the national stage. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
   wpPostSlug:
     'Black-Mirror-What-Artificial-Intelligence-Means-for-Race-Art-and-the-Apocalypse',
   wpPostID: '60986',
