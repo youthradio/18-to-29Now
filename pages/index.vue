@@ -6,14 +6,15 @@
         ref="flourishes"
         class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
       />
-      <h1 id="stories" class="mw8 center ph3 blue ttu">Stories</h1>
-
+      <h1 id="stories" class="mw8 f3 lh-title center ph3 blue ttu mt4">
+        Stories
+      </h1>
       <HorizontalContainer
         :articles="featured"
         class="ph3 relative z-1"
         @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
       />
-      <section class="mw8 center ph3 relative z-1">
+      <section class="mw8 center ph3 relative z-1 mt2">
         <template v-for="article in latest">
           <article :key="article.slug" class="pb4">
             <div class="flex flex-column flex-row-ns">
@@ -66,7 +67,7 @@
       </section>
       <div class="bg-washed-red relative z--1">
         <blockquote
-          class="flex flex-column flex-row-ns items-end f3 f1-ns center mw8 ph3 "
+          class="flex flex-column flex-row-ns items-end f3 f2-ns center mw8 ph3"
         >
           <p class="blue serif fw9 lh-copy lh-title-ns w-80-ns mv3 mv5-ns">
             {{ randomQuote.quote }}
@@ -85,8 +86,8 @@
           </cite>
         </blockquote>
       </div>
-      <section class="mw8 center relative z-1">
-        <h1 id="contributors" class="blue f3 mt0 lh-title ttu ph3">
+      <section class="mw8 center relative z-1 pt4">
+        <h1 id="contributors" class="blue f3 lh-title ttu ph3">
           Contributors
         </h1>
         <div class="flex flex-wrap ph2">
@@ -138,7 +139,7 @@
         :article-data="articleData"
         @toggleModal="toggleBioModal"
       />
-      <div class="flex justify-center pv3">
+      <div class="flex justify-center pv4">
         <a
           href="#"
           class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
