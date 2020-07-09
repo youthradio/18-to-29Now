@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ArticleHeader />
+    <ArticleHeader :copy="articleData.main.header.copy" />
     <div class="relative">
       <div
         ref="flourishes"
@@ -19,7 +19,7 @@
           :author="authordata"
         />
 
-        <h3 id="latest" class="blue bb bw2 ttu">Read More</h3>
+        <h3 id="latest" class="blue bb bw2 ttu mt5">Read More</h3>
 
         <HorizontalContainer
           :articles="randomArticles()"

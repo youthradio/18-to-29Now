@@ -177,6 +177,10 @@ a:focus {
 }
 
 @media #{$breakpoint-large} {
+  
+  .grid-col-5-6-lg {
+    grid-column: 5 / 6;
+  }
   .grid-container-l {
     display: grid;
     grid-template-columns: repeat(

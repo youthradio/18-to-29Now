@@ -164,11 +164,8 @@
             class="gridimg db mw-none w-100 db-ns"
           />
         </div>
-        <div class="measure dn db-ns grid-col-5-7">
-          <p class="serif lh-title mt0 b">
-            Young adults from around the country document what’s at stake for
-            them in this election
-          </p>
+        <div class="measure dn db-ns grid-col-5-7 grid-col-5-6-lg">
+          <p class="serif lh-title ma0 b" v-html="copy"></p>
         </div>
       </div>
       <div class="db dn-ns mt3 ph3">
@@ -192,10 +189,7 @@
         </div>
       </div>
       <div class="flex ml-auto ph2 db dn-ns ">
-        <p class="serif lh-title b">
-          Young adults from around the country document what’s at stake for them
-          in this election
-        </p>
+        <p class="serif lh-title b" v-html="copy"></p>
       </div>
     </div>
   </header>
@@ -204,6 +198,12 @@
 import mixinMethods from '~/utils/mixinMethods'
 export default {
   mixins: [mixinMethods],
+  props: {
+    copy: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {}
   },

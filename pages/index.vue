@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="relative">
-      <MainHeader class="relative" />
+      <MainHeader :copy="articleData.main.header.copy" class="relative" />
       <div
         ref="flourishes"
         class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"

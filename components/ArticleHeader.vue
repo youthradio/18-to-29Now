@@ -43,16 +43,20 @@
         </div>
       </nav>
       <div class="dn db-ns w-30 ml-auto serif tr">
-        <p>
-          Young adults from around the country document what’s at stake for them
-          in this election
-        </p>
+        <p v-html="copy"></p>
       </div>
     </div>
   </header>
 </template>
 <script>
-export default {}
+export default {
+  props: {
+    copy: {
+      type: String,
+      required: true
+    }
+  }
+}
 </script>
 
 <style lang="scss"></style>
