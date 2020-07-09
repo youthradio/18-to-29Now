@@ -1,5 +1,5 @@
 module.exports = {
-  baseURL: '/18-to-29Now',
+  baseURL: process.env.BASE_URL_PRODUCTION || '/18-to-29Now',
   title: 'Young America Speaks UP - 18 to 19 Now',
   author: 'Static Author',
   publishDate: 'April. 14, 2020',
