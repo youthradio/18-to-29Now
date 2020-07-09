@@ -28,8 +28,8 @@
           </nuxt-link>
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
-            title="Latest"
-            :to="{ path: '/', hash: 'latest' }"
+            title="Stories"
+            :to="{ path: '/', hash: 'stories' }"
           >
             Stories
           </nuxt-link>
