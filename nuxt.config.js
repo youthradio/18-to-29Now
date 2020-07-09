@@ -77,6 +77,7 @@ export default {
         content: POSTCONFIG.featureImage
       },
       { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'msapplication-config', content: 'favicon/browserconfig.xml' },
       { name: 'theme-color', content: '#ffffff' }
     ],
     link: [

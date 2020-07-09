@@ -6,13 +6,14 @@
         ref="flourishes"
         class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
       />
+      <h1 id="stories" class="mw8 center ph3 blue ttu">Stories</h1>
+
       <HorizontalContainer
         :articles="featured"
-        class="ph3 pt4 relative z-1"
+        class="ph3 relative z-1"
         @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
       />
       <section class="mw8 center ph3 relative z-1">
-        <h3 id="latest" class="blue bb bw2 ttu">Latest</h3>
         <template v-for="article in latest">
           <article :key="article.slug" class="pb4">
             <div class="flex flex-column flex-row-ns">

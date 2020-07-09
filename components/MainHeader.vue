@@ -12,7 +12,7 @@
         <nuxt-link
           class="link dib mh4-ns pv1 underline-hover washed-red"
           title="Latest"
-          :to="{ path: '/', hash: 'latest' }"
+          :to="{ path: '/', hash: 'stories' }"
         >
           Stories
         </nuxt-link>

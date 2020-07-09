@@ -45,7 +45,7 @@
             <a
               href="https://www.wnyc.org/terms"
               target="_blank"
-              class="link blue no-underline underline-hover hover-dark-red"
+              class="link blue underline underline-hover hover-dark-red"
             >
               Terms of Use
             </a>
