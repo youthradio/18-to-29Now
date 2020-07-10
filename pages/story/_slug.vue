@@ -85,7 +85,7 @@ export default {
   },
   computed: {
     articleFormatComponent() {
-      if (this.article.format === 'print') {
+      if (this.article.format === 'text') {
         return 'article-text'
       } else if (this.article.format === 'video') {
         return 'article-video'
