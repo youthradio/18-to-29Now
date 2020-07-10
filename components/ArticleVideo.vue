@@ -18,8 +18,11 @@
       {{ article.title }}
     </h1>
     <div class="flex flex-column flex-row-ns justify-between">
-      <div ref="container" class="absolute random-textures" />
-      <div class="w-20-ns">
+      <div
+        ref="container"
+        class="absolute random-textures z-0 pointer-events-none"
+      />
+      <div class="w-20-ns relative z-1">
         <div class="fl fn-ns">
           <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>
           <h3 class="dark-red lh-title pr3-ns mt1 mb1">
