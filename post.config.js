@@ -59,6 +59,10 @@ module.exports = {
       name:
         'Expecting the Unexpected: Graduating High School During a Pandemic',
       id: '1rIjRKFW3B73onuxgLTJT2MZmY80FfpIx-xCWVeGrqeE'
+    },
+    {
+      name: 'Young and Sober During COVID 19',
+      id: '1CYkpKFZx_isFpGgwqn2-btW0Mrs9IHTtOCEDC4XLY18'
     }
   ],
   dataPath: 'data/data.json',
