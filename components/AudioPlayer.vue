@@ -23,7 +23,12 @@
           aria-text="play pause"
           @click.prevent="togglePlay"
         >
-          <svg class="pointer db" width="50" height="50" viewBox="0 0 510 510">
+          <svg
+            class="pointer db z-5"
+            width="50"
+            height="50"
+            viewBox="0 0 510 510"
+          >
             <path
               v-if="isPlaying"
               style="fill:#FFD299;"
@@ -187,7 +192,7 @@ export default {
       const box = this.waveformSVG.node().getBoundingClientRect()
       const x = Math.max(
         0,
-        Math.min(selection.event.sourceEvent.layerX - box.x, box.width)
+        Math.min(selection.event.sourceEvent.pageX - box.x, box.width)
       )
       const p = x / box.width
       this.player.currentTime = this.duration * p
