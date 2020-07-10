@@ -146,7 +146,7 @@ export default {
    */
   modules: ['@nuxtjs/sitemap', '@nuxtjs/google-gtag'],
   'google-gtag': {
-    id: 'UA-6029148-3',
+    id: 'UA-165640898-1',
     config: {
       anonymize_ip: true, // anonymize IP
       page_title: POSTCONFIG.title,
