@@ -14,12 +14,14 @@
         />
 
         <BioContainer
-          class="pt4 w-60-ns center"
+          class="pt4 w-60-ns center relative z-1"
           mode="small"
           :author="authordata"
         />
 
-        <h3 id="latest" class="blue bb bw2 ttu mt5">Read More</h3>
+        <h3 id="readmore" class="blue bb bw2 ttu mt5 relative z-1">
+          Read More
+        </h3>
 
         <HorizontalContainer
           :articles="randomArticles()"
@@ -104,7 +106,7 @@ export default {
     }
   },
   mounted() {
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 800) {
       this.randomIcons(this.$refs.flourishes, 6, true, true)
     }
   },

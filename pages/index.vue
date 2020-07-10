@@ -196,7 +196,7 @@ export default {
     // if (this.$route.hash) {
     // setTimeout(() => this.scrollFix(this.$route.hash), 1)
     // }
-    if (window.innerWidth > 900) {
+    if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 10, true, true)
     }
   },
