@@ -17,7 +17,10 @@
               target="_blank"
               class="db pointer link grow no-underline"
             >
-              <img src="logos/yrlogo.svg" class="db" alt="YR Media Logo"
+              <img
+                src="logos/yrlogo.svg"
+                class="db img-fluid-h"
+                alt="YR Media Logo"
             /></a>
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
@@ -27,7 +30,10 @@
               target="_blank"
               class="db pointer link grow no-underline"
             >
-              <img src="logos/wnyclogo.svg" class="db" alt="WNYC Logo"
+              <img
+                src="logos/wnyclogo.svg"
+                class="db img-fluid-h"
+                alt="WNYC Logo"
             /></a>
           </div>
           <div class="ph2">
@@ -36,7 +42,10 @@
               target="_blank"
               class="db pointer link grow no-underline"
             >
-              <img src="logos/radio-rookies.svg" class="db" alt="Radio Rookies"
+              <img
+                src="logos/radio-rookies.svg"
+                class="db img-fluid-h"
+                alt="Radio Rookies"
             /></a>
           </div>
         </div>

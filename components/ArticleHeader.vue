@@ -42,7 +42,7 @@
           </nuxt-link>
         </div>
       </nav>
-      <div class="dn db-ns w-30 ml-auto serif tr">
+      <div class="dn db-ns w-30 ml-auto sans-serif tr">
         <p v-html="copy"></p>
       </div>
     </div>

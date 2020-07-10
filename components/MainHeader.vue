@@ -86,19 +86,21 @@
         </div>
         <div class="grid-col-start-1 dn db-ns ">
           <div class="">
+            <p class="sans-serif f7 lh-title ttu tr">BROUGHT<br />TO YOU BY</p>
+
             <img
               src="logos/yrlogo.svg"
-              class="db ml-auto pa1 pr0"
+              class="db ml-auto pa1 pr0 img-fluid-h"
               alt="YR Media Logo"
             />
             <img
               src="logos/wnyclogo.svg"
-              class="db ml-auto pa1 pr0"
+              class="db ml-auto pa1 pr0 img-fluid-h"
               alt="WNYC Logo"
             />
             <img
               src="logos/radio-rookies.svg"
-              class="db ml-auto pa1 pr0"
+              class="db ml-auto pa1 pr0 img-fluid-h"
               alt="Radio Rookies"
             />
           </div>
@@ -165,10 +167,11 @@
           />
         </div>
         <div class="measure dn db-ns grid-col-5-7 grid-col-5-6-lg">
-          <p class="serif lh-title ma0 b" v-html="copy"></p>
+          <p class="sans-serif lh-title ma0 b" v-html="copy"></p>
         </div>
       </div>
       <div class="db dn-ns mt3 ph3">
+        <p class="sans-serif lh-title ttu tc f7">BROUGHT TO YOU BY</p>
         <div
           class="flex w-80 center justify-around justify-start-ns items-baseline"
         >
@@ -189,7 +192,7 @@
         </div>
       </div>
       <div class="flex ml-auto ph2 db dn-ns ">
-        <p class="serif lh-title b" v-html="copy"></p>
+        <p class="sans-serif lh-title b" v-html="copy"></p>
       </div>
     </div>
   </header>
