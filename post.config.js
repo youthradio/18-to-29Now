@@ -43,10 +43,6 @@ module.exports = {
       id: '1iaWKK1W4uZi_X13MieT4jemysA1C6bZkW1E8jkT7a_Q'
     },
     {
-      name: ' Pandemic Reflections from Borderland Antonio ',
-      id: '1u5V-ectva2CoZ5_YkSK-ddzy8YzwE9NxjP-9559Z3Vw'
-    },
-    {
       name: 'A Dreamer Who Wants To Be Normal',
       id: '1tlCOZnuvFN1gFwMLRAMBhsNVAlUWcH3AVt1DlsDhIDQ'
     },
@@ -63,6 +59,11 @@ module.exports = {
     {
       name: 'Young and Sober During COVID 19',
       id: '1CYkpKFZx_isFpGgwqn2-btW0Mrs9IHTtOCEDC4XLY18'
+    },
+    {
+      name:
+        '“I am in Juárez. You are in El Paso.” Pandemic Reflections from Borderland ',
+      id: '1u5V-ectva2CoZ5_YkSK-ddzy8YzwE9NxjP-9559Z3Vw'
     }
   ],
   dataPath: 'data/data.json',
