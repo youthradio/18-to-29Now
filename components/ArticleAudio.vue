@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AudioPlayer v-if="songData.svgStr" :song-data="songData" />
+    <AudioPlayer v-if="songData.svgStr" :song-data="songData" class="z-10" />
     <!-- <iframe
       frameborder="0"
       scrolling="no"
