@@ -12,7 +12,7 @@
             Contributor
           </h1>
           <BioContainer :author="authordata" />
-          <div>
+          <div v-if="articlesbyauthor.length">
             <h4 class="dark-red ttu">
               WRITTEN BY {{ authordata.name | first }}
             </h4>
