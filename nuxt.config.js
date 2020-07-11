@@ -153,7 +153,7 @@ export default {
       page_path: POSTCONFIG.baseURL
     },
     debug: false, // enable to track in dev mode
-    disableAutoPageTrack: true // disable if you don't want to track each page route with router.afterEach(...).
+    disableAutoPageTrack: false // disable if you don't want to track each page route with router.afterEach(...).
   },
 
   /*
