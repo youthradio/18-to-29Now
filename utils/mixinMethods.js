@@ -37,7 +37,7 @@ const mixinMethods = {
     randomImage(element) {
       const height = element.parentNode.getBoundingClientRect().height
 
-      const randomImgs = Array(19)
+      const randomImgs = Array(12)
         .fill()
         .map((_, i) => i + 1)
         .sort(() => Math.random() - 0.5) // array possible images

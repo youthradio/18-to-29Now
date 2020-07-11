@@ -159,14 +159,21 @@
         <div class="">
           <img
             alt=""
-            src="images/grid/13.jpg"
+            src="images/grid/12.jpg"
             class="gridimg db mw-none w-100 db-ns"
           />
         </div>
-        <div class="db dn-ns ">
+        <div class="db dn-ns">
           <img
             alt=""
-            src="images/grid/14.jpg"
+            src="images/grid/7.jpg"
+            class="gridimg db mw-none w-100 db-ns"
+          />
+        </div>
+        <div class="db dn-ns">
+          <img
+            alt=""
+            src="images/grid/1.jpg"
             class="gridimg db mw-none w-100 db-ns"
           />
         </div>
