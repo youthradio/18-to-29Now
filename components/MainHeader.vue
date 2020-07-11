@@ -1,5 +1,9 @@
 <template>
   <header class="relative min-vh-100 bg-washed-red">
+    <div
+      ref="flourishes"
+      class="absolute flex flex-column justify-around z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
+    />
     <nav class="fixed w-100 top-0 serif db pv2 f6 f4-ns bg-blue b z-5">
       <div class="flex justify-around justify-center-ns">
         <nuxt-link
@@ -211,7 +215,11 @@ export default {
     return {}
   },
   computed: {},
-  mounted() {}
+  mounted() {
+    if (window.innerWidth > 1300) {
+      this.randomIcons(this.$refs.flourishes, 4, true, true)
+    }
+  }
 }
 </script>
 

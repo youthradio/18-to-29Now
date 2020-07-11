@@ -1,10 +1,10 @@
 <template>
   <div class="relative">
+    <MainHeader :copy="articleData.main.header.copy" class="relative" />
     <div class="relative">
-      <MainHeader :copy="articleData.main.header.copy" class="relative" />
       <div
         ref="flourishes"
-        class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
+        class="absolute flex flex-column justify-around z-0 top-0 left-0 right-0 bottom-0 pointer-events-none"
       />
       <h1 id="stories" class="mw8 f3 lh-title center ph3 blue ttu mt4">
         Stories
@@ -190,11 +190,8 @@ export default {
   },
   computed: {},
   mounted() {
-    // if (this.$route.hash) {
-    // setTimeout(() => this.scrollFix(this.$route.hash), 1)
-    // }
     if (window.innerWidth > 1300) {
-      this.randomIcons(this.$refs.flourishes, 10, true, true)
+      this.randomIcons(this.$refs.flourishes, 8, true, true)
     }
   },
   methods: {
