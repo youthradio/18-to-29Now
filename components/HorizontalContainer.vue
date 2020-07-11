@@ -18,8 +18,9 @@
           >
             <div class="relative">
               <img
-                :src="feature.featureImageSmall"
-                class="db"
+                :data-src="feature.featureImageSmall"
+                src="blankfeature.jpg"
+                class="db lazyload"
                 alt="Photo of a dimly lit room with a computer interface terminal."
                 style="object-fit: cover;"
               />

@@ -55,12 +55,21 @@ const mixinMethods = {
         element.appendChild(img)
       }
     },
-    randomIcons(element, num = 5, randh = false, randv = false) {
+    randomIcons(element, num = 5, randh = false, randv = false, empty = 0) {
       // const vh = window.innerHeight
       // const width = element.getBoundingClientRect().width
       const scale = 0.5
       // const marg = 0
       // const step = 100 / num
+      for (let i = 0; i < empty; i++) {
+        const div = document.createElement('div')
+        div.style.cssText = `
+          display:flex;
+          justify-content: space-between;
+          height: 60px;
+        `
+        element.appendChild(div)
+      }
       for (let i = 0; i < num; i++) {
         const div = document.createElement('div')
         div.style.cssText = `

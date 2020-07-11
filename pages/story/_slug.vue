@@ -110,7 +110,7 @@ export default {
   },
   mounted() {
     if (window.innerWidth > 800) {
-      this.randomIcons(this.$refs.flourishes, 6, true, true)
+      this.randomIcons(this.$refs.flourishes, 8, true, true, 1)
     }
     const stories = this.readMoreArticles.slice()
     this.randomArticles = stories.sort(() => 0.5 - Math.random()).slice(0, 2)
