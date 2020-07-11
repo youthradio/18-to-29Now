@@ -224,7 +224,7 @@ export default {
   computed: {},
   mounted() {
     if (window.innerWidth > 1300) {
-      this.randomIcons(this.$refs.flourishes, 4, true, true)
+      this.randomIcons(this.$refs.flourishes, 3, true, true)
     }
   }
 }

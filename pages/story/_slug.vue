@@ -22,23 +22,24 @@
         <h3 id="readmore" class="blue bb bw2 ttu mt5 relative z-1">
           Read More
         </h3>
-
-        <HorizontalContainer
-          :articles="randomArticles()"
-          @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
-        />
       </main>
+    </div>
 
-      <div class="flex justify-center pv3">
-        <nuxt-link
-          title="Home"
-          :to="{ path: '/' }"
-          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
+    <div class="center mw8 ph3 relative z-1">
+      <HorizontalContainer
+        :articles="randomArticles"
+        @toggleBioModalSlug="(authorslug) => toggleBioModalSlug(authorslug)"
+      />
+    </div>
+    <div class="flex justify-center pv3">
+      <nuxt-link
+        title="Home"
+        :to="{ path: '/' }"
+        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
         center"
-        >
-          Back to Main Page
-        </nuxt-link>
-      </div>
+      >
+        Back to Main Page
+      </nuxt-link>
     </div>
     <Modal
       v-if="modelBioData"
@@ -78,6 +79,7 @@ export default {
   async asyncData(ctx) {
     const slug = await ctx.params.slug
     const article = ArticleData.stories.find((e) => e.slug === slug)
+    const readMoreArticles = ArticleData.stories.filter((e) => e.slug !== slug)
     const authordata = ArticleData.bios.find(
       (e) => e.authorslug === article.authorslug
     )
@@ -85,11 +87,14 @@ export default {
       slug,
       article,
       authordata,
+      readMoreArticles,
       articleData: ArticleData
     }
   },
   data() {
-    return {}
+    return {
+      randomArticles: []
+    }
   },
   computed: {
     articleFormatComponent() {
@@ -107,16 +112,10 @@ export default {
     if (window.innerWidth > 800) {
       this.randomIcons(this.$refs.flourishes, 6, true, true)
     }
+    const stories = this.readMoreArticles.slice()
+    this.randomArticles = stories.sort(() => 0.5 - Math.random()).slice(0, 2)
   },
-  methods: {
-    randomArticles() {
-      const stories = this.articleData.stories.filter(
-        (e) => e.slug !== this.slug
-      )
-      const r = stories.sort(() => 0.5 - Math.random()).slice(0, 2)
-      return r
-    }
-  },
+  methods: {},
   head() {
     return {
       title: this.article.title,
