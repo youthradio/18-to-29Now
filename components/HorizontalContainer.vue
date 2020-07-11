@@ -71,7 +71,7 @@ export default {
     }
   },
   mounted() {
-    this.$forceUpdate()
+    // this.$forceUpdate()
   },
   methods: {}
 }
