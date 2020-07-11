@@ -83,16 +83,27 @@
       <p class="sans-serif lh-title ttu tc f7">BROUGHT TO YOU BY</p>
       <div class="flex center justify-center items-baseline">
         <div class="ph2 ph4-ns">
-          <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
+          <img
+            src="logos/yrlogo.svg"
+            height="40"
+            class="db"
+            alt="YR Media Logo"
+          />
         </div>
         <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
         <div class="ph2 ph4-ns">
-          <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
+          <img
+            src="logos/wnyclogo.svg"
+            height="40"
+            class="db"
+            alt="WNYC Logo"
+          />
         </div>
         <div class="ph2 ph4-ns">
           <img
             src="logos/radio-rookies.svg"
-            class="db h-100"
+            height="40"
+            class="db"
             alt="Radio Rookies"
           />
         </div>

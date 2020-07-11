@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ArticleHeader />
+    <ArticleHeader :copy="articleData.main.header.copy" />
     <div class="relative overflow-x-hidden">
       <div
         ref="flourishes"
