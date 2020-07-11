@@ -1,7 +1,7 @@
 <template>
-  <header class="bg-washed-red pv4">
+  <header class="bg-washed-red pv3">
     <div class="flex mw8 center ph3 justify-between items-center">
-      <div class="w-80 w-auto-ns">
+      <div class="w-50 w-auto-ns">
         <nuxt-link title="Home" :to="{ path: '/' }">
           <img
             src="logos/logoarticle.svg"
@@ -42,8 +42,60 @@
           </nuxt-link>
         </div>
       </nav>
-      <div class="dn db-ns w-30 ml-auto sans-serif tr">
+      <div class="dn db-ns w-30 ml-auto sans-serif tr pr4">
         <p v-html="copy"></p>
+      </div>
+      <div class="dn db-l w-20 bl pl4">
+        <div class="flex">
+          <p class="sans-serif lh-title ttu tr f7 mt0 w-50">
+            BROUGHT TO YOU BY
+          </p>
+          <div class="w-50 pl3">
+            <img
+              src="logos/yrlogo.svg"
+              height="40"
+              class="db"
+              alt="YR Media Logo"
+            />
+          </div>
+        </div>
+        <div class="flex pt3">
+          <div class="w-50">
+            <img
+              src="logos/wnyclogo.svg"
+              height="40"
+              class="db"
+              alt="WNYC Logo"
+            />
+          </div>
+          <div class="w-50 pl3">
+            <img
+              src="logos/radio-rookies.svg"
+              height="40"
+              class="db"
+              alt="Radio Rookies"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="db dn-l mt3 ph3">
+      <p class="sans-serif lh-title ttu tc f7">BROUGHT TO YOU BY</p>
+      <div class="flex center justify-center items-baseline">
+        <div class="ph2 ph4-ns">
+          <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
+        </div>
+        <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
+        <div class="ph2 ph4-ns">
+          <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
+        </div>
+        <div class="ph2 ph4-ns">
+          <img
+            src="logos/radio-rookies.svg"
+            class="db h-100"
+            alt="Radio Rookies"
+          />
+        </div>
       </div>
     </div>
   </header>
