@@ -7,7 +7,7 @@ module.exports = {
   description:
     'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
   url: 'https://youngamericaspeaksup.org/',
-  featureImage: 'https://youngamericaspeaksup.org/socialmain.jpg',
+  featureImage: 'https://youngamericaspeaksup.org/youngamericaspeaksup.jpg',
   featureImagePath: 'images/feature',
   featureImageDescription:
     'We are 18-to-29-year olds. And we have the most at stake in Election 2020. There’s a lot of speculation in the media about young voter turnout, but very little attention paid to our actual experiences and perspectives regarding systemic racism, immigration, health care access and college affordability. This is a platform for reporting for, by and about us. A project of YR Media and WNYC’s Radio Rookies.',
