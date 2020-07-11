@@ -169,29 +169,26 @@ export default {
   },
   mixins: [mixinMethods],
   asyncData(ctx) {
+    const l = ArticleData.main.quotes.length
+
+    const latest = ArticleData.main.latest.map((l) =>
+      ArticleData.stories.find((e) => e.slug === l.slug)
+    )
+    const randomQuote = ArticleData.main.quotes[~~(Math.random() * l)]
+    const featured = ArticleData.main.featured.map((l) =>
+      ArticleData.stories.find((e) => e.slug === l.slug)
+    )
     return {
+      featured,
+      randomQuote,
+      latest,
       articleData: ArticleData
     }
   },
   data() {
     return {}
   },
-  computed: {
-    featured() {
-      return this.articleData.main.featured.map((l) =>
-        this.articleData.stories.find((e) => e.slug === l.slug)
-      )
-    },
-    latest() {
-      return this.articleData.main.latest.map((l) =>
-        this.articleData.stories.find((e) => e.slug === l.slug)
-      )
-    },
-    randomQuote() {
-      const l = this.articleData.main.quotes.length
-      return this.articleData.main.quotes[~~(Math.random() * l)]
-    }
-  },
+  computed: {},
   mounted() {
     // if (this.$route.hash) {
     // setTimeout(() => this.scrollFix(this.$route.hash), 1)

@@ -6,7 +6,7 @@
         ref="flourishes"
         class="absolute flex flex-column justify-between z-0 top-0 left-0 right-0 bottom-0"
       />
-      <main class="center mw8 pa3">
+      <main class="center mw8 pa3 relative z-1">
         <div class="center w-60-ns lh-copy f5 f4-ns">
           <h1 class="blue f3 sans-serif mt0 lh-title ttu">
             Contributor
@@ -83,19 +83,18 @@ export default {
   mixins: [mixinMethods],
   async asyncData(ctx) {
     const slug = await ctx.params.slug
+    const articlesbyauthor = ArticleData.stories.filter(
+      (e) => e.authorslug === slug
+    )
+    const authordata = ArticleData.bios.find((e) => e.authorslug === slug)
     return {
       slug,
+      authordata,
+      articlesbyauthor,
       articleData: ArticleData
     }
   },
-  computed: {
-    authordata() {
-      return this.articleData.bios.find((e) => e.authorslug === this.slug)
-    },
-    articlesbyauthor() {
-      return this.articleData.stories.filter((e) => e.authorslug === this.slug)
-    }
-  },
+  computed: {},
   mounted() {
     if (window.innerWidth > 900) {
       this.randomIcons(this.$refs.flourishes, 3, true, true)

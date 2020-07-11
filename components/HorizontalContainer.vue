@@ -70,7 +70,9 @@ export default {
       default: () => []
     }
   },
-  mounted() {},
+  mounted() {
+    this.$forceUpdate()
+  },
   methods: {}
 }
 </script>

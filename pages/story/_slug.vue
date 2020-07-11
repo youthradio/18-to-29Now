@@ -77,8 +77,14 @@ export default {
   mixins: [mixinMethods],
   async asyncData(ctx) {
     const slug = await ctx.params.slug
+    const article = ArticleData.stories.find((e) => e.slug === slug)
+    const authordata = ArticleData.bios.find(
+      (e) => e.authorslug === article.authorslug
+    )
     return {
       slug,
+      article,
+      authordata,
       articleData: ArticleData
     }
   },
@@ -95,14 +101,6 @@ export default {
         return 'article-audio'
       }
       return null
-    },
-    article() {
-      return this.articleData.stories.find((e) => e.slug === this.slug)
-    },
-    authordata() {
-      return this.articleData.bios.find(
-        (e) => e.authorslug === this.article.authorslug
-      )
     }
   },
   mounted() {
