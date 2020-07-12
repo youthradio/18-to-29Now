@@ -91,22 +91,39 @@
         <div class="grid-col-start-1 dn db-ns ">
           <div class="">
             <p class="sans-serif f7 lh-title ttu tr">BROUGHT<br />TO YOU BY</p>
-
-            <img
-              src="logos/yrlogo.svg"
-              class="db ml-auto pa1 pr0 img-fluid-h"
-              alt="YR Media Logo"
-            />
-            <img
-              src="logos/wnyclogo.svg"
-              class="db ml-auto pa1 pr0 img-fluid-h"
-              alt="WNYC Logo"
-            />
-            <img
-              src="logos/radio-rookies.svg"
-              class="db ml-auto pa1 pr0 img-fluid-h"
-              alt="Radio Rookies"
-            />
+            <a
+              href="https://yr.media"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/yrlogo.svg"
+                class="db ml-auto pa1 pr0 img-fluid-h"
+                alt="YR Media Logo"
+              />
+            </a>
+            <a
+              href="https://wnyc.org"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/wnyclogo.svg"
+                class="db ml-auto pa1 pr0 img-fluid-h"
+                alt="WNYC Logo"
+              />
+            </a>
+            <a
+              href="https://www.wnyc.org/shows/rookies"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/radio-rookies.svg"
+                class="db ml-auto pa1 pr0 img-fluid-h"
+                alt="Radio Rookies"
+              />
+            </a>
           </div>
         </div>
         <div class=" grid-col-start-2 dn db-ns">
@@ -187,18 +204,40 @@
           class="flex w-80 center justify-around justify-start-ns items-baseline"
         >
           <div class="ph2 ">
-            <img src="logos/yrlogo.svg" class="db h-100" alt="YR Media Logo" />
+            <a
+              href="https://yr.media"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/yrlogo.svg"
+                class="db h-100"
+                alt="YR Media Logo"
+              />
+            </a>
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
           <div class="ph2 ">
-            <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
+            <a
+              href="https://www.wnyc.org"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
+            </a>
           </div>
           <div class="ph2 ">
-            <img
-              src="logos/radio-rookies.svg"
-              class="db h-100"
-              alt="Radio Rookies"
-            />
+            <a
+              href="https://www.wnyc.org/shows/rookies"
+              target="_blank"
+              class="db pointer link grow no-underline"
+            >
+              <img
+                src="logos/radio-rookies.svg"
+                class="db h-100"
+                alt="Radio Rookies"
+              />
+            </a>
           </div>
         </div>
       </div>
