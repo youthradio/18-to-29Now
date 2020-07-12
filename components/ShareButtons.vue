@@ -3,7 +3,16 @@
     <div
       class="flex flex-column items-center justify-around bg-blue-op-50 br-pill w-content"
     >
-      <a href="#" class="db link grow" @click.prevent="facebookShare">
+      <a
+        class="db link grow"
+        target="_blank"
+        rel="nofollow"
+        :href="
+          `https://www.facebook.com/sharer/sharer.php?u=${url}&t=${encodeURIComponent(
+            title
+          )}`
+        "
+      >
         <svg
           class="db pa2 mt2"
           width="12"
@@ -17,7 +26,16 @@
           />
         </svg>
       </a>
-      <a href="#" class="db link grow" @click.prevent="tweetShare">
+      <a
+        class="db link grow"
+        target="_blank"
+        rel="nofollow"
+        :href="
+          `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+            `${title}: ${url} with @itsYRmedia @WNYC @radiorookies`
+          )}`
+        "
+      >
         <svg
           class="db pa2"
           width="24"
@@ -31,7 +49,16 @@
           />
         </svg>
       </a>
-      <a href="#" class="db link grow" @click.prevent="emailShare">
+      <a
+        target="_blank"
+        rel="nofollow"
+        class="db link grow"
+        :href="
+          `mailto:info@example.com?&subject=${encodeURIComponent(
+            title
+          )}&body=${encodeURIComponent(`${description}\n${url}`)}`
+        "
+      >
         <svg
           class="db pa2 mb2"
           width="24"
@@ -60,28 +87,12 @@ export default {
       required: true
     }
   },
-  methods: {
-    tweetShare() {
-      const url = window.location.href
-
-      const tweet = this.title + `: ${url} with @itsYRmedia @WNYC @radiorookies`
-      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-        tweet
-      )}`
-      window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
-    },
-    facebookShare() {
-      const url = window.location.href
-      const title = this.title
-      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&t=${title}`
-      window.open(facebookUrl, '_blank')
-    },
-    emailShare() {
-      const url = window.location.href
-      const subject = this.title
-      const body = this.description + `, ${url}`
-      const emailURL = `mailto:info@example.com?&subject=${subject}&body=${body}`
-      window.open(emailURL)
+  computed: {
+    url() {
+      if (process.client) {
+        return window.location.href
+      }
+      return null
     }
   }
 }
