@@ -200,13 +200,6 @@ export default {
     if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 8, true, true)
     }
-    this.$nextTick(() => {
-      setTimeout(() => {
-        if (window.location.hash) {
-          location.href = window.location.hash
-        }
-      }, 400)
-    })
   }
 }
 </script>
