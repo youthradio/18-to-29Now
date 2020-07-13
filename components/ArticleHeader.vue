@@ -22,21 +22,21 @@
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
             title="About"
-            :to="{ path: '/', hash: 'about' }"
+            :to="{ path: '/', hash: '#about' }"
           >
             About this Project
           </nuxt-link>
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
             title="Stories"
-            :to="{ path: '/', hash: 'stories' }"
+            :to="{ path: '/', hash: '#stories' }"
           >
             Stories
           </nuxt-link>
           <nuxt-link
             class="link b dib pv1 underline-hover blue"
             title="Contributors"
-            :to="{ path: '/', hash: 'contributors' }"
+            :to="{ path: '/', hash: '#contributors' }"
           >
             Contributors
           </nuxt-link>

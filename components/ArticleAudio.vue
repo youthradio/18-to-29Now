@@ -17,22 +17,20 @@
         class="absolute random-textures z-0 pointer-events-none"
       />
       <div class="w-20-ns relative z-1">
-        <div class="fl fn-ns">
-          <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>
-          <h3 class="dark-red lh-title pr3-ns mt1 mb1">
-            {{ article.author }}
-          </h3>
-          <h3 class="dark-red lh-title pr3-ns mt1 mb1">
-            {{ article.location }}
-          </h3>
-          <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
-            {{ article.date }}
-          </h5>
-        </div>
+        <h5 class="dark-red lh-title pr3-ns normal mb0">PRODUCED BY</h5>
+        <h3 class="dark-red lh-title pr3-ns mt1 mb1">
+          {{ article.author }}
+        </h3>
+        <h3 class="dark-red lh-title pr3-ns normal mt1 mb1">
+          {{ article.location }}
+        </h3>
+        <h5 class="dark-red lh-title pr3-ns normal ma0 mt2">
+          {{ article.date }}
+        </h5>
         <ShareButtons
           :title="article.title"
           :description="article.summary"
-          class="mv3 fr fn-ns"
+          class="mv3"
         />
       </div>
 

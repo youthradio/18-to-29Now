@@ -1,7 +1,7 @@
 <template>
   <aside>
     <div
-      class="flex flex-column items-center justify-around bg-blue-op-50 br-pill w-content"
+      class="flex flex-rown flex-column-ns items-center justify-around bg-blue-op-50 br-pill w-content"
     >
       <a
         class="db link grow"
@@ -14,7 +14,7 @@
         "
       >
         <svg
-          class="db pa2 mt2"
+          class="db pa2 mt2-ns ml2 ml0-ns"
           width="12"
           height="24"
           viewBox="0 0 12 24"
@@ -60,7 +60,7 @@
         "
       >
         <svg
-          class="db pa2 mb2"
+          class="db pa2 mb2-ns mr2 mr0-ns"
           width="24"
           height="18"
           viewBox="0 0 24 18"

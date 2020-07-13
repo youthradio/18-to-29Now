@@ -9,19 +9,19 @@
         <nuxt-link
           class="link dib mh4-ns pv1 underline-hover washed-red"
           title="About"
-          :to="{ path: '/', hash: 'about' }"
+          :to="{ path: '/', hash: '#about' }"
         >
           About this Project
         </nuxt-link>
         <nuxt-link
           class="link dib mh4-ns pv1 underline-hover washed-red"
           title="Latest"
-          :to="{ path: '/', hash: 'stories' }"
+          :to="{ path: '/', hash: '#stories' }"
         >
           Stories
         </nuxt-link>
         <nuxt-link
-          :to="{ path: '/', hash: 'contributors' }"
+          :to="{ path: '/', hash: '#contributors' }"
           class="link dib mh4-ns pv1 underline-hover washed-red"
           title="Contributors"
         >
