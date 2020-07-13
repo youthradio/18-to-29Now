@@ -3,6 +3,7 @@ import POSTCONFIG from './post.config'
 
 export default {
   telemetry: false,
+  target: 'static',
   env: {
     baseUrl: POSTCONFIG.baseURL || 'http://localhost:3000'
   },

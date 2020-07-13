@@ -91,36 +91,34 @@
           Contributors
         </h1>
         <div class="flex flex-wrap ph2">
-          <div
-            v-for="bio in biosData"
-            :key="bio.authorslug"
-            class="w-50 w-20-ns"
-          >
-            <div class="ph2 ph2-ns">
-              <a
-                class="link pointer db dim black"
-                :title="`${bio.name}\n${bio.location}`"
-                @click.prevent="toggleBioModal(bio)"
-              >
-                <div class="bb bw2 pb3 b--dark-red">
-                  <div class="aspect-ratio aspect-ratio--1x1">
-                    <img
-                      :data-src="bio.image"
-                      src="blank.jpg"
-                      class="aspect-ratio--object db img-fluid lazyload"
-                      alt="Photo of a dimly lit room with a computer interface terminal."
-                    />
+          <template v-for="bio in biosData">
+            <div :key="bio.authorslug" class="w-50 w-20-ns">
+              <div class="ph2 ph2-ns">
+                <a
+                  class="link pointer db dim black"
+                  :title="`${bio.name}\n${bio.location}`"
+                  @click.prevent="toggleBioModal(bio)"
+                >
+                  <div class="bb bw2 pb3 b--dark-red">
+                    <div class="aspect-ratio aspect-ratio--1x1">
+                      <img
+                        :data-src="bio.image"
+                        src="blank.jpg"
+                        class="aspect-ratio--object db img-fluid lazyload"
+                        alt="Photo of a dimly lit room with a computer interface terminal."
+                      />
+                    </div>
                   </div>
-                </div>
-                <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
-                  {{ bio.name }}
-                </h3>
-                <h4 class="normal lh-title mt0 f6 f5-ns">
-                  {{ bio.location }}
-                </h4>
-              </a>
+                  <h3 class="blue serif mt3 mb0 lh-title f5 f4-ns">
+                    {{ bio.name }}
+                  </h3>
+                  <h4 class="normal lh-title mt0 f6 f5-ns">
+                    {{ bio.location }}
+                  </h4>
+                </a>
+              </div>
             </div>
-          </div>
+          </template>
         </div>
       </section>
       <section class="mw8 center ph3 mt4 mt5-ns relative z-1">
@@ -200,6 +198,11 @@ export default {
     if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 8, true, true)
     }
+    this.$nextTick(() => {
+      if (location.hash) {
+        document.querySelector(location.hash).scrollIntoView()
+      }
+    })
   }
 }
 </script>
