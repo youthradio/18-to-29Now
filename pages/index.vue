@@ -205,7 +205,7 @@ export default {
         if (window.location.hash) {
           location.href = window.location.hash
         }
-      }, 200)
+      }, 400)
     })
   }
 }
