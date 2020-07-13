@@ -83,9 +83,16 @@ export default {
     const authordata = ArticleData.bios.find(
       (e) => e.authorslug === article.authorslug
     )
+    // bios data sorted by last name
+    const bios = ArticleData.bios
+    const biosData = bios.sort((a, b) =>
+      a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
+    )
+
     return {
       slug,
       article,
+      biosData,
       authordata,
       readMoreArticles,
       articleData: ArticleData

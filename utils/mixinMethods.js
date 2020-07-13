@@ -10,15 +10,6 @@ const mixinMethods = {
       modelBioData: null
     }
   },
-  computed: {
-    biosData() {
-      // bios data sorted by last name
-      const bios = this.articleData.bios
-      return bios.sort((a, b) =>
-        a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
-      )
-    }
-  },
   methods: {
     toggleBioModal(authordata) {
       if (authordata) {

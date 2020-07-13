@@ -178,10 +178,17 @@ export default {
     const featured = ArticleData.main.featured.map((l) =>
       ArticleData.stories.find((e) => e.slug === l.slug)
     )
+    // bios data sorted by last name
+    const bios = ArticleData.bios
+    const biosData = bios.sort((a, b) =>
+      a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
+    )
+
     return {
       featured,
       randomQuote,
       latest,
+      biosData,
       articleData: ArticleData
     }
   },
@@ -193,11 +200,13 @@ export default {
     if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 8, true, true)
     }
-  },
-  methods: {
-    scrollFix(hash) {
-      location.href = hash
-    }
+    this.$nextTick(() => {
+      setTimeout(() => {
+        if (window.location.hash) {
+          location.href = window.location.hash
+        }
+      }, 200)
+    })
   }
 }
 </script>
