@@ -8,7 +8,7 @@
       width="100%"
       src="https://www.wnyc.org/widgets/ondemand_player/18-to-29-now/#file=/audio/json/975844/&share=1"
     ></iframe> -->
-    <h1 class="serif blue f3 f2-ns lh-title mb0 ttc">
+    <h1 class="serif blue f3 f2-ns lh-title mb0">
       {{ article.title }}
     </h1>
     <div class="flex flex-column flex-row-ns justify-between mt2">
