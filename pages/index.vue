@@ -205,6 +205,18 @@ export default {
       }
     })
 
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (location.hash && entry) {
+          setTimeout(() => {
+            document.querySelector(location.hash).scrollIntoView()
+          }, 400)
+        }
+      }
+    })
+
+    resizeObserver.observe(this.$refs.bios)
+
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
@@ -214,8 +226,6 @@ export default {
               null,
               '#' + encodeURIComponent(entry.target.id)
             )
-          } else {
-            history.pushState({}, null, '')
           }
         })
       },
