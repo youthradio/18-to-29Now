@@ -87,12 +87,12 @@
         </blockquote>
       </div>
       <section class="mw8 center relative z-1 pt4">
-        <h1 id="contributors" class="blue f3 lh-title ttu ph3">
+        <h1 id="contributors" class="blue f3 lh-title ttu ph3 relative">
           Contributors
         </h1>
-        <div class="flex flex-wrap ph2">
+        <div ref="bios" class="flex flex-wrap ph2 relative">
           <template v-for="bio in biosData">
-            <div :key="bio.authorslug" class="w-50 w-20-ns">
+            <div :key="bio.authorslug" class="w-50 w-20-ns relative">
               <div class="ph2 ph2-ns">
                 <a
                   class="link pointer db dim black"
@@ -198,11 +198,32 @@ export default {
     if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 8, true, true)
     }
+
     this.$nextTick(() => {
       if (location.hash) {
         document.querySelector(location.hash).scrollIntoView()
       }
     })
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            history.pushState(
+              {},
+              null,
+              '#' + encodeURIComponent(entry.target.id)
+            )
+          } else {
+            history.pushState({}, null, '')
+          }
+        })
+      },
+      { threshold: 1.0 }
+    )
+    this.$el
+      .querySelectorAll('h1[id],h2[id]')
+      .forEach((e) => observer.observe(e))
   }
 }
 </script>
