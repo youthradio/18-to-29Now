@@ -5,8 +5,12 @@
         :data-src="article.featureImage"
         src="blankfeature.jpg"
         class="db img-fluid lazyload"
-        alt="Photo of a dimly lit room with a computer interface terminal."
+        :alt="article.featureImageCaption"
+        :title="article.featureImageCaption"
       />
+      <div v-if="article.featureImageCredits" class="f7 gray">
+        <small>{{ article.featureImageCredits }}</small>
+      </div>
     </div>
     <h1 class="serif blue f3 f2-ns lh-title mb0">
       {{ article.title }}

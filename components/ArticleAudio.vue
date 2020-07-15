@@ -41,9 +41,14 @@
         <img
           :data-src="article.featureImage"
           src="blankfeature.jpg"
-          class="db lazyload"
-          alt="Photo of a dimly lit room with a computer interface terminal."
+          class="db img-fluid lazyload"
+          :alt="article.featureImageCaption"
+          :title="article.featureImageCaption"
         />
+        <div v-if="article.featureImageCredits" class="f7 gray">
+          <small>{{ article.featureImageCredits }}</small>
+        </div>
+
         <article v-html="article.text"></article>
       </div>
     </div>
