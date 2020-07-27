@@ -1,6 +1,6 @@
 <template>
   <section class="mw8 center ph3 relative z-1 mt2">
-    <template v-for="article in articles">
+    <template v-for="article in articlesPage">
       <article :key="article.slug" class="pb4">
         <div class="flex flex-column flex-row-ns">
           <div class="pr3-ns mb4 mb0-ns w-30-ns">
@@ -54,12 +54,29 @@
 <script>
 import mixinMethods from '~/utils/mixinMethods'
 
+// numbers per page  is a constant
+const NUM_PER_PAGE = 3
 export default {
   mixins: [mixinMethods],
   props: {
     articles: {
       type: Array,
       required: true
+    }
+  },
+  data() {
+    return {
+      currentPage: 0
+    }
+  },
+  computed: {
+    // return totatl pages integerer
+    // you use it for the numbers of pages
+    totalPages() {
+      return Math.ceill(this.articles.length / NUM_PER_PAGE)
+    },
+    articlesPage() {
+      return this.articles.slice(0, NUM_PER_PAGE)
     }
   },
   mounted() {},
