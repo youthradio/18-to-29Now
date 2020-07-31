@@ -50,10 +50,13 @@
       </article>
     </template>
     <div>
-      <ul>
+      <ul class="paginator-container">
         <li v-for="page in totalPages" :key="page">
           <a
-            :class="[currentPage == page ? 'active' : '']"
+            :class="[
+              currentPage == page ? 'button-active' : 'button-non-active',
+              'button'
+            ]"
             @click="currentPage = page"
           >
             {{ page }}
@@ -109,7 +112,36 @@ export default {
 </script>
 
 <style lang="scss">
-.active {
-  background-color: red;
+.paginator-container {
+  li {
+    display: inline;
+    padding: 0 5px 0 5px;
+    line-height: 30px;
+  }
+  list-style-type: none;
+  padding: 0;
+}
+.button {
+  display: inline-block;
+
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+
+  width: 32px;
+  height: 32px;
+
+  color: #204d8f;
+  text-align: center;
+  text-decoration: none;
+
+  font-weight: bold;
+}
+.button-non-active {
+  cursor: pointer;
+}
+.button-active {
+  background-color: #ffd299;
+  pointer-events: none;
 }
 </style>
