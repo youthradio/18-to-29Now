@@ -76,7 +76,8 @@ export default {
   },
   data() {
     return {
-      currentPage: 1
+      currentPage: 1,
+      numPerPage: 3
     }
   },
   computed: {
@@ -86,12 +87,17 @@ export default {
       return Math.ceil(this.articles.length / NUM_PER_PAGE)
     },
     articlesPage() {
-      this.articles.slice(0, NUM_PER_PAGE)
       return this.articles.slice(0, NUM_PER_PAGE)
     }
   },
   mounted() {},
-  methods: {}
+  methods: {
+    prevPage(currentPage) {
+      if (currentPage > 1) {
+        currentPage--
+      }
+    }
+  }
 }
 </script>
 
