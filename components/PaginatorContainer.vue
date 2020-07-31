@@ -63,9 +63,6 @@
 <script>
 import mixinMethods from '~/utils/mixinMethods'
 
-// numbers per page is a constant
-const NUM_PER_PAGE = 3
-
 export default {
   mixins: [mixinMethods],
   props: {
@@ -76,18 +73,21 @@ export default {
   },
   data() {
     return {
-      currentPage: 1,
-      numPerPage: 3
+      currentPage: 1, // current multiplier
+      numPerPage: 3 // base of each page
     }
   },
   computed: {
     // return totatl pages integerer
     // you use it for the numbers of pages
     totalPages() {
-      return Math.ceil(this.articles.length / NUM_PER_PAGE)
+      return Math.ceil(this.articles.length / this.numPerPage)
     },
     articlesPage() {
-      return this.articles.slice(0, NUM_PER_PAGE)
+      return this.articles.slice(
+        (this.currentPage - 1) * this.numPerPage, // bottom multiplier
+        this.currentPage * this.numPerPage // top multipler
+      )
     }
   },
   mounted() {},
