@@ -118,7 +118,11 @@ export default {
     padding: 0 5px 0 5px;
     line-height: 30px;
   }
+  display: flex;
+  justify-content: center;
+
   list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 .button {
