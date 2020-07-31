@@ -87,8 +87,8 @@ export default {
       return Math.ceil(this.articles.length / this.numPerPage)
     },
     articlesPage() {
-      const bottomFilter = (this.currentPage - 1) * this.numPerPage
-      const topFilter = this.currentPage * this.numPerPage
+      const bottomFilter = (this.currentPage - 1) * this.numPerPage // starts selecting by 0, but then jumps to 3s after
+      const topFilter = this.currentPage * this.numPerPage // also jumps by 3s
       return this.articles.slice(bottomFilter, topFilter)
     }
   },
