@@ -52,7 +52,10 @@
     <div>
       <ul>
         <li v-for="page in totalPages" :key="page">
-          <a :class="[currentPage == page ? 'active' : '']">
+          <a
+            :class="[currentPage == page ? 'active' : '']"
+            @click="currentPage = page"
+          >
             {{ page }}
           </a>
         </li>
@@ -94,6 +97,11 @@ export default {
     prevPage(currentPage) {
       if (currentPage > 1) {
         currentPage--
+      }
+    },
+    nextPage(currentPage) {
+      if (currentPage > 1) {
+        currentPage++
       }
     }
   }
