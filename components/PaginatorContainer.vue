@@ -49,13 +49,23 @@
         </div>
       </article>
     </template>
+    <div>
+      <ul>
+        <li v-for="page in totalPages" :key="page">
+          <a :class="[currentPage == page ? 'active' : '']">
+            {{ page }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 <script>
 import mixinMethods from '~/utils/mixinMethods'
 
-// numbers per page  is a constant
+// numbers per page is a constant
 const NUM_PER_PAGE = 3
+
 export default {
   mixins: [mixinMethods],
   props: {
@@ -66,16 +76,17 @@ export default {
   },
   data() {
     return {
-      currentPage: 0
+      currentPage: 1
     }
   },
   computed: {
     // return totatl pages integerer
     // you use it for the numbers of pages
     totalPages() {
-      return Math.ceill(this.articles.length / NUM_PER_PAGE)
+      return Math.ceil(this.articles.length / NUM_PER_PAGE)
     },
     articlesPage() {
+      this.articles.slice(0, NUM_PER_PAGE)
       return this.articles.slice(0, NUM_PER_PAGE)
     }
   },
@@ -84,4 +95,8 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.active {
+  background-color: red;
+}
+</style>
