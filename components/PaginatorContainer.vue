@@ -84,10 +84,9 @@ export default {
       return Math.ceil(this.articles.length / this.numPerPage)
     },
     articlesPage() {
-      return this.articles.slice(
-        (this.currentPage - 1) * this.numPerPage, // bottom multiplier
-        this.currentPage * this.numPerPage // top multipler
-      )
+      const bottomFilter = (this.currentPage - 1) * this.numPerPage
+      const topFilter = this.currentPage * this.numPerPage
+      return this.articles.slice(bottomFilter, topFilter)
     }
   },
   mounted() {},
