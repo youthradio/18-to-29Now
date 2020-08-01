@@ -1,5 +1,5 @@
 <template>
-  <section class="mw8 center ph3 relative z-1 mt2">
+  <section id="latest" ref="section" class="mw8 center ph3 relative z-1 mt2">
     <template v-for="article in articlesPage">
       <article :key="article.slug" class="pb4">
         <div class="flex flex-column flex-row-ns">
@@ -95,6 +95,12 @@ export default {
       const bottomFilter = (this.currentPage - 1) * this.numPerPage // starts selecting by 0, but then jumps to 3s after
       const topFilter = this.currentPage * this.numPerPage // also jumps by 3s
       return this.articles.slice(bottomFilter, topFilter)
+    }
+  },
+  watch: {
+    currentPage() {
+      // when page change, jump to top
+      this.$refs.section.scrollIntoView()
     }
   },
   mounted() {},
