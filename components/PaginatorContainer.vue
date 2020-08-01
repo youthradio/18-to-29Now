@@ -10,8 +10,10 @@
               class="link db dim black"
             >
               <img
+                width="700"
+                height="394"
                 :data-src="article.featureImageSmall"
-                class="db lazyload"
+                class="db lazyload img-fluid"
                 src="blankfeature.jpg"
                 style="object-fit: cover;"
                 alt="Photo of a dimly lit room with a computer interface terminal."
