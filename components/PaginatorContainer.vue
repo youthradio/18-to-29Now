@@ -210,7 +210,7 @@ export default {
   display: inline-block;
   border: none;
   background-color: transparent;
-  border-radius: 50%;
+  padding: 0 4px 0 4px;
 
   height: 32px;
 
