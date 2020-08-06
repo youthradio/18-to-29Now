@@ -96,18 +96,7 @@ export default {
     }
   },
   mounted() {},
-  methods: {
-    prevPage(currentPage) {
-      if (currentPage > 1) {
-        currentPage--
-      }
-    },
-    nextPage(currentPage) {
-      if (currentPage > 1) {
-        currentPage++
-      }
-    }
-  }
+  methods: {}
 }
 </script>
 
