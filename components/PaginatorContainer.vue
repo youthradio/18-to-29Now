@@ -64,6 +64,9 @@
             {{ page }}
           </a>
         </li>
+        <div class="sa-button">
+          See All Articles
+        </div>
       </ul>
     </div>
   </section>
@@ -121,6 +124,18 @@ export default {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.sa-button {
+  display: inline-block;
+  height: 32px;
+
+  color: #204d8f;
+  text-align: center;
+  text-decoration: none;
+
+  font-weight: bold;
+  line-height: 30px;
+  padding: 0 0 0 5px;
 }
 .button {
   display: inline-block;
