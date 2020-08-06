@@ -1,56 +1,111 @@
 <template>
   <section id="latest" ref="section" class="mw8 center ph3 relative z-1 mt2">
-    <template v-for="article in articlesPage">
-      <article :key="article.slug" class="pb4">
-        <div class="flex flex-column flex-row-ns">
-          <div class="pr3-ns mb4 mb0-ns w-30-ns">
-            <nuxt-link
-              :title="article.title"
-              :to="{ path: `story/${article.slug}` }"
-              class="link db dim black"
-            >
-              <img
-                width="700"
-                height="394"
-                :data-src="article.featureImageSmall"
-                class="db lazyload img-fluid"
-                src="blankfeature.jpg"
-                style="object-fit: cover;"
-                alt="Photo of a dimly lit room with a computer interface terminal."
-              />
-            </nuxt-link>
+    <div v-if="seeAllSwitch">
+      <template v-for="article in articles">
+        <article :key="article.slug" class="pb4">
+          <div class="flex flex-column flex-row-ns">
+            <div class="pr3-ns mb4 mb0-ns w-30-ns">
+              <nuxt-link
+                :title="article.title"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db dim black"
+              >
+                <img
+                  width="700"
+                  height="394"
+                  :data-src="article.featureImageSmall"
+                  class="db lazyload img-fluid"
+                  src="blankfeature.jpg"
+                  style="object-fit: cover;"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </nuxt-link>
+            </div>
+            <div class="w-70-ns pl3-ns">
+              <nuxt-link
+                :title="article.title"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db blue underline-hover"
+              >
+                <h2 class="blue serif mv0 lh-title f4 f3-ns">
+                  {{ article.title }}
+                </h2>
+              </nuxt-link>
+              <a
+                :title="`${article.author} Bio`"
+                class="pointer link db blue dim black"
+                @click.prevent="$emit('toggleBioModalSlug', article.authorslug)"
+              >
+                <h3 class="dark-red lh-title mv1 f5 f4-ns">
+                  {{ article.author }} |
+                  <span class="ttc normal"> {{ article.format }}</span>
+                </h3>
+              </a>
+              <nuxt-link
+                :title="article.summary"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db dim black"
+              >
+                <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
+              </nuxt-link>
+            </div>
           </div>
-          <div class="w-70-ns pl3-ns">
-            <nuxt-link
-              :title="article.title"
-              :to="{ path: `story/${article.slug}` }"
-              class="link db blue underline-hover"
-            >
-              <h2 class="blue serif mv0 lh-title f4 f3-ns">
-                {{ article.title }}
-              </h2>
-            </nuxt-link>
-            <a
-              :title="`${article.author} Bio`"
-              class="pointer link db blue dim black"
-              @click.prevent="$emit('toggleBioModalSlug', article.authorslug)"
-            >
-              <h3 class="dark-red lh-title mv1 f5 f4-ns">
-                {{ article.author }} |
-                <span class="ttc normal"> {{ article.format }}</span>
-              </h3>
-            </a>
-            <nuxt-link
-              :title="article.summary"
-              :to="{ path: `story/${article.slug}` }"
-              class="link db dim black"
-            >
-              <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
-            </nuxt-link>
+        </article>
+      </template>
+    </div>
+    <div v-else>
+      <template v-for="article in articlesPage">
+        <article :key="article.slug" class="pb4">
+          <div class="flex flex-column flex-row-ns">
+            <div class="pr3-ns mb4 mb0-ns w-30-ns">
+              <nuxt-link
+                :title="article.title"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db dim black"
+              >
+                <img
+                  width="700"
+                  height="394"
+                  :data-src="article.featureImageSmall"
+                  class="db lazyload img-fluid"
+                  src="blankfeature.jpg"
+                  style="object-fit: cover;"
+                  alt="Photo of a dimly lit room with a computer interface terminal."
+                />
+              </nuxt-link>
+            </div>
+            <div class="w-70-ns pl3-ns">
+              <nuxt-link
+                :title="article.title"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db blue underline-hover"
+              >
+                <h2 class="blue serif mv0 lh-title f4 f3-ns">
+                  {{ article.title }}
+                </h2>
+              </nuxt-link>
+              <a
+                :title="`${article.author} Bio`"
+                class="pointer link db blue dim black"
+                @click.prevent="$emit('toggleBioModalSlug', article.authorslug)"
+              >
+                <h3 class="dark-red lh-title mv1 f5 f4-ns">
+                  {{ article.author }} |
+                  <span class="ttc normal"> {{ article.format }}</span>
+                </h3>
+              </a>
+              <nuxt-link
+                :title="article.summary"
+                :to="{ path: `story/${article.slug}` }"
+                class="link db dim black"
+              >
+                <p class="f4-l lh-copy mv0">{{ article.summary }}</p>
+              </nuxt-link>
+            </div>
           </div>
-        </div>
-      </article>
-    </template>
+        </article>
+      </template>
+    </div>
     <div>
       <ul class="paginator-container">
         <li v-for="page in totalPages" :key="page">
@@ -59,14 +114,36 @@
               currentPage == page ? 'button-active' : 'button-non-active',
               'button'
             ]"
-            @click="currentPage = page"
+            @click="
+              {
+                currentPage = page
+                if (seeAllSwitch) {
+                  seeAllSwitch = false
+                }
+              }
+            "
           >
             {{ page }}
           </a>
         </li>
-        <div class="sa-button">
-          See All Articles
-        </div>
+        <li>
+          <div
+            :class="[
+              currentPage == 0 ? 'button-active' : 'button-non-active',
+              'sa-button'
+            ]"
+            @click="
+              {
+                currentPage = 0 // hacky but it works!
+                if (!seeAllSwitch) {
+                  seeAllSwitch = true
+                }
+              }
+            "
+          >
+            See All Articles
+          </div>
+        </li>
       </ul>
     </div>
   </section>
@@ -85,7 +162,8 @@ export default {
   data() {
     return {
       currentPage: 1, // current multiplier
-      numPerPage: 3 // base of each page
+      numPerPage: 3, // base of each page
+      seeAllSwitch: false
     }
   },
   computed: {
@@ -93,6 +171,9 @@ export default {
     // you use it for the numbers of pages
     totalPages() {
       return Math.ceil(this.articles.length / this.numPerPage)
+    },
+    allArticles() {
+      return this.articles
     },
     articlesPage() {
       const bottomFilter = (this.currentPage - 1) * this.numPerPage // starts selecting by 0, but then jumps to 3s after
@@ -127,6 +208,10 @@ export default {
 }
 .sa-button {
   display: inline-block;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+
   height: 32px;
 
   color: #204d8f;
@@ -134,8 +219,6 @@ export default {
   text-decoration: none;
 
   font-weight: bold;
-  line-height: 30px;
-  padding: 0 0 0 5px;
 }
 .button {
   display: inline-block;
