@@ -33,10 +33,13 @@ module.exports = {
       name: 'Now_KelveyVanderHart',
       id: '1G86FG7VfV6EYkqJ7LHiOq_M5gdIgqWV80-D1zB9CFXg'
     },
-    // { name: 'test', id: '1c9ZvJQ7dTjO6sTDOFX2Nkf9s-hV-jAGVj_qMBGRojOM' },
     {
       name: 'Barely Making It: Navigating 2020 As a Broke College Student',
       id: '1YYPg9O9ANBS26dwjuvT0ozP4PjqpLr1WC9YVbiulZt8'
+    },
+    {
+      name: " Getting on Board with Kamala: It's Complicated",
+      id: '1p6epB-L4aTJq-sRp04o6e1_X-ECBI87ZqJFDm3-71Aw'
     },
     {
       name: 'A Minnesotan Weighs In: Is There Hope After The Hashtags?',
