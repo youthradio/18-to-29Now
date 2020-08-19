@@ -26,18 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn publish-ghpages
-
-      - name: Deploy GH-Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          allow_empty_commit: true
-          keep_files: false
-          force_orphan: true
-
+      - run: yarn install --frozen-lockfile      
       - name: Rebuild for Production
         env:
           BASE_URL_PRODUCTION: /
