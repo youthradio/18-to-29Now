@@ -129,6 +129,10 @@
           class="mw9 center two-col-ns lh-copy f5 f4-ns"
           v-html="articleData.main.about.text"
         ></div>
+        <div
+          class="mw9 center lh-copy f7 i"
+          v-html="articleData.main.about.credits"
+        ></div>
       </section>
       <Modal
         v-if="modelBioData"
