@@ -67,6 +67,11 @@ module.exports = {
       name:
         '“I am in Juárez. You are in El Paso.” Pandemic Reflections from Borderland ',
       id: '1u5V-ectva2CoZ5_YkSK-ddzy8YzwE9NxjP-9559Z3Vw'
+    },
+    {
+      name:
+        'From Quarantine at NYU, a Freshman Waits to Start the Next Chapter',
+      id: '1xQqjocgeFTwhkQzzxqX8T6obFL1m0ahPj0PSUFt6_qQ'
     }
   ],
   dataPath: 'data/data.json',
