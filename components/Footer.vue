@@ -49,8 +49,17 @@
             /></a>
           </div>
         </div>
-        <div class="mt3 mt0-ns ml4-ns w-40-ns">
-          <p class="di db-ns ph2 ph0-ns">
+        <div class="mt3 mt0-ns ml4-ns w-40-ns tc tl-ns">
+          <p class="">
+            <a
+              href="mailto:kpitkin@wnyc.org,rebecca@yrmedia.org?subject=18-29%20website%20contact"
+              target="_blank"
+              class="link blue underline underline-hover hover-dark-red"
+            >
+              Contact and Media Inquiries
+            </a>
+          </p>
+          <p class=" ph2 ph0-ns">
             <a
               href="https://www.wnyc.org/terms"
               target="_blank"
@@ -59,7 +68,7 @@
               Terms of Use
             </a>
           </p>
-          <p class="di db-ns ph2 ph0-ns">
+          <p class=" ph2 ph0-ns">
             <a
               href="https://yr.media/privacy-policy/"
               target="_blank"
