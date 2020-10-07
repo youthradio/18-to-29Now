@@ -42,6 +42,7 @@
           :data-src="article.featureImage"
           src="blankfeature.jpg"
           class="db img-fluid lazyload"
+          loading="lazy"
           :alt="article.featureImageCaption"
           :title="article.featureImageCaption"
         />

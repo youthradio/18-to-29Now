@@ -6,6 +6,7 @@
           <img
             src="logos/logoarticle.svg"
             class="db"
+            loading="lazy"
             alt="Young America 18 to 29 Now Speaks UP"
           />
         </nuxt-link>

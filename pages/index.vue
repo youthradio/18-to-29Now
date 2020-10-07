@@ -28,6 +28,7 @@
                     :data-src="article.featureImageSmall"
                     class="db lazyload"
                     src="blankfeature.jpg"
+                    loading="lazy"
                     style="object-fit: cover;"
                     alt="Photo of a dimly lit room with a computer interface terminal."
                   />
@@ -105,6 +106,7 @@
                         :data-src="bio.image"
                         src="blank.jpg"
                         class="aspect-ratio--object db img-fluid lazyload"
+                        loading="lazy"
                         alt="Photo of a dimly lit room with a computer interface terminal."
                       />
                     </div>

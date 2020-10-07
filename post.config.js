@@ -72,6 +72,10 @@ module.exports = {
       name:
         'From Quarantine at NYU, a Freshman Waits to Start the Next Chapter',
       id: '1xQqjocgeFTwhkQzzxqX8T6obFL1m0ahPj0PSUFt6_qQ'
+    },
+    {
+      name: 'Beyond Boeing: My Town, My Peers, Our Future',
+      id: '1-Ny03f-v9MfBWl3R_UvbSgwa7A1-NQMSfFvwygF2KFo'
     }
   ],
   dataPath: 'data/data.json',

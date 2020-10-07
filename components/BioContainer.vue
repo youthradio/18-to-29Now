@@ -6,6 +6,7 @@
           src="blank.jpg"
           :data-src="author.image"
           class="mwimg db lazyload"
+          loading="lazy"
           :alt="`${author.name} Profile Picture`"
         />
       </div>

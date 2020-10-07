@@ -20,6 +20,7 @@
               <img
                 src="logos/yrlogo.svg"
                 class="db img-fluid-h"
+                loading="lazy"
                 alt="YR Media Logo"
             /></a>
           </div>
@@ -33,6 +34,7 @@
               <img
                 src="logos/wnyclogo.svg"
                 class="db img-fluid-h"
+                loading="lazy"
                 alt="WNYC Logo"
             /></a>
           </div>
@@ -45,6 +47,7 @@
               <img
                 src="logos/radio-rookies.svg"
                 class="db img-fluid-h"
+                loading="lazy"
                 alt="Radio Rookies"
             /></a>
           </div>

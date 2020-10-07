@@ -19,6 +19,7 @@
             <div class="relative">
               <img
                 :data-src="feature.featureImageSmall"
+                loading="lazy"
                 src="blankfeature.jpg"
                 class="db lazyload"
                 alt="Photo of a dimly lit room with a computer interface terminal."
