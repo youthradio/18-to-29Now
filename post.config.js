@@ -76,6 +76,10 @@ module.exports = {
     {
       name: 'Beyond Boeing: My Town, My Peers, Our Future',
       id: '1-Ny03f-v9MfBWl3R_UvbSgwa7A1-NQMSfFvwygF2KFo'
+    },
+    {
+      name: 'Young Republican: Finding My Place in the Party',
+      id: '17sPjspwSRhZPR78dZFZRAGOdi7Hi08n7l1cTWhoJxso'
     }
   ],
   dataPath: 'data/data.json',
