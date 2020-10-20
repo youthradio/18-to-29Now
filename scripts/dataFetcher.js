@@ -70,8 +70,11 @@ function markdown2html(data) {
         }
         obj[key] = DOMPurify.sanitize(marked(obj[key]), configDom).trim()
         // make slugs from titles
-        if (key === 'title') {
+        if (key === 'title' && obj.slug_custom === undefined) {
           obj.slug = makeSlug(obj[key])
+        }
+        if (key === 'slug_custom' && obj.slug === undefined) {
+          obj.slug = obj.slug_custom
         }
         if (key === 'name' || key === 'author') {
           obj.authorslug = makeSlug(obj[key])
@@ -97,6 +100,7 @@ async function customFetcher(DOC_ID) {
   // convertedData
 
   // return some JSON Object
+  // eslint-disable-next-line no-console
   console.log(convertedData)
   return convertedData
 }
