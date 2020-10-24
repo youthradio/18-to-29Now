@@ -80,6 +80,10 @@ module.exports = {
     {
       name: 'Young Republican: Finding My Place in the Party',
       id: '17sPjspwSRhZPR78dZFZRAGOdi7Hi08n7l1cTWhoJxso'
+    },
+    {
+      name: 'Beyond Latinx: The Politics of Language in Borderland, America',
+      id: '1wZFtAb4N_2qy3RuICQqP2K8RDWsPnqTR5kePgz_0pFA'
     }
   ],
   dataPath: 'data/data.json',

@@ -60,6 +60,7 @@ import ArticleHeader from '~/components/ArticleHeader.vue'
 import Footer from '~/components/Footer.vue'
 import BioContainer from '~/components/BioContainer.vue'
 import ArticleText from '~/components/ArticleText.vue'
+import ArticleTextInteractive from '~/components/ArticleTextInteractive.vue'
 import ArticleVideo from '~/components/ArticleVideo.vue'
 import ArticleAudio from '~/components/ArticleAudio.vue'
 import HorizontalContainer from '~/components/HorizontalContainer.vue'
@@ -71,6 +72,7 @@ export default {
     Footer,
     BioContainer,
     ArticleText,
+    ArticleTextInteractive,
     ArticleVideo,
     ArticleAudio,
     HorizontalContainer
@@ -111,6 +113,8 @@ export default {
         return 'article-video'
       } else if (this.article.format === 'audio') {
         return 'article-audio'
+      } else if (this.article.format === 'interactive') {
+        return 'article-text-interactive'
       }
       return null
     }
