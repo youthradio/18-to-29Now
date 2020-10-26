@@ -8,9 +8,9 @@
         target="_blank"
         rel="nofollow"
         :href="
-          `https://www.facebook.com/sharer/sharer.php?u=${url}&t=${encodeURIComponent(
-            title
-          )}`
+          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+            url
+          )}&t=${encodeURIComponent(title)}`
         "
       >
         <svg
@@ -87,13 +87,21 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      isMounted: false
+    }
+  },
   computed: {
     url() {
-      if (process.client) {
+      if (process.client && this.isMounted) {
         return window.location.href
       }
       return null
     }
+  },
+  mounted() {
+    this.isMounted = true
   }
 }
 </script>
