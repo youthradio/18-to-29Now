@@ -89,7 +89,7 @@ export default {
   },
   computed: {
     url() {
-      if (typeof window !== 'undefined') {
+      if (process.client) {
         return window.location.href
       }
       return null
