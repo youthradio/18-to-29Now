@@ -183,7 +183,7 @@ export default {
       ArticleData.stories.find((e) => e.slug === l.slug)
     )
     // bios data sorted by last name
-    const bios = ArticleData.bios
+    const bios = ArticleData.bios.filter((e) => !e.hide)
     const biosData = bios.sort((a, b) =>
       a.name.split(' ')[1] > b.name.split(' ')[1] ? 1 : -1
     )

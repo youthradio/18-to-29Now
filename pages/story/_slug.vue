@@ -14,6 +14,7 @@
         />
 
         <BioContainer
+          v-if="authordata"
           class="pt4 w-60-ns center relative z-1"
           mode="small"
           :author="authordata"
@@ -82,9 +83,9 @@ export default {
     const slug = await ctx.params.slug
     const article = ArticleData.stories.find((e) => e.slug === slug)
     const readMoreArticles = ArticleData.stories.filter((e) => e.slug !== slug)
-    const authordata = ArticleData.bios.find(
-      (e) => e.authorslug === article.authorslug
-    )
+    const authordata = ArticleData.bios
+      .filter((e) => !e.hide)
+      .find((e) => e.authorslug === article.authorslug)
     // bios data sorted by last name
     const bios = ArticleData.bios
     const biosData = bios.sort((a, b) =>
