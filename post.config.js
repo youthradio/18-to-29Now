@@ -89,6 +89,10 @@ module.exports = {
       name:
         'Is College Even Worth It? First-Gen College Student Talks Being Broke and the 2020 Ballot',
       id: '15I4ougx4enC3Pb7Yg5gjPvFwPiOLkurtbQCyL6RnWEw'
+    },
+    {
+      name: 'Young America in 2020: In Our Own Words',
+      id: '1kOpuEKVq63yzdDpCwUuQ2D4IUGdVg0AVoGrxxaqpfhc'
     }
   ],
   dataPath: 'data/data.json',
