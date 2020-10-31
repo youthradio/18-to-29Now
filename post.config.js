@@ -84,6 +84,11 @@ module.exports = {
     {
       name: 'Beyond Latinx: The Politics of Language in Borderland, America',
       id: '1wZFtAb4N_2qy3RuICQqP2K8RDWsPnqTR5kePgz_0pFA'
+    },
+    {
+      name:
+        'Is College Even Worth It? First-Gen College Student Talks Being Broke and the 2020 Ballot',
+      id: '15I4ougx4enC3Pb7Yg5gjPvFwPiOLkurtbQCyL6RnWEw'
     }
   ],
   dataPath: 'data/data.json',
