@@ -93,6 +93,10 @@ module.exports = {
     {
       name: 'Young America in 2020: In Our Own Words',
       id: '1kOpuEKVq63yzdDpCwUuQ2D4IUGdVg0AVoGrxxaqpfhc'
+    },
+    {
+      name: 'Voting Third Party: It’s Political and Personal',
+      id: '1a8KqSV1Kv9mOz6cuaVi2NZwaNIx7vOl_nquNrIancNY'
     }
   ],
   dataPath: 'data/data.json',
