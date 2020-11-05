@@ -97,6 +97,16 @@ module.exports = {
     {
       name: 'Voting Third Party: It’s Political and Personal',
       id: '1a8KqSV1Kv9mOz6cuaVi2NZwaNIx7vOl_nquNrIancNY'
+    },
+    {
+      name:
+        "Parole Reform in 2020? How My Dad's Prison Release Changed My Views This Election",
+      id: '1O8-vBo4-ucCR0BJGJr8u9Zbvn_3ib7DwnkixodA0jOw'
+    },
+    {
+      name:
+        'Waiting and Watching: A Q&A With 18-to-29 Now Correspondents - backend',
+      id: '1bKfUJEztRiuurARmIqkRnJ5Vx-TtqMrLR1ZnZohoBCU'
     }
   ],
   dataPath: 'data/data.json',
