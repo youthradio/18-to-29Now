@@ -2,8 +2,9 @@ const utils = {
   makeSlug(s) {
     const from = 'ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;'
     const to = 'aaaaaeeeeeiiiiooooouuuunc------'
+    const sthtml = s.replaceAll('&amp;', '-and-')
 
-    const noaccents = Array.from(s)
+    const noaccents = Array.from(sthtml)
       .map((c) => {
         const index = [...from].indexOf(c)
         if (index > -1) {
@@ -15,7 +16,6 @@ const utils = {
         return c
       })
       .join('')
-
     return noaccents
       .toString()
       .trim()

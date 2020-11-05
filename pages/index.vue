@@ -40,9 +40,10 @@
                   :to="{ path: `story/${article.slug}` }"
                   class="link db blue underline-hover"
                 >
-                  <h2 class="blue serif mv0 lh-title f4 f3-ns">
-                    {{ article.title }}
-                  </h2>
+                  <h2
+                    class="blue serif mv0 lh-title f4 f3-ns"
+                    v-html="article.title"
+                  ></h2>
                 </nuxt-link>
                 <a
                   :title="`${article.author} Bio`"

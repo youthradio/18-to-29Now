@@ -13,9 +13,7 @@
         <small>{{ article.featureImageCredits }}</small>
       </div>
     </div>
-    <h1 class="serif blue f3 f2-ns lh-title mb0">
-      {{ article.title }}
-    </h1>
+    <h1 class="serif blue f3 f2-ns lh-title mb0" v-html="article.title"></h1>
     <div class="flex flex-column flex-row-ns justify-between">
       <div
         ref="container"

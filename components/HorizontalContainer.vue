@@ -34,9 +34,10 @@
             :to="{ path: `/story/${feature.slug}` }"
             class="link db underline-hover blue"
           >
-            <h2 class="blue f3 f2-ns serif ma0 lh-title">
-              {{ feature.title }}
-            </h2>
+            <h2
+              class="blue f3 f2-ns serif ma0 lh-title"
+              v-html="feature.title"
+            ></h2>
           </nuxt-link>
           <a
             :title="`${feature.author} Bio`"
