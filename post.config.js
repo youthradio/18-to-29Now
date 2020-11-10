@@ -107,6 +107,10 @@ module.exports = {
       name:
         'Waiting and Watching: A Q&A With 18-to-29 Now Correspondents - backend',
       id: '1bKfUJEztRiuurARmIqkRnJ5Vx-TtqMrLR1ZnZohoBCU'
+    },
+    {
+      name: 'Finally! A Weight Is Lifted',
+      id: '1dnxD9vPXuipQ1_W9AgHh4Q4XpQXUeUHejOcrhIs6FHM'
     }
   ],
   dataPath: 'data/data.json',
