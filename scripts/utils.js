@@ -2,7 +2,7 @@ const utils = {
   makeSlug(s) {
     const from = 'ãàáäâẽèéëêìíïîõòóöôùúüûñç·/_,:;'
     const to = 'aaaaaeeeeeiiiiooooouuuunc------'
-    const sthtml = s.replaceAll('&amp;', '-and-')
+    const sthtml = s.replace(/&amp;/g, '-and-')
 
     const noaccents = Array.from(sthtml)
       .map((c) => {
