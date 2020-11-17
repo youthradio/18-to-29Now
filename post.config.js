@@ -111,6 +111,10 @@ module.exports = {
     {
       name: 'Finally! A Weight Is Lifted',
       id: '1dnxD9vPXuipQ1_W9AgHh4Q4XpQXUeUHejOcrhIs6FHM'
+    },
+    {
+      name: 'Connecting The Dots On Climate Change and The Cost Of Rent',
+      id: '1OX1TZvhO4DcNjtQiLP2CKnkexOywRvXfbpBAS6-f26Y'
     }
   ],
   dataPath: 'data/data.json',
