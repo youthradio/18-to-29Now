@@ -107,14 +107,14 @@ import ShareButtons from '~/components/ShareButtons.vue'
 
 export default {
   components: {
-    ShareButtons
+    ShareButtons,
   },
   mixins: [mixinMethods],
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {}
@@ -144,8 +144,8 @@ export default {
           el.classList.remove('green')
         }
       })
-    }
-  }
+    },
+  },
 }
 </script>
 

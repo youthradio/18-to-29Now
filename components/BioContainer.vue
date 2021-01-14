@@ -28,16 +28,16 @@ export default {
     mode: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
     author: {
       type: Object,
       required: true,
-      default: null
-    }
+      default: null,
+    },
   },
   mounted() {},
-  methods: {}
+  methods: {},
 }
 </script>
 

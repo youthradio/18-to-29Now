@@ -23,7 +23,7 @@
                 src="blankfeature.jpg"
                 class="db lazyload"
                 alt="Photo of a dimly lit room with a computer interface terminal."
-                style="object-fit: cover;"
+                style="object-fit: cover"
               />
             </div>
           </nuxt-link>
@@ -71,11 +71,11 @@ export default {
   props: {
     articles: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   mounted() {},
-  methods: {}
+  methods: {},
 }
 </script>
 

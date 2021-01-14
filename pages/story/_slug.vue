@@ -36,8 +36,7 @@
       <nuxt-link
         title="Home"
         :to="{ path: '/' }"
-        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
-        center"
+        class="f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue center"
       >
         Back to Main Page
       </nuxt-link>
@@ -76,7 +75,7 @@ export default {
     ArticleTextInteractive,
     ArticleVideo,
     ArticleAudio,
-    HorizontalContainer
+    HorizontalContainer,
   },
   mixins: [mixinMethods],
   async asyncData(ctx) {
@@ -98,12 +97,80 @@ export default {
       biosData,
       authordata,
       readMoreArticles,
-      articleData: ArticleData
+      articleData: ArticleData,
     }
   },
   data() {
     return {
-      randomArticles: []
+      randomArticles: [],
+    }
+  },
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.summary,
+        },
+        { hid: 'og:title', property: 'og:title', content: this.article.title },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: this.article.title,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: POSTCONFIG.url + this.$route.fullPath,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: POSTCONFIG.url + this.article.featureImage,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.article.summary,
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.article.summary,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.article.title,
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.article.summary,
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: POSTCONFIG.url + this.article.featureImage,
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.article.featureImage,
+        },
+        {
+          hid: 'itemprop:description',
+          itemprop: 'description',
+          content: this.article.summary,
+        },
+        {
+          hid: 'itemprop:image',
+          itemprop: 'image',
+          content: POSTCONFIG.url + this.article.featureImage,
+        },
+      ],
     }
   },
   computed: {
@@ -118,7 +185,7 @@ export default {
         return 'article-text-interactive'
       }
       return null
-    }
+    },
   },
   mounted() {
     if (window.innerWidth > 800) {
@@ -128,74 +195,6 @@ export default {
     this.randomArticles = stories.sort(() => 0.5 - Math.random()).slice(0, 2)
   },
   methods: {},
-  head() {
-    return {
-      title: this.article.title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.article.summary
-        },
-        { hid: 'og:title', property: 'og:title', content: this.article.title },
-        {
-          hid: 'og:site_name',
-          property: 'og:site_name',
-          content: this.article.title
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: POSTCONFIG.url + this.$route.fullPath
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: POSTCONFIG.url + this.article.featureImage
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.article.summary
-        },
-        {
-          hid: 'og:image:alt',
-          property: 'og:image:alt',
-          content: this.article.summary
-        },
-        {
-          hid: 'twitter:title',
-          name: 'twitter:title',
-          content: this.article.title
-        },
-        {
-          hid: 'twitter:description',
-          name: 'twitter:description',
-          content: this.article.summary
-        },
-        {
-          hid: 'twitter:image',
-          name: 'twitter:image',
-          content: POSTCONFIG.url + this.article.featureImage
-        },
-        {
-          hid: 'twitter:image:alt',
-          name: 'twitter:image:alt',
-          content: this.article.featureImage
-        },
-        {
-          hid: 'itemprop:description',
-          itemprop: 'description',
-          content: this.article.summary
-        },
-        {
-          hid: 'itemprop:image',
-          itemprop: 'image',
-          content: POSTCONFIG.url + this.article.featureImage
-        }
-      ]
-    }
-  }
 }
 </script>
 

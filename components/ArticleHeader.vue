@@ -147,9 +147,9 @@ export default {
   props: {
     copy: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

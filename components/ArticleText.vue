@@ -53,21 +53,21 @@ import ShareButtons from '~/components/ShareButtons.vue'
 
 export default {
   components: {
-    ShareButtons
+    ShareButtons,
   },
   mixins: [mixinMethods],
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {}
   },
   mounted() {
     this.randomImage(this.$refs.container)
-  }
+  },
 }
 </script>
 

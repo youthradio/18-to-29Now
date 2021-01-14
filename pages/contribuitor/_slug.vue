@@ -8,9 +8,7 @@
       />
       <main class="center mw8 pa3 relative z-1">
         <div class="center w-60-ns lh-copy f5 f4-ns">
-          <h1 class="blue f3 sans-serif mt0 lh-title ttu">
-            Contributor
-          </h1>
+          <h1 class="blue f3 sans-serif mt0 lh-title ttu">Contributor</h1>
           <BioContainer :author="authordata" />
           <div v-if="articlesbyauthor.length">
             <h4 class="dark-red ttu">
@@ -78,7 +76,7 @@ export default {
   filters: {
     first(val) {
       return val.split(' ')[0]
-    }
+    },
   },
   mixins: [mixinMethods],
   async asyncData(ctx) {
@@ -91,7 +89,7 @@ export default {
       slug,
       authordata,
       articlesbyauthor,
-      articleData: ArticleData
+      articleData: ArticleData,
     }
   },
   computed: {},
@@ -99,7 +97,7 @@ export default {
     if (window.innerWidth > 900) {
       this.randomIcons(this.$refs.flourishes, 3, true, true)
     }
-  }
+  },
 }
 </script>
 

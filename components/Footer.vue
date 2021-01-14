@@ -62,7 +62,7 @@
               Contact and Media Inquiries
             </a>
           </p>
-          <p class=" ph2 ph0-ns">
+          <p class="ph2 ph0-ns">
             <a
               href="https://www.wnyc.org/terms"
               target="_blank"
@@ -71,7 +71,7 @@
               Terms of Use
             </a>
           </p>
-          <p class=" ph2 ph0-ns">
+          <p class="ph2 ph0-ns">
             <a
               href="https://yr.media/privacy-policy/"
               target="_blank"
@@ -90,17 +90,17 @@ import NewsletterSignup from '~/components/NewsletterSignup.vue'
 
 export default {
   components: {
-    NewsletterSignup
+    NewsletterSignup,
   },
   props: {
     content: {
       type: Object,
       required: false,
-      default: null
-    }
+      default: null,
+    },
   },
   mounted() {},
-  methods: {}
+  methods: {},
 }
 </script>
 

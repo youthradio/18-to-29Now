@@ -8,8 +8,7 @@
     <div class="bg-washed-red mw8 center pv4 ph4">
       <div class="relative center lh-copy f5 f4-ns">
         <a
-          class="absolute right-1 top-1 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue
-        center"
+          class="absolute right-1 top-1 pointer f7 f6-ns grow no-underline br-pill ph3 pv2 dib washed-red bg-blue center"
           tabindex="0"
           @click.prevent="$emit('toggleModal')"
         >
@@ -59,22 +58,22 @@ export default {
   filters: {
     first(val) {
       return val.split(' ')[0]
-    }
+    },
   },
   props: {
     authordata: { type: Object, required: true, default: null },
-    articleData: { type: Object, required: true, default: null }
+    articleData: { type: Object, required: true, default: null },
   },
   computed: {
     articlesbyauthor() {
       return this.articleData.stories.filter(
         (e) => e.authorslug === this.authordata.authorslug
       )
-    }
+    },
   },
   mounted() {
     this.$el.focus()
-  }
+  },
 }
 </script>
 

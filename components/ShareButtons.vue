@@ -7,11 +7,9 @@
         class="db link grow"
         target="_blank"
         rel="nofollow"
-        :href="
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            url
-          )}&t=${encodeURIComponent(title)}`
-        "
+        :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          url
+        )}&t=${encodeURIComponent(title)}`"
       >
         <svg
           class="db pa2 mt2-ns ml2 ml0-ns"
@@ -30,11 +28,9 @@
         class="db link grow"
         target="_blank"
         rel="nofollow"
-        :href="
-          `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-            `${title}: ${url} with @itsYRmedia @WNYC @radiorookies`
-          )}`
-        "
+        :href="`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          `${title}: ${url} with @itsYRmedia @WNYC @radiorookies`
+        )}`"
       >
         <svg
           class="db pa2"
@@ -53,11 +49,9 @@
         target="_blank"
         rel="nofollow"
         class="db link grow"
-        :href="
-          `mailto:info@example.com?&subject=${encodeURIComponent(
-            title
-          )}&body=${encodeURIComponent(`${description}\n${url}`)}`
-        "
+        :href="`mailto:info@example.com?&subject=${encodeURIComponent(
+          title
+        )}&body=${encodeURIComponent(`${description}\n${url}`)}`"
       >
         <svg
           class="db pa2 mb2-ns mr2 mr0-ns"
@@ -80,16 +74,16 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      isMounted: false
+      isMounted: false,
     }
   },
   computed: {
@@ -98,11 +92,11 @@ export default {
         return window.location.href
       }
       return null
-    }
+    },
   },
   mounted() {
     this.isMounted = true
-  }
+  },
 }
 </script>
 

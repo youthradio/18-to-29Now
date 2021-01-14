@@ -29,7 +29,7 @@
                     class="db lazyload"
                     src="blankfeature.jpg"
                     loading="lazy"
-                    style="object-fit: cover;"
+                    style="object-fit: cover"
                     alt="Photo of a dimly lit room with a computer interface terminal."
                   />
                 </nuxt-link>
@@ -125,9 +125,7 @@
         </div>
       </section>
       <section class="mw8 center ph3 mt4 mt5-ns relative z-1">
-        <h2 id="about" class="blue mt0 lh-title ttu">
-          About
-        </h2>
+        <h2 id="about" class="blue mt0 lh-title ttu">About</h2>
         <div
           class="mw9 center two-col-ns lh-copy f5 f4-ns"
           v-html="articleData.main.about.text"
@@ -147,8 +145,7 @@
       <div class="flex justify-center pv4">
         <a
           href="#"
-          class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue
-        center"
+          class="pointer f6 grow no-underline br-pill ph3 pv2 mb2 dib washed-red bg-blue center"
           title="Back to Top"
         >
           Back to Top
@@ -170,7 +167,7 @@ export default {
   components: {
     MainHeader,
     Footer,
-    HorizontalContainer
+    HorizontalContainer,
   },
   mixins: [mixinMethods],
   asyncData(ctx) {
@@ -194,7 +191,7 @@ export default {
       randomQuote,
       latest,
       biosData,
-      articleData: ArticleData
+      articleData: ArticleData,
     }
   },
   data() {
@@ -241,7 +238,7 @@ export default {
     this.$el
       .querySelectorAll('h1[id],h2[id]')
       .forEach((e) => observer.observe(e))
-  }
+  },
 }
 </script>
 

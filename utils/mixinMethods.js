@@ -3,11 +3,11 @@ import icons from '~/utils/icons'
 
 const mixinMethods = {
   components: {
-    Modal
+    Modal,
   },
   data() {
     return {
-      modelBioData: null
+      modelBioData: null,
     }
   },
   methods: {
@@ -97,8 +97,8 @@ const mixinMethods = {
         }
         element.appendChild(div)
       }
-    }
-  }
+    },
+  },
 }
 
 export default mixinMethods

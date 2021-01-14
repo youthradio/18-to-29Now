@@ -6,7 +6,7 @@
       :user-id="newsletter.uid"
       :list-id="newsletter.id"
     >
-      <template v-slot="{ subscribe, setEmail, error, success, loading }">
+      <template #default="{ subscribe, setEmail, error, success, loading }">
         <form @submit.prevent="subscribe">
           <div class="flex">
             <div class="flex-auto self-stretch pr2">
@@ -18,8 +18,7 @@
               />
             </div>
             <button
-              class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue
-        center nowrap  br-pill bn"
+              class="pointer sans-serif f6 f5-ns grow no-underline ph3 pv2 dib washed-red bg-blue center nowrap br-pill bn"
               type="submit"
             >
               Sign Up
@@ -63,8 +62,8 @@ export default {
     message: {
       type: String,
       required: false,
-      default: ''
-    }
+      default: '',
+    },
   },
   data() {
     return {}
@@ -72,8 +71,8 @@ export default {
   computed: {
     newsletter() {
       return POSTCONFIG.newsletter
-    }
-  }
+    },
+  },
 }
 </script>
 

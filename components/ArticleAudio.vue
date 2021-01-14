@@ -68,12 +68,12 @@ export default {
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      svgStr: null
+      svgStr: null,
     }
   },
   computed: {
@@ -83,9 +83,9 @@ export default {
         songUrl: this.article.audioURL,
         title: this.article.title,
         url: '',
-        author: this.article.author
+        author: this.article.author,
       }
-    }
+    },
   },
   mounted() {
     this.svgStr = this.generateWaveformSVG(
@@ -93,7 +93,7 @@ export default {
       {
         height: 100,
         width: 500,
-        padding: 0.8
+        padding: 0.8,
       }
     )
     this.randomImage(this.$refs.container)
@@ -101,8 +101,8 @@ export default {
   methods: {
     generateWaveformSVG(data, options) {
       return generateWaveform(data, options)
-    }
-  }
+    },
+  },
 }
 </script>
 

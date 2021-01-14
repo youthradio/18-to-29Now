@@ -40,7 +40,7 @@
       <div
         class="grid-container grid-container-ns grid-container-l h-100 self-center"
       >
-        <div class="grid-col-start-2 dn db-ns ">
+        <div class="grid-col-start-2 dn db-ns">
           <img
             alt=""
             src="images/grid/1.jpg"
@@ -68,7 +68,7 @@
             class="gridimg db mw-none w-100"
           />
         </div>
-        <div class="dn db-ns grid-col-1-4 ">
+        <div class="dn db-ns grid-col-1-4">
           <div class="flex justify-end items-end h-100 pl4">
             <img alt="" src="logos/ygamerica.svg" class="db h-100" />
           </div>
@@ -88,7 +88,7 @@
             class="gridimg db mw-none w-100"
           />
         </div>
-        <div class="grid-col-start-1 dn db-ns ">
+        <div class="grid-col-start-1 dn db-ns">
           <div class="">
             <p class="sans-serif f7 lh-title ttu tr">BROUGHT<br />TO YOU BY</p>
             <a
@@ -126,14 +126,14 @@
             </a>
           </div>
         </div>
-        <div class=" grid-col-start-2 dn db-ns">
+        <div class="grid-col-start-2 dn db-ns">
           <img
             alt=""
             src="images/grid/7.jpg"
             class="gridimg db mw-none w-100"
           />
         </div>
-        <div class="relative ">
+        <div class="relative">
           <img
             alt=""
             src="images/grid/8.jpg"
@@ -153,12 +153,12 @@
             class="gridimg db mw-none w-100"
           />
         </div>
-        <div class="dn db-ns grid-col-5-7 ">
+        <div class="dn db-ns grid-col-5-7">
           <div class="flex h-100 pr5">
             <img alt="" src="logos/speaksup.svg" class="db h-100" />
           </div>
         </div>
-        <div class="grid-col-start-2 ">
+        <div class="grid-col-start-2">
           <img
             alt=""
             src="images/grid/10.jpg"
@@ -203,7 +203,7 @@
         <div
           class="flex w-80 center justify-around justify-start-ns items-baseline"
         >
-          <div class="ph2 ">
+          <div class="ph2">
             <a
               href="https://yr.media"
               target="_blank"
@@ -217,7 +217,7 @@
             </a>
           </div>
           <!-- <div class="dn db-ns br bw1 self-stretch mv3"></div> -->
-          <div class="ph2 ">
+          <div class="ph2">
             <a
               href="https://www.wnyc.org"
               target="_blank"
@@ -226,7 +226,7 @@
               <img src="logos/wnyclogo.svg" class="db h-100" alt="WNYC Logo" />
             </a>
           </div>
-          <div class="ph2 ">
+          <div class="ph2">
             <a
               href="https://www.wnyc.org/shows/rookies"
               target="_blank"
@@ -241,7 +241,7 @@
           </div>
         </div>
       </div>
-      <div class="flex ml-auto ph2 db dn-ns ">
+      <div class="flex ml-auto ph2 db dn-ns">
         <p class="sans-serif lh-title b" v-html="copy"></p>
       </div>
     </div>
@@ -254,8 +254,8 @@ export default {
   props: {
     copy: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {}
@@ -265,7 +265,7 @@ export default {
     if (window.innerWidth > 1300) {
       this.randomIcons(this.$refs.flourishes, 3, true, true)
     }
-  }
+  },
 }
 </script>
 

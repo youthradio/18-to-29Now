@@ -3,9 +3,7 @@
     <vue-plyr>
       <div class="plyr__video-embed">
         <iframe
-          :src="
-            `https://www.youtube.com/embed/${article.videoid}?iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1`
-          "
+          :src="`https://www.youtube.com/embed/${article.videoid}?iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1`"
           allowfullscreen
           allowtransparency
           playsinline
@@ -54,21 +52,21 @@ import ShareButtons from '~/components/ShareButtons.vue'
 
 export default {
   components: {
-    ShareButtons
+    ShareButtons,
   },
   mixins: [mixinMethods],
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {}
   },
   mounted() {
     this.randomImage(this.$refs.container)
-  }
+  },
 }
 </script>
 
