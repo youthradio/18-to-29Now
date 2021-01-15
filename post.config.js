@@ -116,6 +116,14 @@ module.exports = {
       name: 'Connecting The Dots On Climate Change and The Cost Of Rent',
       id: '1OX1TZvhO4DcNjtQiLP2CKnkexOywRvXfbpBAS6-f26Y',
     },
+    {
+      name: 'Wishing for a New America',
+      id: '17ojtioymhMLPTCIay5cS0UeL8YJc4HMBW0Xm0lOtCpw',
+    },
+    {
+      name: 'I’m Republican but the People Have Spoken',
+      id: '1PR5757nBMWm0_y-E5Linl6nOBiDJ9URABRkY8W4bt5o',
+    },
   ],
   dataPath: 'data/data.json',
   newsletter: {
