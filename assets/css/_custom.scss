@@ -115,7 +115,7 @@ a:focus {
 }
 @media #{$breakpoint-not-small} {
   .img-texture {
-    width: calc(100vw/6);
+    width: calc(100vw / 6);
     max-width: 300px;
   }
   .mwimg {
@@ -125,7 +125,7 @@ a:focus {
     zoom: 2;
   }
   .two-col-ns {
-    max-height: 30rem;
+    max-height: 35rem;
     column-count: 2;
     column-gap: 2rem;
     p:first-of-type {
@@ -177,7 +177,6 @@ a:focus {
 }
 
 @media #{$breakpoint-large} {
-  
   .grid-col-5-6-lg {
     grid-column: 5 / 6;
   }
