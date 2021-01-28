@@ -124,6 +124,10 @@ module.exports = {
       name: 'I’m Republican but the People Have Spoken',
       id: '1PR5757nBMWm0_y-E5Linl6nOBiDJ9URABRkY8W4bt5o',
     },
+    {
+      name: 'Let’s Talk About It: Young People Weigh in on the 2020 Election',
+      id: '1Ej26QsoG3kJaV4zHkoPoG0kD7fdGBXJZDaniL5kfs9Q',
+    },
   ],
   dataPath: 'data/data.json',
   newsletter: {

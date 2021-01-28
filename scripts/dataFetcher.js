@@ -64,6 +64,7 @@ function markdown2html(data) {
               'style',
               'strong',
               'i',
+              'h3',
             ],
             KEEP_CONTENT: true,
           }
