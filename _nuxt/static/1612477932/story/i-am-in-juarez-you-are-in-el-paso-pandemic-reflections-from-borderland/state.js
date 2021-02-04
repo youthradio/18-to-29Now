@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F18-to-29Now\u002F_nuxt\u002Fstatic\u002F1612477932",layout:"default",error:null,serverRendered:true,routePath:"\u002Fstory\u002Fi-am-in-juarez-you-are-in-el-paso-pandemic-reflections-from-borderland",config:{}};
