@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1612558963",layout:"default",error:null,serverRendered:true,routePath:"\u002Fstory\u002Fis-college-even-worth-it-first-gen-college-student-talks-being-broke-and-the-2020-ballot",config:{}};
